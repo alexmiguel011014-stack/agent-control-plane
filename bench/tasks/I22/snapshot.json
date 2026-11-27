@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "files": [
+    {
+      "path": "src/day.mjs",
+      "sizeBytes": 68,
+      "sha256": "19b298d579b354b503911313d8ac70774b05cd4767f9bbea35b34a6cfa96627f"
+    },
+    {
+      "path": "src/group-by-day.mjs",
+      "sizeBytes": 344,
+      "sha256": "0487854605a98301d584d8f9e9f658c8f145d9c5d53b31b062f535e5018eecd5"
+    }
+  ]
+}

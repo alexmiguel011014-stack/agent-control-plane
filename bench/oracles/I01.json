@@ -1,0 +1,174 @@
+{
+  "schemaVersion": 1,
+  "cases": [
+    {
+      "id": "i01-oracle-merge-precedence",
+      "operationId": "call",
+      "args": [
+        {
+          "$ref": "n0"
+        }
+      ],
+      "expected": {
+        "ok": true,
+        "value": {
+          "$ref": "n4"
+        }
+      },
+      "expectedArgsAfterProjections": [
+        {
+          "index": 0,
+          "path": [
+            "defaults"
+          ],
+          "value": {
+            "$ref": "n5"
+          }
+        },
+        {
+          "index": 0,
+          "path": [
+            "fileOptions"
+          ],
+          "value": {
+            "$ref": "n6"
+          }
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n0",
+      "kind": "object",
+      "properties": [
+        [
+          "defaults",
+          {
+            "$ref": "n1"
+          }
+        ],
+        [
+          "fileOptions",
+          {
+            "$ref": "n2"
+          }
+        ],
+        [
+          "cliOptions",
+          {
+            "$ref": "n3"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "n1",
+      "kind": "object",
+      "properties": [
+        [
+          "enabled",
+          true
+        ],
+        [
+          "count",
+          9
+        ],
+        [
+          "label",
+          "default"
+        ]
+      ]
+    },
+    {
+      "id": "n2",
+      "kind": "object",
+      "properties": [
+        [
+          "enabled",
+          true
+        ],
+        [
+          "count",
+          8
+        ],
+        [
+          "label",
+          "file"
+        ]
+      ]
+    },
+    {
+      "id": "n3",
+      "kind": "object",
+      "properties": [
+        [
+          "enabled",
+          false
+        ],
+        [
+          "count",
+          0
+        ],
+        [
+          "label",
+          ""
+        ]
+      ]
+    },
+    {
+      "id": "n4",
+      "kind": "object",
+      "properties": [
+        [
+          "enabled",
+          false
+        ],
+        [
+          "count",
+          0
+        ],
+        [
+          "label",
+          ""
+        ]
+      ]
+    },
+    {
+      "id": "n5",
+      "kind": "object",
+      "properties": [
+        [
+          "enabled",
+          true
+        ],
+        [
+          "count",
+          9
+        ],
+        [
+          "label",
+          "default"
+        ]
+      ]
+    },
+    {
+      "id": "n6",
+      "kind": "object",
+      "properties": [
+        [
+          "enabled",
+          true
+        ],
+        [
+          "count",
+          8
+        ],
+        [
+          "label",
+          "file"
+        ]
+      ]
+    }
+  ]
+}

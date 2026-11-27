@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "files": [
+    {
+      "path": "src/access.mjs",
+      "sizeBytes": 381,
+      "sha256": "75e2026120a92b47e9562990b6035b2dcd7e0996a01f2904e7a3acb42bb20a83"
+    },
+    {
+      "path": "src/roles.mjs",
+      "sizeBytes": 69,
+      "sha256": "9ade85d61a38279ca2e407b4b410b561b868d8a6d83a5f114c71146df9e7b225"
+    }
+  ]
+}

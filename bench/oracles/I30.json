@@ -1,0 +1,103 @@
+{
+  "schemaVersion": 1,
+  "cases": [
+    {
+      "id": "i30-oracle-1",
+      "operationId": "call",
+      "args": [
+        "/files/*",
+        "/files/x/y.txt"
+      ],
+      "expected": {
+        "ok": true,
+        "value": {
+          "$ref": "n0"
+        }
+      }
+    },
+    {
+      "id": "i30-oracle-2",
+      "operationId": "call",
+      "args": [
+        "/files/*",
+        "/files"
+      ],
+      "expected": {
+        "ok": true,
+        "value": {
+          "$ref": "n1"
+        }
+      }
+    },
+    {
+      "id": "i30-oracle-3",
+      "operationId": "call",
+      "args": [
+        "/u/:name",
+        "/u/a%20b"
+      ],
+      "expected": {
+        "ok": true,
+        "value": {
+          "$ref": "n2"
+        }
+      }
+    },
+    {
+      "id": "i30-oracle-4",
+      "operationId": "call",
+      "args": [
+        "//x/:k//",
+        "/x/9/"
+      ],
+      "expected": {
+        "ok": true,
+        "value": {
+          "$ref": "n3"
+        }
+      }
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n0",
+      "kind": "object",
+      "properties": [
+        [
+          "rest",
+          "x/y.txt"
+        ]
+      ]
+    },
+    {
+      "id": "n1",
+      "kind": "object",
+      "properties": [
+        [
+          "rest",
+          ""
+        ]
+      ]
+    },
+    {
+      "id": "n2",
+      "kind": "object",
+      "properties": [
+        [
+          "name",
+          "a b"
+        ]
+      ]
+    },
+    {
+      "id": "n3",
+      "kind": "object",
+      "properties": [
+        [
+          "k",
+          "9"
+        ]
+      ]
+    }
+  ]
+}

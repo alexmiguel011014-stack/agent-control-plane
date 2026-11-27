@@ -1,0 +1,20 @@
+{
+  "task_id": "I21",
+  "prompt": "Fix formatBytes(bytes). Use the units B, KB, MB, GB and TB with 1024 per step. Show whole bytes without decimals and larger units with one decimal that is dropped when it is .0 (1536 gives 1.5 KB, 2048 gives 2 KB). A negative or non-finite input returns \"invalid\".",
+  "base_snapshot_sha256": "969e5fe829a5b316b7dd21af35f0156943e653aef6c628bf9b1825288de56e9d",
+  "allowed_globs": [
+    "src/**/*.mjs"
+  ],
+  "allowed_operations": [
+    "read_text",
+    "list_files",
+    "apply_unified_diff",
+    "run_declared_test",
+    "git_diff"
+  ],
+  "public_test_command_id": "i21-public-tests",
+  "timeout_ms": 600000,
+  "max_changed_files": 1,
+  "oracle_version": "oracle-v1",
+  "risk_class": "process"
+}

@@ -1,0 +1,91 @@
+{
+  "schemaVersion": 1,
+  "cases": [
+    {
+      "id": "i08-oracle-1",
+      "operationId": "call",
+      "args": [
+        "x,,  ,Y"
+      ],
+      "expected": {
+        "ok": true,
+        "value": {
+          "$ref": "n0"
+        }
+      }
+    },
+    {
+      "id": "i08-oracle-2",
+      "operationId": "call",
+      "args": [
+        "a,b,c,d,e,f,g"
+      ],
+      "expected": {
+        "ok": true,
+        "value": {
+          "$ref": "n1"
+        }
+      }
+    },
+    {
+      "id": "i08-oracle-3",
+      "operationId": "call",
+      "args": [
+        " A , a ,B"
+      ],
+      "expected": {
+        "ok": true,
+        "value": {
+          "$ref": "n2"
+        }
+      }
+    },
+    {
+      "id": "i08-oracle-4",
+      "operationId": "call",
+      "args": [
+        "   "
+      ],
+      "expected": {
+        "ok": true,
+        "value": {
+          "$ref": "n3"
+        }
+      }
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n0",
+      "kind": "array",
+      "items": [
+        "x",
+        "y"
+      ]
+    },
+    {
+      "id": "n1",
+      "kind": "array",
+      "items": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ]
+    },
+    {
+      "id": "n2",
+      "kind": "array",
+      "items": [
+        "a",
+        "b"
+      ]
+    },
+    {
+      "id": "n3",
+      "kind": "array",
+      "items": []
+    }
+  ]
+}

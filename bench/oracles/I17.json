@@ -1,0 +1,170 @@
+{
+  "schemaVersion": 1,
+  "cases": [
+    {
+      "id": "i17-oracle-1",
+      "operationId": "call",
+      "args": [
+        999,
+        {
+          "$ref": "n0"
+        }
+      ],
+      "expected": {
+        "ok": true,
+        "value": {
+          "$ref": "n1"
+        }
+      }
+    },
+    {
+      "id": "i17-oracle-2",
+      "operationId": "call",
+      "args": [
+        500,
+        null
+      ],
+      "expected": {
+        "ok": true,
+        "value": {
+          "$ref": "n2"
+        }
+      }
+    },
+    {
+      "id": "i17-oracle-3",
+      "operationId": "call",
+      "args": [
+        200,
+        {
+          "$ref": "n3"
+        }
+      ],
+      "expected": {
+        "ok": true,
+        "value": {
+          "$ref": "n4"
+        }
+      }
+    },
+    {
+      "id": "i17-oracle-4",
+      "operationId": "call",
+      "args": [
+        333,
+        {
+          "$ref": "n5"
+        }
+      ],
+      "expected": {
+        "ok": true,
+        "value": {
+          "$ref": "n6"
+        }
+      }
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n0",
+      "kind": "object",
+      "properties": [
+        [
+          "type",
+          "percent"
+        ],
+        [
+          "value",
+          15
+        ]
+      ],
+      "frozen": true
+    },
+    {
+      "id": "n1",
+      "kind": "object",
+      "properties": [
+        [
+          "discountCents",
+          150
+        ],
+        [
+          "totalCents",
+          849
+        ]
+      ]
+    },
+    {
+      "id": "n2",
+      "kind": "object",
+      "properties": [
+        [
+          "discountCents",
+          0
+        ],
+        [
+          "totalCents",
+          500
+        ]
+      ]
+    },
+    {
+      "id": "n3",
+      "kind": "object",
+      "properties": [
+        [
+          "type",
+          "fixed"
+        ],
+        [
+          "value",
+          -5
+        ]
+      ],
+      "frozen": true
+    },
+    {
+      "id": "n4",
+      "kind": "object",
+      "properties": [
+        [
+          "discountCents",
+          0
+        ],
+        [
+          "totalCents",
+          200
+        ]
+      ]
+    },
+    {
+      "id": "n5",
+      "kind": "object",
+      "properties": [
+        [
+          "type",
+          "percent"
+        ],
+        [
+          "value",
+          50
+        ]
+      ],
+      "frozen": true
+    },
+    {
+      "id": "n6",
+      "kind": "object",
+      "properties": [
+        [
+          "discountCents",
+          167
+        ],
+        [
+          "totalCents",
+          166
+        ]
+      ]
+    }
+  ]
+}

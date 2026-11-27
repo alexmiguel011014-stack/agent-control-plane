@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "files": [
+    {
+      "path": "src/resolve-options.mjs",
+      "sizeBytes": 158,
+      "sha256": "f01c4e5b40a63c2843d211e141ffeb6466c361418d6b6df29ab12fb599387bed"
+    },
+    {
+      "path": "src/startup-config.mjs",
+      "sizeBytes": 205,
+      "sha256": "76c9842e51cf1da571fee780db0f9eadfcc7b33d7e9a7e1f17f36b178f4d5b2f"
+    }
+  ]
+}

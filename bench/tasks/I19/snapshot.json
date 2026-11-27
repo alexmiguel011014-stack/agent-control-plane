@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "files": [
+    {
+      "path": "src/chunk-budget.mjs",
+      "sizeBytes": 441,
+      "sha256": "5d5d8d437e84c44cf7529384c71f859649507a356dacbd7a820da3b57bd78c0f"
+    },
+    {
+      "path": "src/size.mjs",
+      "sizeBytes": 106,
+      "sha256": "25587a3d64c837cf4ec38ac6cea26220ce799950b3df98d2c201e07fa605d46a"
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "cases": [
+    {
+      "id": "includes-final-index",
+      "operationId": "call",
+      "args": [
+        {
+          "$ref": "n0"
+        },
+        1,
+        2
+      ],
+      "expected": {
+        "ok": true,
+        "value": 8
+      }
+    },
+    {
+      "id": "single-final-index",
+      "operationId": "call",
+      "args": [
+        {
+          "$ref": "n1"
+        },
+        3,
+        3
+      ],
+      "expected": {
+        "ok": true,
+        "value": 7
+      }
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n0",
+      "kind": "array",
+      "items": [
+        2,
+        3,
+        5,
+        7
+      ]
+    },
+    {
+      "id": "n1",
+      "kind": "array",
+      "items": [
+        2,
+        3,
+        5,
+        7
+      ]
+    }
+  ]
+}

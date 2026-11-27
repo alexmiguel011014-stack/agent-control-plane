@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "files": [
+    {
+      "path": "src/clamp.mjs",
+      "sizeBytes": 94,
+      "sha256": "1edad87d3a1c0fec19d55657c24d02dd9309c137da3213209c167949eda974fb"
+    },
+    {
+      "path": "src/pagination.mjs",
+      "sizeBytes": 333,
+      "sha256": "90797a08a4e8801d459eec595046bc41063891055e8337fcab908612dadbc436"
+    }
+  ]
+}

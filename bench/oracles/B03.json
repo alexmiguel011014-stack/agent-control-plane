@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "cases": [
+    {
+      "id": "positive-over-zero",
+      "operationId": "call",
+      "args": [
+        1,
+        0
+      ],
+      "expected": {
+        "ok": true,
+        "value": null
+      }
+    },
+    {
+      "id": "negative-over-zero",
+      "operationId": "call",
+      "args": [
+        -1,
+        0
+      ],
+      "expected": {
+        "ok": true,
+        "value": null
+      }
+    },
+    {
+      "id": "negative-denominator",
+      "operationId": "call",
+      "args": [
+        7,
+        -2
+      ],
+      "expected": {
+        "ok": true,
+        "value": -3.5
+      }
+    }
+  ],
+  "nodes": []
+}

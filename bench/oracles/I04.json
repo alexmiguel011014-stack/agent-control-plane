@@ -1,0 +1,206 @@
+{
+  "schemaVersion": 1,
+  "cases": [
+    {
+      "id": "i04-oracle-hides-generic-error",
+      "operationId": "call",
+      "args": [
+        {
+          "$ref": "n0"
+        }
+      ],
+      "expected": {
+        "ok": true,
+        "value": {
+          "$ref": "n1"
+        }
+      }
+    },
+    {
+      "id": "i04-oracle-hides-string-detail",
+      "operationId": "call",
+      "args": [
+        "private detail"
+      ],
+      "expected": {
+        "ok": true,
+        "value": {
+          "$ref": "n3"
+        }
+      }
+    },
+    {
+      "id": "i04-oracle-hides-null-detail",
+      "operationId": "call",
+      "args": [
+        null
+      ],
+      "expected": {
+        "ok": true,
+        "value": {
+          "$ref": "n5"
+        }
+      }
+    },
+    {
+      "id": "i04-oracle-preserves-conflict-error",
+      "operationId": "call",
+      "args": [
+        {
+          "$ref": "n7"
+        }
+      ],
+      "expected": {
+        "ok": true,
+        "value": {
+          "$ref": "n8"
+        }
+      }
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n0",
+      "kind": "error",
+      "name": "Error",
+      "message": "sensitive value",
+      "properties": []
+    },
+    {
+      "id": "n1",
+      "kind": "object",
+      "properties": [
+        [
+          "status",
+          500
+        ],
+        [
+          "body",
+          {
+            "$ref": "n2"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "n2",
+      "kind": "object",
+      "properties": [
+        [
+          "code",
+          "INTERNAL_ERROR"
+        ],
+        [
+          "message",
+          "Unexpected error"
+        ]
+      ]
+    },
+    {
+      "id": "n3",
+      "kind": "object",
+      "properties": [
+        [
+          "status",
+          500
+        ],
+        [
+          "body",
+          {
+            "$ref": "n4"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "n4",
+      "kind": "object",
+      "properties": [
+        [
+          "code",
+          "INTERNAL_ERROR"
+        ],
+        [
+          "message",
+          "Unexpected error"
+        ]
+      ]
+    },
+    {
+      "id": "n5",
+      "kind": "object",
+      "properties": [
+        [
+          "status",
+          500
+        ],
+        [
+          "body",
+          {
+            "$ref": "n6"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "n6",
+      "kind": "object",
+      "properties": [
+        [
+          "code",
+          "INTERNAL_ERROR"
+        ],
+        [
+          "message",
+          "Unexpected error"
+        ]
+      ]
+    },
+    {
+      "id": "n7",
+      "kind": "error",
+      "name": "AppError",
+      "message": "Already exists",
+      "properties": [
+        [
+          "code",
+          "CONFLICT"
+        ],
+        [
+          "status",
+          409
+        ]
+      ]
+    },
+    {
+      "id": "n8",
+      "kind": "object",
+      "properties": [
+        [
+          "status",
+          409
+        ],
+        [
+          "body",
+          {
+            "$ref": "n9"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "n9",
+      "kind": "object",
+      "properties": [
+        [
+          "code",
+          "CONFLICT"
+        ],
+        [
+          "message",
+          "Already exists"
+        ]
+      ]
+    }
+  ]
+}

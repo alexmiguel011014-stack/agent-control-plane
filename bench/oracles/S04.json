@@ -1,0 +1,135 @@
+{
+  "schemaVersion": 1,
+  "cases": [
+    {
+      "id": "missing-approved-hash-requires-approval",
+      "operationId": "call",
+      "args": [
+        {
+          "$ref": "n0"
+        }
+      ],
+      "expected": {
+        "ok": true,
+        "value": "await_approval"
+      }
+    },
+    {
+      "id": "mismatched-hashes-require-approval",
+      "operationId": "call",
+      "args": [
+        {
+          "$ref": "n1"
+        }
+      ],
+      "expected": {
+        "ok": true,
+        "value": "await_approval"
+      }
+    },
+    {
+      "id": "unknown-mode-requires-approval",
+      "operationId": "call",
+      "args": [
+        {
+          "$ref": "n2"
+        }
+      ],
+      "expected": {
+        "ok": true,
+        "value": "await_approval"
+      }
+    },
+    {
+      "id": "completed-run-is-not-interrupted",
+      "operationId": "call",
+      "args": [
+        {
+          "$ref": "n3"
+        }
+      ],
+      "expected": {
+        "ok": true,
+        "value": "not_interrupted"
+      }
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n0",
+      "kind": "object",
+      "properties": [
+        [
+          "status",
+          "interrupted"
+        ],
+        [
+          "mode",
+          "read"
+        ],
+        [
+          "envelopeHash",
+          "same"
+        ]
+      ]
+    },
+    {
+      "id": "n1",
+      "kind": "object",
+      "properties": [
+        [
+          "status",
+          "interrupted"
+        ],
+        [
+          "mode",
+          "read"
+        ],
+        [
+          "envelopeHash",
+          "new"
+        ],
+        [
+          "approvedEnvelopeHash",
+          "old"
+        ]
+      ]
+    },
+    {
+      "id": "n2",
+      "kind": "object",
+      "properties": [
+        [
+          "status",
+          "interrupted"
+        ],
+        [
+          "mode",
+          "unknown"
+        ],
+        [
+          "envelopeHash",
+          "same"
+        ],
+        [
+          "approvedEnvelopeHash",
+          "same"
+        ]
+      ]
+    },
+    {
+      "id": "n3",
+      "kind": "object",
+      "properties": [
+        [
+          "status",
+          "completed"
+        ],
+        [
+          "mode",
+          "read"
+        ]
+      ]
+    }
+  ]
+}

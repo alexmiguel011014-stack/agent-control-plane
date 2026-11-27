@@ -1,0 +1,10 @@
+{
+  "schemaVersion": 1,
+  "files": [
+    {
+      "path": "src/duration.mjs",
+      "sizeBytes": 133,
+      "sha256": "4b4e6fd2ae8cf352184c45c5604abb69566c0cda3f448658abdbdc13d0bfec15"
+    }
+  ]
+}

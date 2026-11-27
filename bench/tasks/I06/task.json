@@ -1,0 +1,20 @@
+{
+  "task_id": "I06",
+  "prompt": "Make CLI result formatting emit exactly one JSON object with schemaVersion: 1 and a result field. If the result is undefined or cannot be serialized as JSON, emit {\"schemaVersion\":1,\"error\":{\"code\":\"INVALID_RESULT\",\"message\":\"Result is not JSON serializable\"}} instead.",
+  "base_snapshot_sha256": "5a60eb5b05b389ecd701d515dc3a40c0cf89db56e7788ef4f04e6c2357b80002",
+  "allowed_globs": [
+    "src/**/*.mjs"
+  ],
+  "allowed_operations": [
+    "read_text",
+    "list_files",
+    "apply_unified_diff",
+    "run_declared_test",
+    "git_diff"
+  ],
+  "public_test_command_id": "i06-public-tests",
+  "timeout_ms": 600000,
+  "max_changed_files": 1,
+  "oracle_version": "oracle-v1",
+  "risk_class": "process"
+}

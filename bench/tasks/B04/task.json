@@ -1,0 +1,20 @@
+{
+  "task_id": "B04",
+  "prompt": "Fix slugify(value) so accented Latin letters are normalized to their base ASCII letters before lowercase slug processing. Preserve word boundaries as single hyphens and trim leading/trailing hyphens. Do not add dependencies.",
+  "base_snapshot_sha256": "f7e058ee52a32e5ecd175346313afc58cc4de7e033687f7aeac47b7642d13cf6",
+  "allowed_globs": [
+    "src/**/*.mjs"
+  ],
+  "allowed_operations": [
+    "read_text",
+    "list_files",
+    "apply_unified_diff",
+    "run_declared_test",
+    "git_diff"
+  ],
+  "public_test_command_id": "b04-public-tests",
+  "timeout_ms": 600000,
+  "max_changed_files": 1,
+  "oracle_version": "oracle-v1",
+  "risk_class": "write"
+}

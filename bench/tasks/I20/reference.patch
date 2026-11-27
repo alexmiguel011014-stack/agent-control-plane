@@ -1,0 +1,9 @@
+diff --git a/src/compare.mjs b/src/compare.mjs
+--- a/src/compare.mjs
++++ b/src/compare.mjs
+@@ -1,4 +1,4 @@
+ export function compareEntries(a, b) {
+-  if (a.score !== b.score) return a.score - b.score;
++  if (a.score !== b.score) return b.score - a.score;
+   return a.name < b.name ? -1 : a.name > b.name ? 1 : 0;
+ }

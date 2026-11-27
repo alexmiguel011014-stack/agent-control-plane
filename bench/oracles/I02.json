@@ -1,0 +1,109 @@
+{
+  "schemaVersion": 1,
+  "cases": [
+    {
+      "id": "i02-oracle-positive-offset-date-boundary",
+      "operationId": "call",
+      "args": [
+        "2025-01-01T00:30:00+02:00"
+      ],
+      "expected": {
+        "ok": true,
+        "value": "2024-12-31"
+      }
+    },
+    {
+      "id": "i02-oracle-negative-offset-date-boundary",
+      "operationId": "call",
+      "args": [
+        "2025-01-01T23:30:00-02:00"
+      ],
+      "expected": {
+        "ok": true,
+        "value": "2025-01-02"
+      }
+    },
+    {
+      "id": "i02-oracle-rejects-text",
+      "operationId": "call",
+      "args": [
+        "not-a-date"
+      ],
+      "expected": {
+        "ok": false,
+        "error": {
+          "name": "TypeError",
+          "instanceOf": "TypeError"
+        }
+      }
+    },
+    {
+      "id": "i02-oracle-rejects-impossible-day",
+      "operationId": "call",
+      "args": [
+        "2025-02-30T12:00:00Z"
+      ],
+      "expected": {
+        "ok": false,
+        "error": {
+          "name": "TypeError",
+          "instanceOf": "TypeError"
+        }
+      }
+    },
+    {
+      "id": "i02-oracle-rejects-leap-second-with-offset",
+      "operationId": "call",
+      "args": [
+        "2025-01-01T00:00:60+01:00"
+      ],
+      "expected": {
+        "ok": false,
+        "error": {
+          "name": "TypeError",
+          "instanceOf": "TypeError"
+        }
+      }
+    },
+    {
+      "id": "i02-oracle-rejects-unknown-offset",
+      "operationId": "call",
+      "args": [
+        "2025-01-01T00:00:00-00:00"
+      ],
+      "expected": {
+        "ok": false,
+        "error": {
+          "name": "TypeError",
+          "instanceOf": "TypeError"
+        }
+      }
+    },
+    {
+      "id": "i02-oracle-rejects-trailing-newline",
+      "operationId": "call",
+      "args": [
+        "2025-01-01T00:00:00Z\n"
+      ],
+      "expected": {
+        "ok": false,
+        "error": {
+          "name": "TypeError",
+          "instanceOf": "TypeError"
+        }
+      }
+    },
+    {
+      "id": "i02-oracle-accepts-leap-day-fraction",
+      "operationId": "call",
+      "args": [
+        "2024-02-29T23:59:59.123Z"
+      ],
+      "expected": {
+        "ok": true,
+        "value": "2024-02-29"
+      }
+    }
+  ],
+  "nodes": []
+}

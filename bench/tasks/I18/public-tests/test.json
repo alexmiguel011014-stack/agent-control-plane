@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "cases": [
+    {
+      "id": "i18-public-1",
+      "operationId": "call",
+      "args": [
+        "a=1\nb = x=y"
+      ],
+      "expected": {
+        "ok": true,
+        "value": {
+          "$ref": "n0"
+        }
+      }
+    },
+    {
+      "id": "i18-public-2",
+      "operationId": "call",
+      "args": [
+        "host = db.local=5432"
+      ],
+      "expected": {
+        "ok": true,
+        "value": {
+          "$ref": "n1"
+        }
+      }
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n0",
+      "kind": "object",
+      "properties": [
+        [
+          "a",
+          "1"
+        ],
+        [
+          "b",
+          "x=y"
+        ]
+      ]
+    },
+    {
+      "id": "n1",
+      "kind": "object",
+      "properties": [
+        [
+          "host",
+          "db.local=5432"
+        ]
+      ]
+    }
+  ]
+}

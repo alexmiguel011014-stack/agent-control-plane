@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "files": [
+    {
+      "path": "src/config.mjs",
+      "sizeBytes": 177,
+      "sha256": "6ef3c6bab8b021fe060461a35a5eb7bfe0ef93b4ddf7ad7bc9d2e59480e5ffa1"
+    },
+    {
+      "path": "src/defaults.mjs",
+      "sizeBytes": 120,
+      "sha256": "773b763f1f51b23eef6eafe8dfd840f74e50f899c6595f8b0879bceba7ee5274"
+    },
+    {
+      "path": "src/startup.mjs",
+      "sizeBytes": 205,
+      "sha256": "47bae35e7e8199d1c3aefc76e53c3927da142db7ce76e07b46cdbbf926b78c56"
+    }
+  ]
+}

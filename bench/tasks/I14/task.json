@@ -1,0 +1,20 @@
+{
+  "task_id": "I14",
+  "prompt": "Fix percentile(values, p) using the nearest-rank method: sort the numbers ascending as numbers, take rank = ceil(p / 100 * count) with a minimum of 1, and return the value at that rank. An empty array returns null. Do not mutate the input.",
+  "base_snapshot_sha256": "f86ea2585b7d59a1772b5e04dcee0a1d0f1c6f80b1e5b4139de881fe54e3d9fb",
+  "allowed_globs": [
+    "src/**/*.mjs"
+  ],
+  "allowed_operations": [
+    "read_text",
+    "list_files",
+    "apply_unified_diff",
+    "run_declared_test",
+    "git_diff"
+  ],
+  "public_test_command_id": "i14-public-tests",
+  "timeout_ms": 600000,
+  "max_changed_files": 1,
+  "oracle_version": "oracle-v1",
+  "risk_class": "process"
+}

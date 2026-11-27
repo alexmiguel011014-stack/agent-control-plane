@@ -1,0 +1,604 @@
+{
+  "schemaVersion": 1,
+  "cases": [
+    {
+      "id": "i20-oracle-1",
+      "operationId": "call",
+      "args": [
+        {
+          "$ref": "n0"
+        }
+      ],
+      "expected": {
+        "ok": true,
+        "value": {
+          "$ref": "n5"
+        }
+      },
+      "expectedArgsAfter": [
+        {
+          "$ref": "n10"
+        }
+      ]
+    },
+    {
+      "id": "i20-oracle-2",
+      "operationId": "call",
+      "args": [
+        {
+          "$ref": "n15"
+        }
+      ],
+      "expected": {
+        "ok": true,
+        "value": {
+          "$ref": "n16"
+        }
+      },
+      "expectedArgsAfter": [
+        {
+          "$ref": "n17"
+        }
+      ]
+    },
+    {
+      "id": "i20-oracle-3",
+      "operationId": "call",
+      "args": [
+        {
+          "$ref": "n18"
+        }
+      ],
+      "expected": {
+        "ok": true,
+        "value": {
+          "$ref": "n20"
+        }
+      },
+      "expectedArgsAfter": [
+        {
+          "$ref": "n22"
+        }
+      ]
+    },
+    {
+      "id": "i20-oracle-4",
+      "operationId": "call",
+      "args": [
+        {
+          "$ref": "n24"
+        }
+      ],
+      "expected": {
+        "ok": true,
+        "value": {
+          "$ref": "n28"
+        }
+      },
+      "expectedArgsAfter": [
+        {
+          "$ref": "n32"
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n0",
+      "kind": "array",
+      "items": [
+        {
+          "$ref": "n1"
+        },
+        {
+          "$ref": "n2"
+        },
+        {
+          "$ref": "n3"
+        },
+        {
+          "$ref": "n4"
+        }
+      ]
+    },
+    {
+      "id": "n1",
+      "kind": "object",
+      "properties": [
+        [
+          "name",
+          "a"
+        ],
+        [
+          "score",
+          9
+        ]
+      ],
+      "frozen": true
+    },
+    {
+      "id": "n2",
+      "kind": "object",
+      "properties": [
+        [
+          "name",
+          "b"
+        ],
+        [
+          "score",
+          7
+        ]
+      ],
+      "frozen": true
+    },
+    {
+      "id": "n3",
+      "kind": "object",
+      "properties": [
+        [
+          "name",
+          "c"
+        ],
+        [
+          "score",
+          7
+        ]
+      ],
+      "frozen": true
+    },
+    {
+      "id": "n4",
+      "kind": "object",
+      "properties": [
+        [
+          "name",
+          "d"
+        ],
+        [
+          "score",
+          1
+        ]
+      ],
+      "frozen": true
+    },
+    {
+      "id": "n5",
+      "kind": "array",
+      "items": [
+        {
+          "$ref": "n6"
+        },
+        {
+          "$ref": "n7"
+        },
+        {
+          "$ref": "n8"
+        },
+        {
+          "$ref": "n9"
+        }
+      ]
+    },
+    {
+      "id": "n6",
+      "kind": "object",
+      "properties": [
+        [
+          "name",
+          "a"
+        ],
+        [
+          "score",
+          9
+        ],
+        [
+          "rank",
+          1
+        ]
+      ]
+    },
+    {
+      "id": "n7",
+      "kind": "object",
+      "properties": [
+        [
+          "name",
+          "b"
+        ],
+        [
+          "score",
+          7
+        ],
+        [
+          "rank",
+          2
+        ]
+      ]
+    },
+    {
+      "id": "n8",
+      "kind": "object",
+      "properties": [
+        [
+          "name",
+          "c"
+        ],
+        [
+          "score",
+          7
+        ],
+        [
+          "rank",
+          2
+        ]
+      ]
+    },
+    {
+      "id": "n9",
+      "kind": "object",
+      "properties": [
+        [
+          "name",
+          "d"
+        ],
+        [
+          "score",
+          1
+        ],
+        [
+          "rank",
+          4
+        ]
+      ]
+    },
+    {
+      "id": "n10",
+      "kind": "array",
+      "items": [
+        {
+          "$ref": "n11"
+        },
+        {
+          "$ref": "n12"
+        },
+        {
+          "$ref": "n13"
+        },
+        {
+          "$ref": "n14"
+        }
+      ]
+    },
+    {
+      "id": "n11",
+      "kind": "object",
+      "properties": [
+        [
+          "name",
+          "a"
+        ],
+        [
+          "score",
+          9
+        ]
+      ]
+    },
+    {
+      "id": "n12",
+      "kind": "object",
+      "properties": [
+        [
+          "name",
+          "b"
+        ],
+        [
+          "score",
+          7
+        ]
+      ]
+    },
+    {
+      "id": "n13",
+      "kind": "object",
+      "properties": [
+        [
+          "name",
+          "c"
+        ],
+        [
+          "score",
+          7
+        ]
+      ]
+    },
+    {
+      "id": "n14",
+      "kind": "object",
+      "properties": [
+        [
+          "name",
+          "d"
+        ],
+        [
+          "score",
+          1
+        ]
+      ]
+    },
+    {
+      "id": "n15",
+      "kind": "array",
+      "items": []
+    },
+    {
+      "id": "n16",
+      "kind": "array",
+      "items": []
+    },
+    {
+      "id": "n17",
+      "kind": "array",
+      "items": []
+    },
+    {
+      "id": "n18",
+      "kind": "array",
+      "items": [
+        {
+          "$ref": "n19"
+        }
+      ]
+    },
+    {
+      "id": "n19",
+      "kind": "object",
+      "properties": [
+        [
+          "name",
+          "z"
+        ],
+        [
+          "score",
+          0
+        ]
+      ],
+      "frozen": true
+    },
+    {
+      "id": "n20",
+      "kind": "array",
+      "items": [
+        {
+          "$ref": "n21"
+        }
+      ]
+    },
+    {
+      "id": "n21",
+      "kind": "object",
+      "properties": [
+        [
+          "name",
+          "z"
+        ],
+        [
+          "score",
+          0
+        ],
+        [
+          "rank",
+          1
+        ]
+      ]
+    },
+    {
+      "id": "n22",
+      "kind": "array",
+      "items": [
+        {
+          "$ref": "n23"
+        }
+      ]
+    },
+    {
+      "id": "n23",
+      "kind": "object",
+      "properties": [
+        [
+          "name",
+          "z"
+        ],
+        [
+          "score",
+          0
+        ]
+      ]
+    },
+    {
+      "id": "n24",
+      "kind": "array",
+      "items": [
+        {
+          "$ref": "n25"
+        },
+        {
+          "$ref": "n26"
+        },
+        {
+          "$ref": "n27"
+        }
+      ]
+    },
+    {
+      "id": "n25",
+      "kind": "object",
+      "properties": [
+        [
+          "name",
+          "q"
+        ],
+        [
+          "score",
+          3
+        ]
+      ],
+      "frozen": true
+    },
+    {
+      "id": "n26",
+      "kind": "object",
+      "properties": [
+        [
+          "name",
+          "p"
+        ],
+        [
+          "score",
+          3
+        ]
+      ],
+      "frozen": true
+    },
+    {
+      "id": "n27",
+      "kind": "object",
+      "properties": [
+        [
+          "name",
+          "r"
+        ],
+        [
+          "score",
+          3
+        ]
+      ],
+      "frozen": true
+    },
+    {
+      "id": "n28",
+      "kind": "array",
+      "items": [
+        {
+          "$ref": "n29"
+        },
+        {
+          "$ref": "n30"
+        },
+        {
+          "$ref": "n31"
+        }
+      ]
+    },
+    {
+      "id": "n29",
+      "kind": "object",
+      "properties": [
+        [
+          "name",
+          "p"
+        ],
+        [
+          "score",
+          3
+        ],
+        [
+          "rank",
+          1
+        ]
+      ]
+    },
+    {
+      "id": "n30",
+      "kind": "object",
+      "properties": [
+        [
+          "name",
+          "q"
+        ],
+        [
+          "score",
+          3
+        ],
+        [
+          "rank",
+          1
+        ]
+      ]
+    },
+    {
+      "id": "n31",
+      "kind": "object",
+      "properties": [
+        [
+          "name",
+          "r"
+        ],
+        [
+          "score",
+          3
+        ],
+        [
+          "rank",
+          1
+        ]
+      ]
+    },
+    {
+      "id": "n32",
+      "kind": "array",
+      "items": [
+        {
+          "$ref": "n33"
+        },
+        {
+          "$ref": "n34"
+        },
+        {
+          "$ref": "n35"
+        }
+      ]
+    },
+    {
+      "id": "n33",
+      "kind": "object",
+      "properties": [
+        [
+          "name",
+          "q"
+        ],
+        [
+          "score",
+          3
+        ]
+      ]
+    },
+    {
+      "id": "n34",
+      "kind": "object",
+      "properties": [
+        [
+          "name",
+          "p"
+        ],
+        [
+          "score",
+          3
+        ]
+      ]
+    },
+    {
+      "id": "n35",
+      "kind": "object",
+      "properties": [
+        [
+          "name",
+          "r"
+        ],
+        [
+          "score",
+          3
+        ]
+      ]
+    }
+  ]
+}

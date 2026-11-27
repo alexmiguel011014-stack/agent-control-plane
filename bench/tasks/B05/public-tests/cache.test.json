@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 1,
+  "cases": [
+    {
+      "id": "invalidates-only-requested-key",
+      "operationId": "call",
+      "args": [
+        {
+          "$ref": "n0"
+        },
+        "user:1"
+      ],
+      "expected": {
+        "ok": true,
+        "value": true
+      },
+      "expectedArgsAfter": [
+        {
+          "$ref": "n1"
+        },
+        "user:1"
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n0",
+      "kind": "map",
+      "entries": [
+        [
+          "user:1",
+          "one"
+        ],
+        [
+          "user:2",
+          "two"
+        ]
+      ]
+    },
+    {
+      "id": "n1",
+      "kind": "map",
+      "entries": [
+        [
+          "user:2",
+          "two"
+        ]
+      ]
+    }
+  ]
+}

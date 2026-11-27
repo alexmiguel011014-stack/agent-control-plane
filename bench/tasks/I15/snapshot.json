@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "files": [
+    {
+      "path": "src/pair.mjs",
+      "sizeBytes": 99,
+      "sha256": "9426034af09ad0539f053ec053eda5c498b58e36d4fdb4954170766de795396a"
+    },
+    {
+      "path": "src/query.mjs",
+      "sizeBytes": 367,
+      "sha256": "011e3f0ae05601da688efa3152c6c6f65518ffd5052defcb3a9ee3d9d3aae1a6"
+    }
+  ]
+}

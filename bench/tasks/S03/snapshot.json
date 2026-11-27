@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "files": [
+    {
+      "path": "src/command-policy.mjs",
+      "sizeBytes": 151,
+      "sha256": "92dba1dea24d656786292ef71e363ab7857bddc913263b2b5d432c43d6a4a698"
+    },
+    {
+      "path": "src/tool-authorization.mjs",
+      "sizeBytes": 193,
+      "sha256": "6b0a960562e3d691e9d39840cf9caf7e152e06edbf20682d49aa9399aac62306"
+    }
+  ]
+}

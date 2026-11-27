@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "files": [
+    {
+      "path": "src/build-event.mjs",
+      "sizeBytes": 146,
+      "sha256": "43e1c2a79824bafce6841dba1c10fb96a6943fae0f1556b579d78649b44533f3"
+    },
+    {
+      "path": "src/redact-event.mjs",
+      "sizeBytes": 367,
+      "sha256": "2503b5791ee5dc43018c4ee866a5a9c8072d11de5f1b7a904ef1234990292a8c"
+    }
+  ]
+}

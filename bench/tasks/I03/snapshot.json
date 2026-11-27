@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "files": [
+    {
+      "path": "src/csv-cell.mjs",
+      "sizeBytes": 65,
+      "sha256": "db12ada917e06c4843dfc232d90c9012547331aa17973056fd79670baa19cc57"
+    },
+    {
+      "path": "src/serialize-row.mjs",
+      "sizeBytes": 139,
+      "sha256": "5826a241d4516795bd1b41d9d6fec6740e06883def84866ceb5170f6c6cc080f"
+    }
+  ]
+}

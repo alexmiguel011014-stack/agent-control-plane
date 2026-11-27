@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "cases": [
+    {
+      "id": "rejects-same-prefix-sibling",
+      "operationId": "call",
+      "args": [
+        "/srv/app",
+        "/srv/application/secrets.txt"
+      ],
+      "expected": {
+        "ok": true,
+        "value": false
+      }
+    },
+    {
+      "id": "normalizes-parent-segment-inside-root",
+      "operationId": "call",
+      "args": [
+        "/srv/app",
+        "/srv/app/config/../src/main.mjs"
+      ],
+      "expected": {
+        "ok": true,
+        "value": true
+      }
+    },
+    {
+      "id": "rejects-parent-sibling",
+      "operationId": "call",
+      "args": [
+        "/srv/app",
+        "/srv/app/../app-copy/file"
+      ],
+      "expected": {
+        "ok": true,
+        "value": false
+      }
+    }
+  ],
+  "nodes": []
+}

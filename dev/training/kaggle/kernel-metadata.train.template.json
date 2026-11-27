@@ -1,0 +1,12 @@
+{
+  "id": "<KAGGLE_USER>/<KERNEL_SLUG>",
+  "title": "<KERNEL_SLUG>",
+  "code_file": "kernel_main.py",
+  "language": "python",
+  "kernel_type": "script",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_internet": true,
+  "machine_shape": "NvidiaTeslaT4",
+  "dataset_sources": ["<KAGGLE_USER>/agentcp-train-v5"]
+}

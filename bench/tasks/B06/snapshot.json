@@ -1,0 +1,10 @@
+{
+  "schemaVersion": 1,
+  "files": [
+    {
+      "path": "src/config.mjs",
+      "sizeBytes": 96,
+      "sha256": "8305175528d96cdeca49741d53c68c8685c227b64562037eb5d7ef5b9c58fa01"
+    }
+  ]
+}

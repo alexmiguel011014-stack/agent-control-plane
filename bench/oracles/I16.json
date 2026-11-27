@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "cases": [
+    {
+      "id": "i16-oracle-1",
+      "operationId": "call",
+      "args": [
+        "constructor"
+      ],
+      "expected": {
+        "ok": true,
+        "value": "Unknown (constructor)"
+      }
+    },
+    {
+      "id": "i16-oracle-2",
+      "operationId": "call",
+      "args": [
+        7
+      ],
+      "expected": {
+        "ok": true,
+        "value": "Unknown (7)"
+      }
+    },
+    {
+      "id": "i16-oracle-3",
+      "operationId": "call",
+      "args": [
+        "Archived"
+      ],
+      "expected": {
+        "ok": true,
+        "value": "Unknown (Archived)"
+      }
+    },
+    {
+      "id": "i16-oracle-4",
+      "operationId": "call",
+      "args": [
+        "OPEN "
+      ],
+      "expected": {
+        "ok": true,
+        "value": "Open"
+      }
+    }
+  ],
+  "nodes": []
+}

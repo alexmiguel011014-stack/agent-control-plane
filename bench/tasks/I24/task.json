@@ -1,0 +1,20 @@
+{
+  "task_id": "I24",
+  "prompt": "Fix renderTemplate(template, vars). Replace each {{name}} (spaces inside the braces are allowed) with the HTML-escaped value of vars[name], escaping &, < and > exactly once; a name missing from vars becomes an empty string. Substituted values are not scanned for further placeholders.",
+  "base_snapshot_sha256": "6b21e575c927e4f3b5ca7c29398b81e50bb2901d2f487c43d628693ce90e7371",
+  "allowed_globs": [
+    "src/**/*.mjs"
+  ],
+  "allowed_operations": [
+    "read_text",
+    "list_files",
+    "apply_unified_diff",
+    "run_declared_test",
+    "git_diff"
+  ],
+  "public_test_command_id": "i24-public-tests",
+  "timeout_ms": 600000,
+  "max_changed_files": 1,
+  "oracle_version": "oracle-v1",
+  "risk_class": "process"
+}

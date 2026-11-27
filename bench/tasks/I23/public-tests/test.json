@@ -1,0 +1,107 @@
+{
+  "schemaVersion": 1,
+  "cases": [
+    {
+      "id": "i23-public-1",
+      "operationId": "call",
+      "args": [
+        {
+          "$ref": "n0"
+        },
+        {
+          "$ref": "n2"
+        },
+        "read"
+      ],
+      "expected": {
+        "ok": true,
+        "value": true
+      }
+    },
+    {
+      "id": "i23-public-2",
+      "operationId": "call",
+      "args": [
+        {
+          "$ref": "n3"
+        },
+        {
+          "$ref": "n5"
+        },
+        "write"
+      ],
+      "expected": {
+        "ok": true,
+        "value": true
+      }
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n0",
+      "kind": "object",
+      "properties": [
+        [
+          "roles",
+          {
+            "$ref": "n1"
+          }
+        ]
+      ],
+      "frozen": true
+    },
+    {
+      "id": "n1",
+      "kind": "array",
+      "items": [
+        "viewer"
+      ]
+    },
+    {
+      "id": "n2",
+      "kind": "object",
+      "properties": [
+        [
+          "orgId",
+          1
+        ]
+      ],
+      "frozen": true
+    },
+    {
+      "id": "n3",
+      "kind": "object",
+      "properties": [
+        [
+          "roles",
+          {
+            "$ref": "n4"
+          }
+        ],
+        [
+          "orgId",
+          1
+        ]
+      ],
+      "frozen": true
+    },
+    {
+      "id": "n4",
+      "kind": "array",
+      "items": [
+        "editor"
+      ]
+    },
+    {
+      "id": "n5",
+      "kind": "object",
+      "properties": [
+        [
+          "orgId",
+          1
+        ]
+      ],
+      "frozen": true
+    }
+  ]
+}

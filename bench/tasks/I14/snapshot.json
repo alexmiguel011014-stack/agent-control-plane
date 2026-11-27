@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "files": [
+    {
+      "path": "src/percentile.mjs",
+      "sizeBytes": 257,
+      "sha256": "a67850d2c9086979d2cf60ede1de79e80541e58f5bc13f4306faaa3b0f1a5435"
+    },
+    {
+      "path": "src/sorting.mjs",
+      "sizeBytes": 68,
+      "sha256": "6c353dd63ff83049ff4562682aa7b413b48a1da3754b5b9e5f455748eabf5e23"
+    }
+  ]
+}

@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "cases": [
+    {
+      "id": "i14-public-1",
+      "operationId": "call",
+      "args": [
+        {
+          "$ref": "n0"
+        },
+        50
+      ],
+      "expected": {
+        "ok": true,
+        "value": 35
+      },
+      "expectedArgsAfter": [
+        {
+          "$ref": "n1"
+        },
+        50
+      ]
+    },
+    {
+      "id": "i14-public-2",
+      "operationId": "call",
+      "args": [
+        {
+          "$ref": "n2"
+        },
+        100
+      ],
+      "expected": {
+        "ok": true,
+        "value": 10
+      },
+      "expectedArgsAfter": [
+        {
+          "$ref": "n3"
+        },
+        100
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n0",
+      "kind": "array",
+      "items": [
+        15,
+        20,
+        35,
+        40,
+        50,
+        9,
+        100
+      ]
+    },
+    {
+      "id": "n1",
+      "kind": "array",
+      "items": [
+        15,
+        20,
+        35,
+        40,
+        50,
+        9,
+        100
+      ]
+    },
+    {
+      "id": "n2",
+      "kind": "array",
+      "items": [
+        10,
+        2
+      ]
+    },
+    {
+      "id": "n3",
+      "kind": "array",
+      "items": [
+        10,
+        2
+      ]
+    }
+  ]
+}

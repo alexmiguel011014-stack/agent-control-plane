@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "cases": [
+    {
+      "id": "i12-oracle-1",
+      "operationId": "call",
+      "args": [
+        10,
+        100,
+        1000
+      ],
+      "expected": {
+        "ok": true,
+        "value": 1000
+      }
+    },
+    {
+      "id": "i12-oracle-2",
+      "operationId": "call",
+      "args": [
+        0,
+        100,
+        1000
+      ],
+      "expected": {
+        "ok": true,
+        "value": 0
+      }
+    },
+    {
+      "id": "i12-oracle-3",
+      "operationId": "call",
+      "args": [
+        2.5,
+        100,
+        1000
+      ],
+      "expected": {
+        "ok": true,
+        "value": 0
+      }
+    },
+    {
+      "id": "i12-oracle-4",
+      "operationId": "call",
+      "args": [
+        3,
+        50,
+        1000
+      ],
+      "expected": {
+        "ok": true,
+        "value": 200
+      }
+    }
+  ],
+  "nodes": []
+}

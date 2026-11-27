@@ -1,0 +1,74 @@
+{
+  "schemaVersion": 1,
+  "cases": [
+    {
+      "id": "accepts-exact-registered-command",
+      "operationId": "call",
+      "args": [
+        "read_text",
+        {
+          "$ref": "n0"
+        }
+      ],
+      "expected": {
+        "ok": true,
+        "value": {
+          "$ref": "n1"
+        }
+      }
+    },
+    {
+      "id": "rejects-appended-command-text",
+      "operationId": "call",
+      "args": [
+        "read_text --all",
+        {
+          "$ref": "n2"
+        }
+      ],
+      "expected": {
+        "ok": true,
+        "value": {
+          "$ref": "n3"
+        }
+      }
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n0",
+      "kind": "array",
+      "items": [
+        "read_text",
+        "list_files"
+      ]
+    },
+    {
+      "id": "n1",
+      "kind": "object",
+      "properties": [
+        [
+          "allowed",
+          true
+        ]
+      ]
+    },
+    {
+      "id": "n2",
+      "kind": "array",
+      "items": [
+        "read_text"
+      ]
+    },
+    {
+      "id": "n3",
+      "kind": "object",
+      "properties": [
+        [
+          "allowed",
+          false
+        ]
+      ]
+    }
+  ]
+}

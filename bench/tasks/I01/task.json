@@ -1,0 +1,20 @@
+{
+  "task_id": "I01",
+  "prompt": "Fix runtime option precedence. Command line options must override file options, which must override defaults. Preserve explicit false, zero, and empty-string values. Do not mutate any input object.",
+  "base_snapshot_sha256": "ef858c908812363da3cb324d59a4b6f83e507a921b771e3e263afa52c6cd6992",
+  "allowed_globs": [
+    "src/**/*.mjs"
+  ],
+  "allowed_operations": [
+    "read_text",
+    "list_files",
+    "apply_unified_diff",
+    "run_declared_test",
+    "git_diff"
+  ],
+  "public_test_command_id": "i01-public-tests",
+  "timeout_ms": 600000,
+  "max_changed_files": 1,
+  "oracle_version": "oracle-v1",
+  "risk_class": "process"
+}

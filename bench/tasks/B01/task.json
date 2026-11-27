@@ -1,0 +1,20 @@
+{
+  "task_id": "B01",
+  "prompt": "Fix sumRange(values, start, end) so the range includes both start and end indexes. Do not add dependencies.",
+  "base_snapshot_sha256": "43a3ae78b85246ae949207a686a88d893aa37ef8d7f30e8bd14a192ff83bdecb",
+  "allowed_globs": [
+    "src/**/*.mjs"
+  ],
+  "allowed_operations": [
+    "read_text",
+    "list_files",
+    "apply_unified_diff",
+    "run_declared_test",
+    "git_diff"
+  ],
+  "public_test_command_id": "b01-public-tests",
+  "timeout_ms": 600000,
+  "max_changed_files": 1,
+  "oracle_version": "oracle-v1",
+  "risk_class": "write"
+}

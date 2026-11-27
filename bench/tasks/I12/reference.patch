@@ -1,0 +1,10 @@
+diff --git a/src/backoff.mjs b/src/backoff.mjs
+--- a/src/backoff.mjs
++++ b/src/backoff.mjs
+@@ -2,5 +2,5 @@
+ 
+ export function nextDelay(attempt, baseMs, capMs) {
+   if (!Number.isInteger(attempt) || attempt < 1) return 0;
+-  return Math.min(capMs, baseMs * doubled(attempt));
++  return Math.min(capMs, baseMs * doubled(attempt - 1));
+ }

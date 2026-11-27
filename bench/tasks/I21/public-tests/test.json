@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "cases": [
+    {
+      "id": "i21-public-1",
+      "operationId": "call",
+      "args": [
+        1536
+      ],
+      "expected": {
+        "ok": true,
+        "value": "1.5 KB"
+      }
+    },
+    {
+      "id": "i21-public-2",
+      "operationId": "call",
+      "args": [
+        100
+      ],
+      "expected": {
+        "ok": true,
+        "value": "100 B"
+      }
+    }
+  ],
+  "nodes": []
+}

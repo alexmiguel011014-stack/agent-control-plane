@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "files": [
+    {
+      "path": "src/compare.mjs",
+      "sizeBytes": 151,
+      "sha256": "034737a80555ad1739b55c5cb55e1c19058f8c60a334ce5c4f70c9189284a327"
+    },
+    {
+      "path": "src/rank.mjs",
+      "sizeBytes": 398,
+      "sha256": "338854bb1aa8e625faa7e7040aad8d3e117ab3c468ee44b6152c48eca0575089"
+    }
+  ]
+}

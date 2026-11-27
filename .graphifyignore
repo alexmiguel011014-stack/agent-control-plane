@@ -1,0 +1,8 @@
+bench/oracles/
+bench/**/oracle/
+bench/tasks/**/reference.patch
+bench/review/
+bench/results/
+runtime/
+reports/
+research_notes/

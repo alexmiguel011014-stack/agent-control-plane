@@ -1,0 +1,79 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:agent-control-plane:task-manifest:v1",
+  "title": "Agent Control Plane Benchmark Task Manifest v1",
+  "type": "object",
+  "required": [
+    "task_id",
+    "prompt",
+    "base_snapshot_sha256",
+    "allowed_globs",
+    "allowed_operations",
+    "public_test_command_id",
+    "timeout_ms",
+    "max_changed_files",
+    "oracle_version",
+    "risk_class"
+  ],
+  "properties": {
+    "task_id": {
+      "type": "string",
+      "pattern": "^[PBIS][0-9]{2}$"
+    },
+    "prompt": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 4000
+    },
+    "base_snapshot_sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "allowed_globs": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "pattern": "^(?!/)(?![A-Za-z]:)(?!.*(?:^|/)\\.{1,2}(?:/|$))(?!.*(?:^|/)\\.env(?:[^/]*)(?:/|$))(?!.*(?:^|/)\\.git(?:/|$))[A-Za-z0-9_*.-]+(?:/[A-Za-z0-9_*.-]+)*$"
+      }
+    },
+    "allowed_operations": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "enum": [
+          "read_text",
+          "list_files",
+          "apply_unified_diff",
+          "run_declared_test",
+          "git_diff"
+        ]
+      }
+    },
+    "public_test_command_id": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9-]{0,63}$"
+    },
+    "timeout_ms": {
+      "type": "integer",
+      "minimum": 1000,
+      "maximum": 600000
+    },
+    "max_changed_files": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 12
+    },
+    "oracle_version": {
+      "type": "string",
+      "pattern": "^oracle-v[1-9][0-9]*$"
+    },
+    "risk_class": {
+      "enum": ["read", "write", "process"]
+    }
+  },
+  "additionalProperties": false
+}

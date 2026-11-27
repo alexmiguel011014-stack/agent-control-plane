@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "files": [
+    {
+      "path": "src/escape.mjs",
+      "sizeBytes": 127,
+      "sha256": "24f9a20a5d7597ace07d99151caee040103160c44958bf9c501f6dac2a651d08"
+    },
+    {
+      "path": "src/template.mjs",
+      "sizeBytes": 253,
+      "sha256": "1f4a9cbc1810f12c6ea651f410974219e5703a36d1a1e870b82c63ae52540b7c"
+    }
+  ]
+}

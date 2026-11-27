@@ -1,0 +1,191 @@
+{
+  "schemaVersion": 1,
+  "cases": [
+    {
+      "id": "i25-public-1",
+      "operationId": "call",
+      "args": [
+        {
+          "$ref": "n0"
+        }
+      ],
+      "expected": {
+        "ok": true,
+        "value": {
+          "$ref": "n3"
+        }
+      }
+    },
+    {
+      "id": "i25-public-2",
+      "operationId": "call",
+      "args": [
+        {
+          "$ref": "n5"
+        }
+      ],
+      "expected": {
+        "ok": true,
+        "value": {
+          "$ref": "n8"
+        }
+      }
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n0",
+      "kind": "array",
+      "items": [
+        {
+          "$ref": "n1"
+        },
+        {
+          "$ref": "n2"
+        }
+      ]
+    },
+    {
+      "id": "n1",
+      "kind": "object",
+      "properties": [
+        [
+          "key",
+          "a"
+        ],
+        [
+          "version",
+          1
+        ],
+        [
+          "payload",
+          "old"
+        ]
+      ],
+      "frozen": true
+    },
+    {
+      "id": "n2",
+      "kind": "object",
+      "properties": [
+        [
+          "key",
+          "a"
+        ],
+        [
+          "version",
+          1
+        ],
+        [
+          "payload",
+          "new"
+        ]
+      ],
+      "frozen": true
+    },
+    {
+      "id": "n3",
+      "kind": "array",
+      "items": [
+        {
+          "$ref": "n4"
+        }
+      ]
+    },
+    {
+      "id": "n4",
+      "kind": "object",
+      "properties": [
+        [
+          "key",
+          "a"
+        ],
+        [
+          "version",
+          1
+        ],
+        [
+          "payload",
+          "new"
+        ]
+      ]
+    },
+    {
+      "id": "n5",
+      "kind": "array",
+      "items": [
+        {
+          "$ref": "n6"
+        },
+        {
+          "$ref": "n7"
+        }
+      ]
+    },
+    {
+      "id": "n6",
+      "kind": "object",
+      "properties": [
+        [
+          "key",
+          "a"
+        ],
+        [
+          "version",
+          2
+        ],
+        [
+          "payload",
+          "x"
+        ]
+      ],
+      "frozen": true
+    },
+    {
+      "id": "n7",
+      "kind": "object",
+      "properties": [
+        [
+          "key",
+          "a"
+        ],
+        [
+          "version",
+          1
+        ],
+        [
+          "payload",
+          "y"
+        ]
+      ],
+      "frozen": true
+    },
+    {
+      "id": "n8",
+      "kind": "array",
+      "items": [
+        {
+          "$ref": "n9"
+        }
+      ]
+    },
+    {
+      "id": "n9",
+      "kind": "object",
+      "properties": [
+        [
+          "key",
+          "a"
+        ],
+        [
+          "version",
+          2
+        ],
+        [
+          "payload",
+          "x"
+        ]
+      ]
+    }
+  ]
+}

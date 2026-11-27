@@ -1,0 +1,10 @@
+diff --git a/src/chunks.mjs b/src/chunks.mjs
+--- a/src/chunks.mjs
++++ b/src/chunks.mjs
+@@ -1,5 +1,5 @@
+ export function splitLong(word, width) {
+   const parts = [];
+-  for (let i = 0; i + width < word.length; i += width) parts.push(word.slice(i, i + width));
++  for (let i = 0; i < word.length; i += width) parts.push(word.slice(i, i + width));
+   return parts;
+ }

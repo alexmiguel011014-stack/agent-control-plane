@@ -1,0 +1,102 @@
+{
+  "schemaVersion": 1,
+  "cases": [
+    {
+      "id": "stable-sorting-returns-copy-without-mutation",
+      "operationId": "call",
+      "args": [
+        {
+          "$ref": "n0"
+        }
+      ],
+      "expected": {
+        "ok": true,
+        "value": {
+          "$ref": "n4"
+        }
+      },
+      "expectedArgsAfter": [
+        {
+          "$ref": "n0"
+        }
+      ],
+      "expectedDistinctFromArgs": [
+        0
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n0",
+      "kind": "array",
+      "items": [
+        {
+          "$ref": "n1"
+        },
+        {
+          "$ref": "n2"
+        },
+        {
+          "$ref": "n3"
+        }
+      ]
+    },
+    {
+      "id": "n1",
+      "kind": "object",
+      "properties": [
+        [
+          "id",
+          "first"
+        ],
+        [
+          "priority",
+          -1
+        ]
+      ]
+    },
+    {
+      "id": "n2",
+      "kind": "object",
+      "properties": [
+        [
+          "id",
+          "second"
+        ],
+        [
+          "priority",
+          0
+        ]
+      ]
+    },
+    {
+      "id": "n3",
+      "kind": "object",
+      "properties": [
+        [
+          "id",
+          "third"
+        ],
+        [
+          "priority",
+          0
+        ]
+      ]
+    },
+    {
+      "id": "n4",
+      "kind": "array",
+      "items": [
+        {
+          "$ref": "n1"
+        },
+        {
+          "$ref": "n2"
+        },
+        {
+          "$ref": "n3"
+        }
+      ]
+    }
+  ]
+}

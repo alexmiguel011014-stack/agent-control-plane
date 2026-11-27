@@ -1,0 +1,304 @@
+{
+  "schemaVersion": 1,
+  "cases": [
+    {
+      "id": "i27-oracle-1",
+      "operationId": "call",
+      "args": [
+        {
+          "$ref": "n0"
+        }
+      ],
+      "expected": {
+        "ok": true,
+        "value": {
+          "$ref": "n3"
+        }
+      },
+      "expectedArgsAfter": [
+        {
+          "$ref": "n6"
+        }
+      ]
+    },
+    {
+      "id": "i27-oracle-2",
+      "operationId": "call",
+      "args": [
+        {
+          "$ref": "n9"
+        }
+      ],
+      "expected": {
+        "ok": true,
+        "value": {
+          "$ref": "n10"
+        }
+      },
+      "expectedArgsAfter": [
+        {
+          "$ref": "n11"
+        }
+      ]
+    },
+    {
+      "id": "i27-oracle-3",
+      "operationId": "call",
+      "args": [
+        {
+          "$ref": "n12"
+        }
+      ],
+      "expected": {
+        "ok": true,
+        "value": {
+          "$ref": "n14"
+        }
+      },
+      "expectedArgsAfter": [
+        {
+          "$ref": "n16"
+        }
+      ]
+    },
+    {
+      "id": "i27-oracle-4",
+      "operationId": "call",
+      "args": [
+        "just text"
+      ],
+      "expected": {
+        "ok": true,
+        "value": "just text"
+      },
+      "expectedArgsAfter": [
+        "just text"
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n0",
+      "kind": "object",
+      "properties": [
+        [
+          "list",
+          {
+            "$ref": "n1"
+          }
+        ]
+      ],
+      "frozen": true
+    },
+    {
+      "id": "n1",
+      "kind": "array",
+      "items": [
+        {
+          "$ref": "n2"
+        }
+      ]
+    },
+    {
+      "id": "n2",
+      "kind": "object",
+      "properties": [
+        [
+          "apiToken",
+          "t"
+        ],
+        [
+          "name",
+          "n"
+        ]
+      ],
+      "frozen": true
+    },
+    {
+      "id": "n3",
+      "kind": "object",
+      "properties": [
+        [
+          "list",
+          {
+            "$ref": "n4"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "n4",
+      "kind": "array",
+      "items": [
+        {
+          "$ref": "n5"
+        }
+      ]
+    },
+    {
+      "id": "n5",
+      "kind": "object",
+      "properties": [
+        [
+          "apiToken",
+          "***"
+        ],
+        [
+          "name",
+          "n"
+        ]
+      ]
+    },
+    {
+      "id": "n6",
+      "kind": "object",
+      "properties": [
+        [
+          "list",
+          {
+            "$ref": "n7"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "n7",
+      "kind": "array",
+      "items": [
+        {
+          "$ref": "n8"
+        }
+      ]
+    },
+    {
+      "id": "n8",
+      "kind": "object",
+      "properties": [
+        [
+          "apiToken",
+          "t"
+        ],
+        [
+          "name",
+          "n"
+        ]
+      ]
+    },
+    {
+      "id": "n9",
+      "kind": "object",
+      "properties": [
+        [
+          "plain",
+          "ok"
+        ],
+        [
+          "n",
+          1
+        ],
+        [
+          "nothing",
+          null
+        ]
+      ],
+      "frozen": true
+    },
+    {
+      "id": "n10",
+      "kind": "object",
+      "properties": [
+        [
+          "plain",
+          "ok"
+        ],
+        [
+          "n",
+          1
+        ],
+        [
+          "nothing",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "n11",
+      "kind": "object",
+      "properties": [
+        [
+          "plain",
+          "ok"
+        ],
+        [
+          "n",
+          1
+        ],
+        [
+          "nothing",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "n12",
+      "kind": "array",
+      "items": [
+        {
+          "$ref": "n13"
+        },
+        "text"
+      ]
+    },
+    {
+      "id": "n13",
+      "kind": "object",
+      "properties": [
+        [
+          "SECRET_KEY",
+          1
+        ]
+      ],
+      "frozen": true
+    },
+    {
+      "id": "n14",
+      "kind": "array",
+      "items": [
+        {
+          "$ref": "n15"
+        },
+        "text"
+      ]
+    },
+    {
+      "id": "n15",
+      "kind": "object",
+      "properties": [
+        [
+          "SECRET_KEY",
+          "***"
+        ]
+      ]
+    },
+    {
+      "id": "n16",
+      "kind": "array",
+      "items": [
+        {
+          "$ref": "n17"
+        },
+        "text"
+      ]
+    },
+    {
+      "id": "n17",
+      "kind": "object",
+      "properties": [
+        [
+          "SECRET_KEY",
+          1
+        ]
+      ]
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "files": [
+    {
+      "path": "src/chunks.mjs",
+      "sizeBytes": 172,
+      "sha256": "5f5690a0d5cf70a32862b824f0efee886bc9bd901b628b6429d7edc2954c4cb0"
+    },
+    {
+      "path": "src/wrap.mjs",
+      "sizeBytes": 540,
+      "sha256": "ff06cce0589c7f2bf1ca8d3bd12e91e5faef4b9025f2a1b0170f9900269c0c12"
+    }
+  ]
+}

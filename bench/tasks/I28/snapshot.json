@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "files": [
+    {
+      "path": "src/duration-text.mjs",
+      "sizeBytes": 426,
+      "sha256": "7b55eaa97a6d355fe61c08b49ae7bffaf57e40af41154c174670dd5d79cc8038"
+    },
+    {
+      "path": "src/pad.mjs",
+      "sizeBytes": 65,
+      "sha256": "79fac67ccfd0ae328dadf401a05c359702631d23b0afa1772e947db0bb4d92e6"
+    }
+  ]
+}

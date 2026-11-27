@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "cases": [
+    {
+      "id": "i03-public-quotes-commas-and-quotes",
+      "operationId": "call",
+      "args": [
+        {
+          "$ref": "n0"
+        }
+      ],
+      "expected": {
+        "ok": true,
+        "value": "plain,\"north,\"\"west\"\"\""
+      }
+    },
+    {
+      "id": "i03-public-quotes-line-breaks",
+      "operationId": "call",
+      "args": [
+        {
+          "$ref": "n1"
+        }
+      ],
+      "expected": {
+        "ok": true,
+        "value": "\"first\nsecond\""
+      }
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n0",
+      "kind": "array",
+      "items": [
+        "plain",
+        "north,\"west\""
+      ]
+    },
+    {
+      "id": "n1",
+      "kind": "array",
+      "items": [
+        "first\nsecond"
+      ]
+    }
+  ]
+}

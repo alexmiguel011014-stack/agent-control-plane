@@ -1,0 +1,10 @@
+{
+  "schemaVersion": 1,
+  "files": [
+    {
+      "path": "src/priority.mjs",
+      "sizeBytes": 159,
+      "sha256": "791cdc304e7bda87f232ad9f31415b08b8bd3fa38c10b9c508e5f284975cd87a"
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+diff --git a/src/limit.mjs b/src/limit.mjs
+--- a/src/limit.mjs
++++ b/src/limit.mjs
+@@ -1,3 +1,3 @@
+ export function getLimit(config, fallback = 10) {
+-  return config.limit || fallback;
++  return config.limit ?? fallback;
+ }

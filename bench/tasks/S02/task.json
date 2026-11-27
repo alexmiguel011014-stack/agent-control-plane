@@ -1,0 +1,20 @@
+{
+  "task_id": "S02",
+  "prompt": "Redact values in structured event data when a field name ends in secret, token, password, authorization, or apiKey, ignoring letter case and underscores or hyphens. Apply this recursively to nested objects and arrays, preserve other values, and do not mutate the input.",
+  "base_snapshot_sha256": "92c6f5d4a0caf8b527da78c667c33147f1796bbe9c0f37f17d94e2ac14b8aa27",
+  "allowed_globs": [
+    "src/**/*.mjs"
+  ],
+  "allowed_operations": [
+    "read_text",
+    "list_files",
+    "apply_unified_diff",
+    "run_declared_test",
+    "git_diff"
+  ],
+  "public_test_command_id": "s02-public-tests",
+  "timeout_ms": 600000,
+  "max_changed_files": 1,
+  "oracle_version": "oracle-v1",
+  "risk_class": "process"
+}

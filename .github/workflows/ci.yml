@@ -1,0 +1,22 @@
+name: ci
+on:
+  push:
+  pull_request:
+jobs:
+  verify:
+    # The isolation and evaluator contract tests exercise Windows behavior, so CI runs on Windows.
+    # It runs on the owner's self-hosted Windows runner (private repository only) because the
+    # GitHub-hosted runner was blocked by an account billing limit on 2026-11-19. To go back,
+    # set this to `windows-latest`.
+    runs-on: [self-hosted, Windows]
+    steps:
+      - uses: actions/checkout@v4
+      # No actions/setup-node here on purpose. The AppContainer probe script trusts only
+      # C:\Program Files\nodejs\node.exe and disables the PATH lookup, so a tool-cache Node
+      # makes bench/isolation/worker-bridge.test.mjs fail with "Host-test Node path does not
+      # match the trusted installation". The runner machine needs Node 24 in that folder.
+      - run: node --version
+      - run: npm ci
+      # Same command as local development: typecheck, lint, unit tests, benchmark-contract suites.
+      # No model, Ollama runtime, network model download or attestation file is needed.
+      - run: npm run ci

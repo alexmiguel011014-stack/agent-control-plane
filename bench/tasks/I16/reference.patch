@@ -1,0 +1,11 @@
+diff --git a/src/status-label.mjs b/src/status-label.mjs
+--- a/src/status-label.mjs
++++ b/src/status-label.mjs
+@@ -1,5 +1,6 @@
+ import { STATUS_LABELS } from './status-table.mjs';
+ 
+ export function statusLabel(code) {
+-  return STATUS_LABELS[code] || 'Unknown (' + code + ')';
++  const key = typeof code === 'string' ? code.trim().toLowerCase() : '';
++  return Object.hasOwn(STATUS_LABELS, key) ? STATUS_LABELS[key] : 'Unknown (' + code + ')';
+ }

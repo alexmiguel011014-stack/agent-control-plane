@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "files": [
+    {
+      "path": "src/interval.mjs",
+      "sizeBytes": 80,
+      "sha256": "dff346b1858810d489134d67a7f3666f6422d7d8802e346170714cb32b1428fe"
+    },
+    {
+      "path": "src/merge-intervals.mjs",
+      "sizeBytes": 430,
+      "sha256": "80cbfe3ed5bd7eb04d10b44fb8ac79e33af8d2155cf6633c06df880e56b72d2d"
+    }
+  ]
+}

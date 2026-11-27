@@ -1,0 +1,20 @@
+{
+  "task_id": "I30",
+  "prompt": "Fix matchRoute(pattern, path). Segments are separated by /, and repeated or trailing slashes are ignored. A :name segment captures the matching path segment (percent-decoded) into the result; a * segment must be last and captures the remaining segments joined with / as rest (possibly empty); every other segment must match exactly. Return the params object, or null when the path does not match.",
+  "base_snapshot_sha256": "d7ac8a84385a3b4c0ec1a19b5ccfd9e87390c53651b96ace8aefae7f0b4bf8cd",
+  "allowed_globs": [
+    "src/**/*.mjs"
+  ],
+  "allowed_operations": [
+    "read_text",
+    "list_files",
+    "apply_unified_diff",
+    "run_declared_test",
+    "git_diff"
+  ],
+  "public_test_command_id": "i30-public-tests",
+  "timeout_ms": 600000,
+  "max_changed_files": 1,
+  "oracle_version": "oracle-v1",
+  "risk_class": "process"
+}

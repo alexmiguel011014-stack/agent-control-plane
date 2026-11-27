@@ -1,0 +1,20 @@
+{
+  "task_id": "I09",
+  "prompt": "Fix pageWindow(current, total, radius). Clamp the current page into 1..total, then return the consecutive page numbers from current - radius to current + radius, limited to 1..total.",
+  "base_snapshot_sha256": "05f1db1a86eca0ebf1c924884a9bda9c499568fb840b0343443df8dc5deb8b5e",
+  "allowed_globs": [
+    "src/**/*.mjs"
+  ],
+  "allowed_operations": [
+    "read_text",
+    "list_files",
+    "apply_unified_diff",
+    "run_declared_test",
+    "git_diff"
+  ],
+  "public_test_command_id": "i09-public-tests",
+  "timeout_ms": 600000,
+  "max_changed_files": 1,
+  "oracle_version": "oracle-v1",
+  "risk_class": "process"
+}

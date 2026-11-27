@@ -1,0 +1,372 @@
+{
+  "schemaVersion": 1,
+  "cases": [
+    {
+      "id": "i25-oracle-1",
+      "operationId": "call",
+      "args": [
+        {
+          "$ref": "n0"
+        }
+      ],
+      "expected": {
+        "ok": true,
+        "value": {
+          "$ref": "n4"
+        }
+      }
+    },
+    {
+      "id": "i25-oracle-2",
+      "operationId": "call",
+      "args": [
+        {
+          "$ref": "n7"
+        }
+      ],
+      "expected": {
+        "ok": true,
+        "value": {
+          "$ref": "n8"
+        }
+      }
+    },
+    {
+      "id": "i25-oracle-3",
+      "operationId": "call",
+      "args": [
+        {
+          "$ref": "n9"
+        }
+      ],
+      "expected": {
+        "ok": true,
+        "value": {
+          "$ref": "n11"
+        }
+      }
+    },
+    {
+      "id": "i25-oracle-4",
+      "operationId": "call",
+      "args": [
+        {
+          "$ref": "n13"
+        }
+      ],
+      "expected": {
+        "ok": true,
+        "value": {
+          "$ref": "n17"
+        }
+      }
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n0",
+      "kind": "array",
+      "items": [
+        {
+          "$ref": "n1"
+        },
+        {
+          "$ref": "n2"
+        },
+        {
+          "$ref": "n3"
+        }
+      ]
+    },
+    {
+      "id": "n1",
+      "kind": "object",
+      "properties": [
+        [
+          "key",
+          "b"
+        ],
+        [
+          "version",
+          1
+        ],
+        [
+          "payload",
+          1
+        ]
+      ],
+      "frozen": true
+    },
+    {
+      "id": "n2",
+      "kind": "object",
+      "properties": [
+        [
+          "key",
+          "a"
+        ],
+        [
+          "version",
+          1
+        ],
+        [
+          "payload",
+          2
+        ]
+      ],
+      "frozen": true
+    },
+    {
+      "id": "n3",
+      "kind": "object",
+      "properties": [
+        [
+          "key",
+          "b"
+        ],
+        [
+          "version",
+          3
+        ],
+        [
+          "payload",
+          3
+        ]
+      ],
+      "frozen": true
+    },
+    {
+      "id": "n4",
+      "kind": "array",
+      "items": [
+        {
+          "$ref": "n5"
+        },
+        {
+          "$ref": "n6"
+        }
+      ]
+    },
+    {
+      "id": "n5",
+      "kind": "object",
+      "properties": [
+        [
+          "key",
+          "b"
+        ],
+        [
+          "version",
+          3
+        ],
+        [
+          "payload",
+          3
+        ]
+      ]
+    },
+    {
+      "id": "n6",
+      "kind": "object",
+      "properties": [
+        [
+          "key",
+          "a"
+        ],
+        [
+          "version",
+          1
+        ],
+        [
+          "payload",
+          2
+        ]
+      ]
+    },
+    {
+      "id": "n7",
+      "kind": "array",
+      "items": []
+    },
+    {
+      "id": "n8",
+      "kind": "array",
+      "items": []
+    },
+    {
+      "id": "n9",
+      "kind": "array",
+      "items": [
+        {
+          "$ref": "n10"
+        }
+      ]
+    },
+    {
+      "id": "n10",
+      "kind": "object",
+      "properties": [
+        [
+          "key",
+          "k"
+        ],
+        [
+          "version",
+          0
+        ],
+        [
+          "payload",
+          null
+        ]
+      ],
+      "frozen": true
+    },
+    {
+      "id": "n11",
+      "kind": "array",
+      "items": [
+        {
+          "$ref": "n12"
+        }
+      ]
+    },
+    {
+      "id": "n12",
+      "kind": "object",
+      "properties": [
+        [
+          "key",
+          "k"
+        ],
+        [
+          "version",
+          0
+        ],
+        [
+          "payload",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "n13",
+      "kind": "array",
+      "items": [
+        {
+          "$ref": "n14"
+        },
+        {
+          "$ref": "n15"
+        },
+        {
+          "$ref": "n16"
+        }
+      ]
+    },
+    {
+      "id": "n14",
+      "kind": "object",
+      "properties": [
+        [
+          "key",
+          "a"
+        ],
+        [
+          "version",
+          5
+        ],
+        [
+          "payload",
+          "p"
+        ]
+      ],
+      "frozen": true
+    },
+    {
+      "id": "n15",
+      "kind": "object",
+      "properties": [
+        [
+          "key",
+          "b"
+        ],
+        [
+          "version",
+          5
+        ],
+        [
+          "payload",
+          "q"
+        ]
+      ],
+      "frozen": true
+    },
+    {
+      "id": "n16",
+      "kind": "object",
+      "properties": [
+        [
+          "key",
+          "a"
+        ],
+        [
+          "version",
+          5
+        ],
+        [
+          "payload",
+          "r"
+        ]
+      ],
+      "frozen": true
+    },
+    {
+      "id": "n17",
+      "kind": "array",
+      "items": [
+        {
+          "$ref": "n18"
+        },
+        {
+          "$ref": "n19"
+        }
+      ]
+    },
+    {
+      "id": "n18",
+      "kind": "object",
+      "properties": [
+        [
+          "key",
+          "a"
+        ],
+        [
+          "version",
+          5
+        ],
+        [
+          "payload",
+          "r"
+        ]
+      ]
+    },
+    {
+      "id": "n19",
+      "kind": "object",
+      "properties": [
+        [
+          "key",
+          "b"
+        ],
+        [
+          "version",
+          5
+        ],
+        [
+          "payload",
+          "q"
+        ]
+      ]
+    }
+  ]
+}

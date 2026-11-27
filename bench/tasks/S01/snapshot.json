@@ -1,0 +1,10 @@
+{
+  "schemaVersion": 1,
+  "files": [
+    {
+      "path": "src/path-policy.mjs",
+      "sizeBytes": 245,
+      "sha256": "e85143821c92e06b1d9db394e03a0f22dd624d8018fa680dc8484ea8038d2d4d"
+    }
+  ]
+}

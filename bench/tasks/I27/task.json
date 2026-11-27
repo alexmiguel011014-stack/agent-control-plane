@@ -1,0 +1,20 @@
+{
+  "task_id": "I27",
+  "prompt": "Fix redactConfig(value). Return a deep copy in which the value of every object key containing password, token or secret in any letter case is replaced by the text ***, also inside nested objects and arrays. Other values are kept as they are and the input is not changed.",
+  "base_snapshot_sha256": "ef90e7168d6963d01d9dcd0734860e4d8bf672dece878bca44b4807bb535d5bf",
+  "allowed_globs": [
+    "src/**/*.mjs"
+  ],
+  "allowed_operations": [
+    "read_text",
+    "list_files",
+    "apply_unified_diff",
+    "run_declared_test",
+    "git_diff"
+  ],
+  "public_test_command_id": "i27-public-tests",
+  "timeout_ms": 600000,
+  "max_changed_files": 1,
+  "oracle_version": "oracle-v1",
+  "risk_class": "process"
+}

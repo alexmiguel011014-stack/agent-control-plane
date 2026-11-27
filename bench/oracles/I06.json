@@ -1,0 +1,85 @@
+{
+  "schemaVersion": 1,
+  "cases": [
+    {
+      "id": "i06-oracle-circular-error-envelope",
+      "operationId": "call",
+      "args": [
+        {
+          "$ref": "n0"
+        }
+      ],
+      "expected": {
+        "ok": true,
+        "value": "{\"schemaVersion\":1,\"error\":{\"code\":\"INVALID_RESULT\",\"message\":\"Result is not JSON serializable\"}}"
+      }
+    },
+    {
+      "id": "i06-oracle-bigint-error-envelope",
+      "operationId": "call",
+      "args": [
+        {
+          "$value": "bigint",
+          "text": "1"
+        }
+      ],
+      "expected": {
+        "ok": true,
+        "value": "{\"schemaVersion\":1,\"error\":{\"code\":\"INVALID_RESULT\",\"message\":\"Result is not JSON serializable\"}}"
+      }
+    },
+    {
+      "id": "i06-oracle-function-error-envelope",
+      "operationId": "call",
+      "args": [
+        {
+          "$ref": "n1"
+        }
+      ],
+      "expected": {
+        "ok": true,
+        "value": "{\"schemaVersion\":1,\"error\":{\"code\":\"INVALID_RESULT\",\"message\":\"Result is not JSON serializable\"}}"
+      }
+    },
+    {
+      "id": "i06-oracle-json-success-output",
+      "operationId": "call",
+      "args": [
+        {
+          "$ref": "n2"
+        }
+      ],
+      "expected": {
+        "ok": true,
+        "value": "{\"schemaVersion\":1,\"result\":[\"a\",2,null]}"
+      }
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n0",
+      "kind": "object",
+      "properties": [
+        [
+          "self",
+          {
+            "$ref": "n0"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "n1",
+      "kind": "noop-function"
+    },
+    {
+      "id": "n2",
+      "kind": "array",
+      "items": [
+        "a",
+        2,
+        null
+      ]
+    }
+  ]
+}

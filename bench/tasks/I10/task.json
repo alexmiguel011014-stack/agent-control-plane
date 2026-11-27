@@ -1,0 +1,20 @@
+{
+  "task_id": "I10",
+  "prompt": "Fix satisfies(version, range) for dotted numeric versions such as 1.10.0 and a single comparator range such as >=1.2, <2.0.0, > 1.9 or 1.4.2 (exact match). Compare each part as a number and treat missing parts as 0. Return false when the range is not one comparator followed by a version.",
+  "base_snapshot_sha256": "a2e5d43975152b86fc6f7001c6a917d0236367cdf6ec3f89b7a4daec3c7d7a79",
+  "allowed_globs": [
+    "src/**/*.mjs"
+  ],
+  "allowed_operations": [
+    "read_text",
+    "list_files",
+    "apply_unified_diff",
+    "run_declared_test",
+    "git_diff"
+  ],
+  "public_test_command_id": "i10-public-tests",
+  "timeout_ms": 600000,
+  "max_changed_files": 1,
+  "oracle_version": "oracle-v1",
+  "risk_class": "process"
+}

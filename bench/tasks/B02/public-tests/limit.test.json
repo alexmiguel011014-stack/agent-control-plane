@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "cases": [
+    {
+      "id": "zero-is-explicit-limit",
+      "operationId": "call",
+      "args": [
+        {
+          "$ref": "n0"
+        },
+        10
+      ],
+      "expected": {
+        "ok": true,
+        "value": 0
+      }
+    },
+    {
+      "id": "uses-fallback-when-absent",
+      "operationId": "call",
+      "args": [
+        {
+          "$ref": "n1"
+        },
+        10
+      ],
+      "expected": {
+        "ok": true,
+        "value": 10
+      }
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n0",
+      "kind": "object",
+      "properties": [
+        [
+          "limit",
+          0
+        ]
+      ]
+    },
+    {
+      "id": "n1",
+      "kind": "object",
+      "properties": []
+    }
+  ]
+}

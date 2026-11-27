@@ -1,0 +1,20 @@
+{
+  "task_id": "I19",
+  "prompt": "Fix chunkByBudget(items, budget). Group the items in their original order into chunks whose total size (item.size; a missing or negative size counts as 0) does not exceed budget, so a chunk may exactly reach the budget. An item larger than the budget sits alone in its own chunk. Return an array of arrays.",
+  "base_snapshot_sha256": "247831585d0feb083edff63b5e72e90c609b2865350b8902e728ea5099223784",
+  "allowed_globs": [
+    "src/**/*.mjs"
+  ],
+  "allowed_operations": [
+    "read_text",
+    "list_files",
+    "apply_unified_diff",
+    "run_declared_test",
+    "git_diff"
+  ],
+  "public_test_command_id": "i19-public-tests",
+  "timeout_ms": 600000,
+  "max_changed_files": 1,
+  "oracle_version": "oracle-v1",
+  "risk_class": "process"
+}

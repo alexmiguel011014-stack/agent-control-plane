@@ -1,0 +1,184 @@
+{
+  "schemaVersion": 1,
+  "cases": [
+    {
+      "id": "i22-public-1",
+      "operationId": "call",
+      "args": [
+        {
+          "$ref": "n0"
+        }
+      ],
+      "expected": {
+        "ok": true,
+        "value": {
+          "$ref": "n3"
+        }
+      }
+    },
+    {
+      "id": "i22-public-2",
+      "operationId": "call",
+      "args": [
+        {
+          "$ref": "n5"
+        }
+      ],
+      "expected": {
+        "ok": true,
+        "value": {
+          "$ref": "n8"
+        }
+      }
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n0",
+      "kind": "array",
+      "items": [
+        {
+          "$ref": "n1"
+        },
+        {
+          "$ref": "n2"
+        }
+      ]
+    },
+    {
+      "id": "n1",
+      "kind": "object",
+      "properties": [
+        [
+          "at",
+          "2026-03-04T23:10:00Z"
+        ],
+        [
+          "value",
+          2
+        ]
+      ],
+      "frozen": true
+    },
+    {
+      "id": "n2",
+      "kind": "object",
+      "properties": [
+        [
+          "at",
+          "2026-03-04T01:00:00Z"
+        ],
+        [
+          "value",
+          3
+        ]
+      ],
+      "frozen": true
+    },
+    {
+      "id": "n3",
+      "kind": "array",
+      "items": [
+        {
+          "$ref": "n4"
+        }
+      ]
+    },
+    {
+      "id": "n4",
+      "kind": "object",
+      "properties": [
+        [
+          "day",
+          "2026-03-04"
+        ],
+        [
+          "total",
+          5
+        ]
+      ]
+    },
+    {
+      "id": "n5",
+      "kind": "array",
+      "items": [
+        {
+          "$ref": "n6"
+        },
+        {
+          "$ref": "n7"
+        }
+      ]
+    },
+    {
+      "id": "n6",
+      "kind": "object",
+      "properties": [
+        [
+          "at",
+          "2026-03-05T00:00:00Z"
+        ],
+        [
+          "value",
+          1
+        ]
+      ],
+      "frozen": true
+    },
+    {
+      "id": "n7",
+      "kind": "object",
+      "properties": [
+        [
+          "at",
+          "2026-03-04T12:00:00Z"
+        ],
+        [
+          "value",
+          4
+        ]
+      ],
+      "frozen": true
+    },
+    {
+      "id": "n8",
+      "kind": "array",
+      "items": [
+        {
+          "$ref": "n9"
+        },
+        {
+          "$ref": "n10"
+        }
+      ]
+    },
+    {
+      "id": "n9",
+      "kind": "object",
+      "properties": [
+        [
+          "day",
+          "2026-03-04"
+        ],
+        [
+          "total",
+          4
+        ]
+      ]
+    },
+    {
+      "id": "n10",
+      "kind": "object",
+      "properties": [
+        [
+          "day",
+          "2026-03-05"
+        ],
+        [
+          "total",
+          1
+        ]
+      ]
+    }
+  ]
+}

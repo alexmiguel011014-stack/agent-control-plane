@@ -1,0 +1,20 @@
+{
+  "task_id": "I18",
+  "prompt": "Fix parseKeyValueLines(text). Each line is key = value. Ignore blank lines and lines starting with #. Split at the first = only, so a value may contain further = signs. Trim key and value, skip lines whose key is empty, let a later duplicate key win, and give a line without = an empty value.",
+  "base_snapshot_sha256": "cb37068ee277a0e9c3602f3510c98c4d2657fc676a70bb14bbf9eb83858a26e0",
+  "allowed_globs": [
+    "src/**/*.mjs"
+  ],
+  "allowed_operations": [
+    "read_text",
+    "list_files",
+    "apply_unified_diff",
+    "run_declared_test",
+    "git_diff"
+  ],
+  "public_test_command_id": "i18-public-tests",
+  "timeout_ms": 600000,
+  "max_changed_files": 1,
+  "oracle_version": "oracle-v1",
+  "risk_class": "process"
+}

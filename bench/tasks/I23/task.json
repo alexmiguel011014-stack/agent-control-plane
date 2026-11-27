@@ -1,0 +1,20 @@
+{
+  "task_id": "I23",
+  "prompt": "Fix canAccess(user, resource, action). A user has a roles array. A disabled user (disabled: true) or a missing user is always denied. The admin role may do anything. The viewer and editor roles may read. An editor may write only when user.orgId equals resource.orgId. Every other action is denied. Return true or false.",
+  "base_snapshot_sha256": "0de339052330aa147729715ffcabefef89b79b91b360bfde97adc2e9bec2afdd",
+  "allowed_globs": [
+    "src/**/*.mjs"
+  ],
+  "allowed_operations": [
+    "read_text",
+    "list_files",
+    "apply_unified_diff",
+    "run_declared_test",
+    "git_diff"
+  ],
+  "public_test_command_id": "i23-public-tests",
+  "timeout_ms": 600000,
+  "max_changed_files": 1,
+  "oracle_version": "oracle-v1",
+  "risk_class": "process"
+}

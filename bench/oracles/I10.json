@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 1,
+  "cases": [
+    {
+      "id": "i10-oracle-1",
+      "operationId": "call",
+      "args": [
+        "2.0.0",
+        "<1.10"
+      ],
+      "expected": {
+        "ok": true,
+        "value": false
+      }
+    },
+    {
+      "id": "i10-oracle-2",
+      "operationId": "call",
+      "args": [
+        "1.9.9",
+        "< 1.10"
+      ],
+      "expected": {
+        "ok": true,
+        "value": true
+      }
+    },
+    {
+      "id": "i10-oracle-3",
+      "operationId": "call",
+      "args": [
+        "1.0",
+        "bad"
+      ],
+      "expected": {
+        "ok": true,
+        "value": false
+      }
+    },
+    {
+      "id": "i10-oracle-4",
+      "operationId": "call",
+      "args": [
+        "0.9",
+        ">=1.0.0"
+      ],
+      "expected": {
+        "ok": true,
+        "value": false
+      }
+    }
+  ],
+  "nodes": []
+}

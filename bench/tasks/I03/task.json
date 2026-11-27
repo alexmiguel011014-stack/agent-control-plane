@@ -1,0 +1,20 @@
+{
+  "task_id": "I03",
+  "prompt": "Serialize CSV rows correctly. Quote a cell when it contains a comma, double quote, CR, or LF; double every embedded double quote. Convert null and undefined cells to empty strings.",
+  "base_snapshot_sha256": "ebf37681600c954f2c923b8eddc69975aaefda20e7fa0f4bcfd665334ec66cc1",
+  "allowed_globs": [
+    "src/**/*.mjs"
+  ],
+  "allowed_operations": [
+    "read_text",
+    "list_files",
+    "apply_unified_diff",
+    "run_declared_test",
+    "git_diff"
+  ],
+  "public_test_command_id": "i03-public-tests",
+  "timeout_ms": 600000,
+  "max_changed_files": 1,
+  "oracle_version": "oracle-v1",
+  "risk_class": "process"
+}

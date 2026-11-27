@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "files": [
+    {
+      "path": "src/round.mjs",
+      "sizeBytes": 74,
+      "sha256": "d7050cf4a32b627b6268f87d20c4d055289a075b1f26dcf6e6a75a06f76cf46c"
+    },
+    {
+      "path": "src/weighted.mjs",
+      "sizeBytes": 346,
+      "sha256": "a5c8a1f27e39b2f7167c9ed0ec57ec9dc4e5aabe26241421516d6c018eebdb2b"
+    }
+  ]
+}

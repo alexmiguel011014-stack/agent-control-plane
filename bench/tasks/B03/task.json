@@ -1,0 +1,20 @@
+{
+  "task_id": "B03",
+  "prompt": "Fix ratio(numerator, denominator) so a zero denominator returns null. For nonzero denominators, return the numeric quotient. Do not add dependencies.",
+  "base_snapshot_sha256": "fc1a805e7cff3e126068fb74addd08936e0255a489caad770996e2f2eb796a60",
+  "allowed_globs": [
+    "src/**/*.mjs"
+  ],
+  "allowed_operations": [
+    "read_text",
+    "list_files",
+    "apply_unified_diff",
+    "run_declared_test",
+    "git_diff"
+  ],
+  "public_test_command_id": "b03-public-tests",
+  "timeout_ms": 600000,
+  "max_changed_files": 1,
+  "oracle_version": "oracle-v1",
+  "risk_class": "write"
+}

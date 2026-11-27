@@ -1,0 +1,164 @@
+{
+  "schemaVersion": 1,
+  "cases": [
+    {
+      "id": "sort-priority-and-preserve-tie-order",
+      "operationId": "call",
+      "args": [
+        {
+          "$ref": "n0"
+        }
+      ],
+      "expected": {
+        "ok": true,
+        "value": {
+          "$ref": "n4"
+        },
+        "valueProjection": {
+          "kind": "map-property",
+          "property": "id"
+        }
+      }
+    },
+    {
+      "id": "returns-copy-without-mutating-input",
+      "operationId": "call",
+      "args": [
+        {
+          "$ref": "n5"
+        }
+      ],
+      "expected": {
+        "ok": true
+      },
+      "expectedArgsAfter": [
+        {
+          "$ref": "n5"
+        }
+      ],
+      "expectedDistinctFromArgs": [
+        0
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n0",
+      "kind": "array",
+      "items": [
+        {
+          "$ref": "n1"
+        },
+        {
+          "$ref": "n2"
+        },
+        {
+          "$ref": "n3"
+        }
+      ]
+    },
+    {
+      "id": "n1",
+      "kind": "object",
+      "properties": [
+        [
+          "id",
+          "b"
+        ],
+        [
+          "name",
+          "Zulu"
+        ],
+        [
+          "priority",
+          1
+        ]
+      ]
+    },
+    {
+      "id": "n2",
+      "kind": "object",
+      "properties": [
+        [
+          "id",
+          "a"
+        ],
+        [
+          "name",
+          "Alpha"
+        ],
+        [
+          "priority",
+          1
+        ]
+      ]
+    },
+    {
+      "id": "n3",
+      "kind": "object",
+      "properties": [
+        [
+          "id",
+          "c"
+        ],
+        [
+          "name",
+          "Middle"
+        ],
+        [
+          "priority",
+          0
+        ]
+      ]
+    },
+    {
+      "id": "n4",
+      "kind": "array",
+      "items": [
+        "c",
+        "b",
+        "a"
+      ]
+    },
+    {
+      "id": "n5",
+      "kind": "array",
+      "items": [
+        {
+          "$ref": "n6"
+        },
+        {
+          "$ref": "n7"
+        }
+      ]
+    },
+    {
+      "id": "n6",
+      "kind": "object",
+      "properties": [
+        [
+          "id",
+          "b"
+        ],
+        [
+          "priority",
+          2
+        ]
+      ]
+    },
+    {
+      "id": "n7",
+      "kind": "object",
+      "properties": [
+        [
+          "id",
+          "a"
+        ],
+        [
+          "priority",
+          1
+        ]
+      ]
+    }
+  ]
+}

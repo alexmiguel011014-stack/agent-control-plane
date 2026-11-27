@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "files": [
+    {
+      "path": "src/tags.mjs",
+      "sizeBytes": 354,
+      "sha256": "1b4ee5d87d05605b94f80868a5115b6646524796a0a08dc1cc756cec818eb01c"
+    },
+    {
+      "path": "src/text-utils.mjs",
+      "sizeBytes": 72,
+      "sha256": "ebca962b2e6b47658f31906a69efde5c14ddc016e80f571203bf3a88de3f6cf7"
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 1,
+  "cases": [
+    {
+      "id": "i15-public-1",
+      "operationId": "call",
+      "args": [
+        {
+          "$ref": "n0"
+        }
+      ],
+      "expected": {
+        "ok": true,
+        "value": "a%20b=x%26y&c=1&c=2"
+      }
+    },
+    {
+      "id": "i15-public-2",
+      "operationId": "call",
+      "args": [
+        {
+          "$ref": "n2"
+        }
+      ],
+      "expected": {
+        "ok": true,
+        "value": "q=caf%C3%A9"
+      }
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n0",
+      "kind": "object",
+      "properties": [
+        [
+          "a b",
+          "x&y"
+        ],
+        [
+          "c",
+          {
+            "$ref": "n1"
+          }
+        ]
+      ],
+      "frozen": true
+    },
+    {
+      "id": "n1",
+      "kind": "array",
+      "items": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": "n2",
+      "kind": "object",
+      "properties": [
+        [
+          "q",
+          "café"
+        ]
+      ],
+      "frozen": true
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+diff --git a/src/duration.mjs b/src/duration.mjs
+--- a/src/duration.mjs
++++ b/src/duration.mjs
+@@ -1,4 +1,6 @@
+ export function durationToMinutes(value) {
+-  const [hours, minutes] = value.split(':').map(Number);
+-  return hours * 60 + minutes;
++  const match = /^(\d{2}):([0-5]\d)$/.exec(value);
++  if (!match) return null;
++
++  return Number(match[1]) * 60 + Number(match[2]);
+ }

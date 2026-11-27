@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "cases": [
+    {
+      "id": "i08-public-1",
+      "operationId": "call",
+      "args": [
+        "Red, blue ,RED"
+      ],
+      "expected": {
+        "ok": true,
+        "value": {
+          "$ref": "n0"
+        }
+      }
+    },
+    {
+      "id": "i08-public-2",
+      "operationId": "call",
+      "args": [
+        " a ,b"
+      ],
+      "expected": {
+        "ok": true,
+        "value": {
+          "$ref": "n1"
+        }
+      }
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n0",
+      "kind": "array",
+      "items": [
+        "red",
+        "blue"
+      ]
+    },
+    {
+      "id": "n1",
+      "kind": "array",
+      "items": [
+        "a",
+        "b"
+      ]
+    }
+  ]
+}

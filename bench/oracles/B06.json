@@ -1,0 +1,108 @@
+{
+  "schemaVersion": 1,
+  "cases": [
+    {
+      "id": "merges-override-without-mutating-frozen-inputs",
+      "operationId": "call",
+      "args": [
+        {
+          "$ref": "n0"
+        },
+        {
+          "$ref": "n2"
+        }
+      ],
+      "expected": {
+        "ok": true,
+        "value": {
+          "$ref": "n3"
+        }
+      },
+      "expectedArgsAfterProjections": [
+        {
+          "index": 0,
+          "path": [
+            "count"
+          ],
+          "value": 4
+        },
+        {
+          "index": 1,
+          "path": [
+            "count"
+          ],
+          "value": 0
+        }
+      ],
+      "expectedDistinctFromArgs": [
+        0
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n0",
+      "kind": "object",
+      "frozen": true,
+      "properties": [
+        [
+          "nested",
+          {
+            "$ref": "n1"
+          }
+        ],
+        [
+          "count",
+          4
+        ]
+      ]
+    },
+    {
+      "id": "n1",
+      "kind": "object",
+      "properties": [
+        [
+          "enabled",
+          true
+        ]
+      ]
+    },
+    {
+      "id": "n2",
+      "kind": "object",
+      "frozen": true,
+      "properties": [
+        [
+          "count",
+          0
+        ]
+      ]
+    },
+    {
+      "id": "n3",
+      "kind": "object",
+      "properties": [
+        [
+          "nested",
+          {
+            "$ref": "n4"
+          }
+        ],
+        [
+          "count",
+          0
+        ]
+      ]
+    },
+    {
+      "id": "n4",
+      "kind": "object",
+      "properties": [
+        [
+          "enabled",
+          true
+        ]
+      ]
+    }
+  ]
+}

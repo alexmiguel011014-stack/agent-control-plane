@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "cases": [
+    {
+      "id": "i24-public-1",
+      "operationId": "call",
+      "args": [
+        "<p>{{ t }}</p>",
+        {
+          "$ref": "n0"
+        }
+      ],
+      "expected": {
+        "ok": true,
+        "value": "<p>a&lt;b</p>"
+      }
+    },
+    {
+      "id": "i24-public-2",
+      "operationId": "call",
+      "args": [
+        "{{a}}&{{b}}",
+        {
+          "$ref": "n1"
+        }
+      ],
+      "expected": {
+        "ok": true,
+        "value": "x&y"
+      }
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n0",
+      "kind": "object",
+      "properties": [
+        [
+          "t",
+          "a<b"
+        ]
+      ],
+      "frozen": true
+    },
+    {
+      "id": "n1",
+      "kind": "object",
+      "properties": [
+        [
+          "a",
+          "x"
+        ],
+        [
+          "b",
+          "y"
+        ]
+      ],
+      "frozen": true
+    }
+  ]
+}

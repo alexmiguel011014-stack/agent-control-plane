@@ -1,0 +1,515 @@
+{
+  "schemaVersion": 1,
+  "cases": [
+    {
+      "id": "i07-oracle-1",
+      "operationId": "call",
+      "args": [
+        {
+          "$ref": "n0"
+        },
+        {
+          "$ref": "n1"
+        }
+      ],
+      "expected": {
+        "ok": true,
+        "value": {
+          "$ref": "n3"
+        }
+      },
+      "expectedArgsAfter": [
+        {
+          "$ref": "n6"
+        },
+        {
+          "$ref": "n7"
+        }
+      ]
+    },
+    {
+      "id": "i07-oracle-2",
+      "operationId": "call",
+      "args": [
+        {
+          "$ref": "n9"
+        },
+        {
+          "$ref": "n10"
+        }
+      ],
+      "expected": {
+        "ok": true,
+        "value": {
+          "$ref": "n12"
+        }
+      },
+      "expectedArgsAfter": [
+        {
+          "$ref": "n15"
+        },
+        {
+          "$ref": "n16"
+        }
+      ]
+    },
+    {
+      "id": "i07-oracle-3",
+      "operationId": "call",
+      "args": [
+        {
+          "$ref": "n18"
+        },
+        {
+          "$ref": "n19"
+        }
+      ],
+      "expected": {
+        "ok": true,
+        "value": {
+          "$ref": "n22"
+        }
+      },
+      "expectedArgsAfter": [
+        {
+          "$ref": "n25"
+        },
+        {
+          "$ref": "n26"
+        }
+      ]
+    },
+    {
+      "id": "i07-oracle-4",
+      "operationId": "call",
+      "args": [
+        {
+          "$ref": "n29"
+        },
+        {
+          "$ref": "n30"
+        }
+      ],
+      "expected": {
+        "ok": true,
+        "value": {
+          "$ref": "n31"
+        }
+      },
+      "expectedArgsAfter": [
+        {
+          "$ref": "n34"
+        },
+        {
+          "$ref": "n35"
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n0",
+      "kind": "object",
+      "properties": [
+        [
+          "a",
+          1
+        ]
+      ],
+      "frozen": true
+    },
+    {
+      "id": "n1",
+      "kind": "array",
+      "items": [
+        {
+          "$ref": "n2"
+        }
+      ]
+    },
+    {
+      "id": "n2",
+      "kind": "object",
+      "properties": [
+        [
+          "sku",
+          "a"
+        ],
+        [
+          "qty",
+          3
+        ]
+      ],
+      "frozen": true
+    },
+    {
+      "id": "n3",
+      "kind": "object",
+      "properties": [
+        [
+          "reserved",
+          {
+            "$ref": "n4"
+          }
+        ],
+        [
+          "shortages",
+          {
+            "$ref": "n5"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "n4",
+      "kind": "object",
+      "properties": [
+        [
+          "a",
+          1
+        ]
+      ]
+    },
+    {
+      "id": "n5",
+      "kind": "object",
+      "properties": [
+        [
+          "a",
+          2
+        ]
+      ]
+    },
+    {
+      "id": "n6",
+      "kind": "object",
+      "properties": [
+        [
+          "a",
+          1
+        ]
+      ]
+    },
+    {
+      "id": "n7",
+      "kind": "array",
+      "items": [
+        {
+          "$ref": "n8"
+        }
+      ]
+    },
+    {
+      "id": "n8",
+      "kind": "object",
+      "properties": [
+        [
+          "sku",
+          "a"
+        ],
+        [
+          "qty",
+          3
+        ]
+      ]
+    },
+    {
+      "id": "n9",
+      "kind": "object",
+      "properties": [],
+      "frozen": true
+    },
+    {
+      "id": "n10",
+      "kind": "array",
+      "items": [
+        {
+          "$ref": "n11"
+        }
+      ]
+    },
+    {
+      "id": "n11",
+      "kind": "object",
+      "properties": [
+        [
+          "sku",
+          "z"
+        ],
+        [
+          "qty",
+          2
+        ]
+      ],
+      "frozen": true
+    },
+    {
+      "id": "n12",
+      "kind": "object",
+      "properties": [
+        [
+          "reserved",
+          {
+            "$ref": "n13"
+          }
+        ],
+        [
+          "shortages",
+          {
+            "$ref": "n14"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "n13",
+      "kind": "object",
+      "properties": []
+    },
+    {
+      "id": "n14",
+      "kind": "object",
+      "properties": [
+        [
+          "z",
+          2
+        ]
+      ]
+    },
+    {
+      "id": "n15",
+      "kind": "object",
+      "properties": []
+    },
+    {
+      "id": "n16",
+      "kind": "array",
+      "items": [
+        {
+          "$ref": "n17"
+        }
+      ]
+    },
+    {
+      "id": "n17",
+      "kind": "object",
+      "properties": [
+        [
+          "sku",
+          "z"
+        ],
+        [
+          "qty",
+          2
+        ]
+      ]
+    },
+    {
+      "id": "n18",
+      "kind": "object",
+      "properties": [
+        [
+          "a",
+          -4
+        ],
+        [
+          "b",
+          2.5
+        ]
+      ],
+      "frozen": true
+    },
+    {
+      "id": "n19",
+      "kind": "array",
+      "items": [
+        {
+          "$ref": "n20"
+        },
+        {
+          "$ref": "n21"
+        }
+      ]
+    },
+    {
+      "id": "n20",
+      "kind": "object",
+      "properties": [
+        [
+          "sku",
+          "a"
+        ],
+        [
+          "qty",
+          1
+        ]
+      ],
+      "frozen": true
+    },
+    {
+      "id": "n21",
+      "kind": "object",
+      "properties": [
+        [
+          "sku",
+          "b"
+        ],
+        [
+          "qty",
+          1
+        ]
+      ],
+      "frozen": true
+    },
+    {
+      "id": "n22",
+      "kind": "object",
+      "properties": [
+        [
+          "reserved",
+          {
+            "$ref": "n23"
+          }
+        ],
+        [
+          "shortages",
+          {
+            "$ref": "n24"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "n23",
+      "kind": "object",
+      "properties": []
+    },
+    {
+      "id": "n24",
+      "kind": "object",
+      "properties": [
+        [
+          "a",
+          1
+        ],
+        [
+          "b",
+          1
+        ]
+      ]
+    },
+    {
+      "id": "n25",
+      "kind": "object",
+      "properties": [
+        [
+          "a",
+          -4
+        ],
+        [
+          "b",
+          2.5
+        ]
+      ]
+    },
+    {
+      "id": "n26",
+      "kind": "array",
+      "items": [
+        {
+          "$ref": "n27"
+        },
+        {
+          "$ref": "n28"
+        }
+      ]
+    },
+    {
+      "id": "n27",
+      "kind": "object",
+      "properties": [
+        [
+          "sku",
+          "a"
+        ],
+        [
+          "qty",
+          1
+        ]
+      ]
+    },
+    {
+      "id": "n28",
+      "kind": "object",
+      "properties": [
+        [
+          "sku",
+          "b"
+        ],
+        [
+          "qty",
+          1
+        ]
+      ]
+    },
+    {
+      "id": "n29",
+      "kind": "object",
+      "properties": [
+        [
+          "a",
+          3
+        ]
+      ],
+      "frozen": true
+    },
+    {
+      "id": "n30",
+      "kind": "array",
+      "items": []
+    },
+    {
+      "id": "n31",
+      "kind": "object",
+      "properties": [
+        [
+          "reserved",
+          {
+            "$ref": "n32"
+          }
+        ],
+        [
+          "shortages",
+          {
+            "$ref": "n33"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "n32",
+      "kind": "object",
+      "properties": []
+    },
+    {
+      "id": "n33",
+      "kind": "object",
+      "properties": []
+    },
+    {
+      "id": "n34",
+      "kind": "object",
+      "properties": [
+        [
+          "a",
+          3
+        ]
+      ]
+    },
+    {
+      "id": "n35",
+      "kind": "array",
+      "items": []
+    }
+  ]
+}

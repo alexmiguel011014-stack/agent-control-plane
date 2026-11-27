@@ -1,0 +1,10 @@
+{
+  "schemaVersion": 1,
+  "files": [
+    {
+      "path": "src/sum-range.mjs",
+      "sizeBytes": 167,
+      "sha256": "2e2a370292535cc378bddf928821aa34e52c6c898d1014e6c780b278f5b201aa"
+    }
+  ]
+}

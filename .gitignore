@@ -1,0 +1,27 @@
+# Dependencies and generated build output
+/node_modules/
+/dist/
+/coverage/
+/.next/
+/.turbo/
+/graphify-out/
+
+# Environment files: keep only the documented, secret-free template
+.env
+.env.*
+!.env.example
+
+# Runtime state and logs
+/.agentctl/
+/runtime/
+/logs/
+*.log
+*.tmp
+*.trace
+
+# Local benchmark results; task fixtures and source remain versioned
+/bench/results/*
+!/bench/results/README.md
+
+# Generated context map
+/repomix-output.xml

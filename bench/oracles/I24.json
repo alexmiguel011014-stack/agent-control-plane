@@ -1,0 +1,106 @@
+{
+  "schemaVersion": 1,
+  "cases": [
+    {
+      "id": "i24-oracle-1",
+      "operationId": "call",
+      "args": [
+        "{{ missing }}!",
+        {
+          "$ref": "n0"
+        }
+      ],
+      "expected": {
+        "ok": true,
+        "value": "!"
+      }
+    },
+    {
+      "id": "i24-oracle-2",
+      "operationId": "call",
+      "args": [
+        "{{a}}",
+        {
+          "$ref": "n1"
+        }
+      ],
+      "expected": {
+        "ok": true,
+        "value": "{{b}}"
+      }
+    },
+    {
+      "id": "i24-oracle-3",
+      "operationId": "call",
+      "args": [
+        "{{a}}",
+        {
+          "$ref": "n2"
+        }
+      ],
+      "expected": {
+        "ok": true,
+        "value": "Tom &amp; \"Jerry\" &gt; 1"
+      }
+    },
+    {
+      "id": "i24-oracle-4",
+      "operationId": "call",
+      "args": [
+        "no placeholders",
+        {
+          "$ref": "n3"
+        }
+      ],
+      "expected": {
+        "ok": true,
+        "value": "no placeholders"
+      }
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n0",
+      "kind": "object",
+      "properties": [],
+      "frozen": true
+    },
+    {
+      "id": "n1",
+      "kind": "object",
+      "properties": [
+        [
+          "a",
+          "{{b}}"
+        ],
+        [
+          "b",
+          "no"
+        ]
+      ],
+      "frozen": true
+    },
+    {
+      "id": "n2",
+      "kind": "object",
+      "properties": [
+        [
+          "a",
+          "Tom & \"Jerry\" > 1"
+        ]
+      ],
+      "frozen": true
+    },
+    {
+      "id": "n3",
+      "kind": "object",
+      "properties": [
+        [
+          "a",
+          1
+        ]
+      ],
+      "frozen": true
+    }
+  ]
+}

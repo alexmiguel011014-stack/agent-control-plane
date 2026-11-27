@@ -1,0 +1,20 @@
+{
+  "task_id": "S04",
+  "prompt": "For an interrupted run, resume only a read-only operation whose current envelopeHash exactly matches approvedEnvelopeHash. Return await_approval for every interrupted write operation or hash mismatch, and not_interrupted for any other status. Keep this decision as a pure function.",
+  "base_snapshot_sha256": "f3c324a9a2beccb1fd5d6eb8a73a2b0d07599123dd671fbbb70e9a3dc495f396",
+  "allowed_globs": [
+    "src/**/*.mjs"
+  ],
+  "allowed_operations": [
+    "read_text",
+    "list_files",
+    "apply_unified_diff",
+    "run_declared_test",
+    "git_diff"
+  ],
+  "public_test_command_id": "s04-public-tests",
+  "timeout_ms": 600000,
+  "max_changed_files": 1,
+  "oracle_version": "oracle-v1",
+  "risk_class": "process"
+}

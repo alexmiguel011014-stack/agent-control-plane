@@ -1,0 +1,109 @@
+{
+  "schemaVersion": 1,
+  "cases": [
+    {
+      "id": "i06-public-versioned-success-envelope",
+      "operationId": "call",
+      "args": [
+        {
+          "$ref": "n0"
+        }
+      ],
+      "expected": {
+        "ok": true,
+        "value": {
+          "$ref": "n1"
+        },
+        "valueProjection": {
+          "kind": "json-parse"
+        }
+      }
+    },
+    {
+      "id": "i06-public-undefined-error-envelope",
+      "operationId": "call",
+      "args": [
+        {
+          "$value": "undefined"
+        }
+      ],
+      "expected": {
+        "ok": true,
+        "value": {
+          "$ref": "n3"
+        },
+        "valueProjection": {
+          "kind": "json-parse"
+        }
+      }
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n0",
+      "kind": "object",
+      "properties": [
+        [
+          "ok",
+          true
+        ]
+      ]
+    },
+    {
+      "id": "n1",
+      "kind": "object",
+      "properties": [
+        [
+          "schemaVersion",
+          1
+        ],
+        [
+          "result",
+          {
+            "$ref": "n2"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "n2",
+      "kind": "object",
+      "properties": [
+        [
+          "ok",
+          true
+        ]
+      ]
+    },
+    {
+      "id": "n3",
+      "kind": "object",
+      "properties": [
+        [
+          "schemaVersion",
+          1
+        ],
+        [
+          "error",
+          {
+            "$ref": "n4"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "n4",
+      "kind": "object",
+      "properties": [
+        [
+          "code",
+          "INVALID_RESULT"
+        ],
+        [
+          "message",
+          "Result is not JSON serializable"
+        ]
+      ]
+    }
+  ]
+}

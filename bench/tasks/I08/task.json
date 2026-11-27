@@ -1,0 +1,20 @@
+{
+  "task_id": "I08",
+  "prompt": "Fix normalizeTags(input). Split a comma separated string, trim every tag, lowercase it, drop empty tags, drop repeated tags keeping the first occurrence, and return at most five tags in order.",
+  "base_snapshot_sha256": "fa7e76041913ca7ca99771cdfa766eb0d295be03905c40260c1065d0064482e1",
+  "allowed_globs": [
+    "src/**/*.mjs"
+  ],
+  "allowed_operations": [
+    "read_text",
+    "list_files",
+    "apply_unified_diff",
+    "run_declared_test",
+    "git_diff"
+  ],
+  "public_test_command_id": "i08-public-tests",
+  "timeout_ms": 600000,
+  "max_changed_files": 1,
+  "oracle_version": "oracle-v1",
+  "risk_class": "process"
+}

@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "cases": [
+    {
+      "id": "i30-public-1",
+      "operationId": "call",
+      "args": [
+        "/users/:id/",
+        "/users/42"
+      ],
+      "expected": {
+        "ok": true,
+        "value": {
+          "$ref": "n0"
+        }
+      }
+    },
+    {
+      "id": "i30-public-2",
+      "operationId": "call",
+      "args": [
+        "/a/b",
+        "/a//b/"
+      ],
+      "expected": {
+        "ok": true,
+        "value": {
+          "$ref": "n1"
+        }
+      }
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n0",
+      "kind": "object",
+      "properties": [
+        [
+          "id",
+          "42"
+        ]
+      ]
+    },
+    {
+      "id": "n1",
+      "kind": "object",
+      "properties": []
+    }
+  ]
+}

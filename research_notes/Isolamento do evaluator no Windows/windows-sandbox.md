@@ -1,0 +1,65 @@
+# Windows Sandbox as the G2.2 boundary
+
+Checked 2026-10-24. Scope: Microsoft documentation and the observed host facts in the assignment (Windows 10 Pro, WSL returned Wsl/E_ACCESSDENIED, and WindowsSandbox.exe was not found in PATH or System32). No feature activation, code change, test, or oracle run was performed.
+
+## Availability, configuration, and limits on Windows 10
+
+### Takeaway
+
+Windows Sandbox is a plausible no-additional-license-cost option on an already licensed Windows Pro host, provided the host is Windows 10 version 1903+ with virtualization and hardware prerequisites, and the optional feature is enabled. The missing executable is consistent with Sandbox not being installed/enabled, but it does not prove the feature state; an administrator may need to enable it and restart Windows.
+
+### Cited Findings
+
+- Microsoft lists Windows Pro as a supported edition and says the Windows Pro license grants Windows Sandbox entitlement; Windows Home is unsupported. [Windows Sandbox](https://learn.microsoft.com/en-us/windows/security/application-security/application-isolation/windows-sandbox/)
+- Install requirements are AMD64 for Windows 10, BIOS virtualization enabled, at least 4 GB RAM, 1 GB free disk, and two CPU cores. Microsoft says Windows 10 version 1903 or later is required. [Install Windows Sandbox](https://learn.microsoft.com/en-us/windows/security/application-security/application-isolation/windows-sandbox/windows-sandbox-install)
+- Windows Sandbox is an optional Windows feature named `Containers-DisposableClientVM`. Microsoft documents enabling it in “Turn Windows features on or off” or from an elevated PowerShell session with `Enable-WindowsOptionalFeature -FeatureName "Containers-DisposableClientVM" -All -Online`; restart if prompted. This makes administrator access necessary for the documented PowerShell route, though a user may be able to request the feature through the UI and provide elevation. [Install Windows Sandbox](https://learn.microsoft.com/en-us/windows/security/application-security/application-isolation/windows-sandbox/windows-sandbox-install)
+- Configuration files are XML `.wsb` files, supported on Windows 10 build 18342 or later. Microsoft documents starting one by double-clicking or invoking the `.wsb` file from a command line (example: `C:\Temp> MyConfigFile.wsb`). The feature’s first launch is also documented from the Start menu. [Use and configure Windows Sandbox](https://learn.microsoft.com/en-us/windows/security/application-security/application-isolation/windows-sandbox/windows-sandbox-configure-using-wsb-file)
+- A `.wsb` can disable network access and vGPU, map host directories as read-only or writable, and run a `LogonCommand` after the guest logs on. Mapped folders are mounted before that command runs; a complicated startup should be a script mapped into the guest. [Use and configure Windows Sandbox](https://learn.microsoft.com/en-us/windows/security/application-security/application-isolation/windows-sandbox/windows-sandbox-configure-using-wsb-file)
+- Relevant hardening controls include `<Networking>Disable</Networking>`, `<VGpu>Disable</VGpu>`, `<ClipboardRedirection>Disable</ClipboardRedirection>`, `<PrinterRedirection>Disable</PrinterRedirection>`, `<AudioInput>Disable</AudioInput>`, `<VideoInput>Disable</VideoInput>`, and `<ProtectedClient>Enable</ProtectedClient>`. Clipboard redirection otherwise permits copy/paste by default; protected-client mode adds AppContainer isolation to the RDP session. [Use and configure Windows Sandbox](https://learn.microsoft.com/en-us/windows/security/application-security/application-isolation/windows-sandbox/windows-sandbox-configure-using-wsb-file)
+- Microsoft explicitly warns that apps in the sandbox can compromise or otherwise affect mapped host folders; writes to a writable mapped folder persist after Sandbox closes. Read-only mappings prevent writes through that share but still expose the mapped files for reading. [Use and configure Windows Sandbox](https://learn.microsoft.com/en-us/windows/security/application-security/application-isolation/windows-sandbox/windows-sandbox-configure-using-wsb-file)
+- Closing the Sandbox deletes its guest software, files, and state, except that changes in writable mapped folders persist. Windows Sandbox uses hardware-based virtualization and a separate kernel. [Windows Sandbox](https://learn.microsoft.com/en-us/windows/security/application-security/application-isolation/windows-sandbox/)
+- The newer `wsb` CLI is documented as a Windows 11 version 24H2 feature, requiring KB10D or later. It provides start/list/exec/stop/share/connect commands, but Microsoft says it has no process-I/O support for retrieving command output. This is not a documented Windows 10 control path. [Windows Sandbox versions](https://learn.microsoft.com/en-us/windows/security/application-security/application-isolation/windows-sandbox/windows-sandbox-versions); [Windows Sandbox command line interface](https://learn.microsoft.com/en-us/windows/security/application-security/application-isolation/windows-sandbox/windows-sandbox-cli)
+- On 2026-10-24, ordinary Windows 10 Home/Pro 22H2 is past its October 14, 2025 end-of-support date; Microsoft says continued security updates require ESU enrollment, while LTSC has separate lifecycle rules. [Windows 10 release information](https://learn.microsoft.com/en-us/windows/release-health/release-information)
+
+### Inferences
+
+- The observed missing `WindowsSandbox.exe` is compatible with the optional feature being disabled or absent. Verify the optional-feature state before concluding; the assignment’s PATH/System32 observation alone does not identify the cause.
+- WSL access denial does not establish that Windows Sandbox is unavailable: Microsoft documents Sandbox as a separate Windows optional feature with Hyper-V hardware-virtualization prerequisites, and does not list WSL as a prerequisite. This is an inference from the installation requirements, not a Microsoft compatibility statement.
+- For returning artifacts on this Windows 10 path, the documented practical route is a narrowly scoped writable mapped folder. To keep the G2.2 boundary coherent, make that folder itself the disposable workspace and treat every returned file as untrusted. A separate writable host output directory would also be a host-write capability and must be inside the declared disposable workspace. With clipboard and network disabled, guest-only results disappear when the sandbox closes; the classic Windows 10 documentation does not describe an output-capture API.
+- A safe candidate config would map only bootstrap scripts read-only and a dedicated disposable workspace writable; never map the oracle directory or a parent containing it. A `.wsb` logon command can start a guest script, but that configuration does not by itself prove filesystem containment or oracle secrecy.
+
+### Gaps
+
+- The host’s exact Windows build, optional-feature state, BIOS virtualization state, RAM/disk headroom, and policy restrictions were not independently inspected. These determine whether activation is possible.
+- Microsoft documents the newer `wsb stop` command only for Windows 11 24H2. The reviewed Windows 10 documentation establishes opening a `.wsb` configuration, but not a host-side API for reliably enforcing a timed shutdown or capturing guest process output.
+- Microsoft describes disposal and virtualization, but does not certify this specific runner/evaluator design, prove that closing the guest meets the project’s full child-process-tree timeout claim, or provide the project-specific escape tests G2.2 requires.
+
+## Can a .wsb logon command and isolated guest satisfy G2.2?
+
+### Takeaway
+
+Windows Sandbox is a credible boundary candidate for testing, but a `.wsb` file plus a logon command is not itself a G2.2 attestation. It can configure network-off guest execution and narrow host shares; the gate still requires reproducible host-specific proof of workspace containment, oracle inaccessibility, network denial, and timeout termination of all child processes. The Windows 10 guest-control gap makes reliable automatic timeout enforcement especially unproven on this host.
+
+### Cited Findings
+
+- Project G2.2 in `GOALS.md` requires an OS-level boundary on this Windows host and reproducible evidence that the runner cannot read or write outside its disposable workspace (including oracle inputs), cannot access the network, and that a timeout terminates the full child-process tree. It says to stop if any check fails and not substitute worktrees, allowlists, or same-user evaluator code.
+- Networking is enabled by default in Windows Sandbox; a custom `.wsb` must explicitly disable it. [Windows Sandbox](https://learn.microsoft.com/en-us/windows/security/application-security/application-isolation/windows-sandbox/)
+- Windows Sandbox uses hypervisor-based virtualization and a separate kernel, and the guest is disposable when closed. [Windows Sandbox](https://learn.microsoft.com/en-us/windows/security/application-security/application-isolation/windows-sandbox/)
+- Mapped folders cross the host/guest boundary. Microsoft warns they may be affected by sandbox apps, and writable changes persist. Therefore a read-only mapping can still disclose every file in that mapping, while a writable mapping intentionally permits host writes in the exposed folder. [Use and configure Windows Sandbox](https://learn.microsoft.com/en-us/windows/security/application-security/application-isolation/windows-sandbox/windows-sandbox-configure-using-wsb-file)
+- Microsoft says `LogonCommand` runs under the container user account and that the container account should be an administrator account. A logon command runs one command; complex work should be placed in a script, which may be mapped into the guest. [Use and configure Windows Sandbox](https://learn.microsoft.com/en-us/windows/security/application-security/application-isolation/windows-sandbox/windows-sandbox-configure-using-wsb-file)
+- The documented `wsb stop` command terminates the sandbox process and releases sandbox resources, but the newer CLI requires Windows 11 24H2 with KB10D or later. The same CLI page says process I/O is unsupported. [Windows Sandbox versions](https://learn.microsoft.com/en-us/windows/security/application-security/application-isolation/windows-sandbox/windows-sandbox-versions); [Windows Sandbox command line interface](https://learn.microsoft.com/en-us/windows/security/application-security/application-isolation/windows-sandbox/windows-sandbox-cli)
+- Windows 10 22H2 Home/Pro reached end of support on 2025-10-14 unless enrolled in ESU; this increases the host-maintenance risk for relying on the host hypervisor and Sandbox implementation in 2026. [Windows 10 release information](https://learn.microsoft.com/en-us/windows/release-health/release-information)
+
+### Inferences
+
+- **Cautious verdict: technically plausible, not currently proven as G2.2 on the observed host.** The feature can implement important controls, but the host does not yet have demonstrated feature availability, and Windows 10 lacks Microsoft’s documented `wsb` start/stop/exec API. A UI-opened guest can be manually closed, but that is not proof of an automatically enforced timeout.
+- To evaluate the candidate without exposing oracle inputs: keep oracle inputs outside every guest mapping; map only a minimal read-only bootstrap directory and a dedicated disposable workspace. If the runner needs host-visible patch output, let its only writable host mapping be that disposable workspace and verify that no path, junction, or reparse-point escape reaches other host files.
+- A timeout test must start a guest process that spawns nested children, trigger the actual host timeout mechanism, close/dispose the entire Sandbox, and independently verify no child activity remains. The Microsoft docs establish disposal, not this G2.2 test result.
+- Test network denial from inside the actual configured guest against both external endpoints and host/local-network targets; the XML setting is necessary configuration, not the project’s observed result.
+- The Windows 10 host is past normal support unless it is covered by ESU or a different lifecycle channel, so even a successful one-time G2.2 run should record the exact build and maintenance status.
+
+### Gaps
+
+- No Sandbox feature state, activation, startup, guest process, filesystem escape probe, oracle probe, network probe, or timeout/child-tree probe was run; those are manual/host-specific acceptance evidence, not claims supported by documentation.
+- It remains unproven whether the project’s evaluator architecture can keep hidden-oracle material inaccessible while executing patched code inside the same guest. A privileged guest runner should not be given oracle files merely because the guest has a separate kernel.
+- The exact host Windows 10 build and its ESU status are unknown. If it is Windows 10 Pro 22H2 without ESU, it is outside normal Microsoft security support as of the date checked.

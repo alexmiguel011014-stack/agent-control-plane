@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "cases": [
+    {
+      "id": "i12-public-1",
+      "operationId": "call",
+      "args": [
+        1,
+        100,
+        10000
+      ],
+      "expected": {
+        "ok": true,
+        "value": 100
+      }
+    },
+    {
+      "id": "i12-public-2",
+      "operationId": "call",
+      "args": [
+        4,
+        100,
+        10000
+      ],
+      "expected": {
+        "ok": true,
+        "value": 800
+      }
+    }
+  ],
+  "nodes": []
+}

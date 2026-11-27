@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "cases": [
+    {
+      "id": "zero-duration",
+      "operationId": "call",
+      "args": [
+        "00:00"
+      ],
+      "expected": {
+        "ok": true,
+        "value": 0
+      }
+    },
+    {
+      "id": "one-hour-five-minutes",
+      "operationId": "call",
+      "args": [
+        "01:05"
+      ],
+      "expected": {
+        "ok": true,
+        "value": 65
+      }
+    },
+    {
+      "id": "twenty-seven-hours-fifty-nine-minutes",
+      "operationId": "call",
+      "args": [
+        "27:59"
+      ],
+      "expected": {
+        "ok": true,
+        "value": 1679
+      }
+    },
+    {
+      "id": "rejects-minutes-out-of-range",
+      "operationId": "call",
+      "args": [
+        "07:60"
+      ],
+      "expected": {
+        "ok": true,
+        "value": null
+      }
+    }
+  ],
+  "nodes": []
+}

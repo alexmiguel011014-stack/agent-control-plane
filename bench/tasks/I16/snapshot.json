@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "files": [
+    {
+      "path": "src/status-label.mjs",
+      "sizeBytes": 149,
+      "sha256": "9c12af81c1e9aaefbb160a10480053151cf87d92d7eba3fe3f165f0d298e3c1c"
+    },
+    {
+      "path": "src/status-table.mjs",
+      "sizeBytes": 104,
+      "sha256": "c9ccb1ce0c94aa07138d5ac9d4699e3d30f4310582a09b0aa5889490a4cc31d6"
+    }
+  ]
+}

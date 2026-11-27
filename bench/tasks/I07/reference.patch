@@ -1,0 +1,18 @@
+diff --git a/src/reserve.mjs b/src/reserve.mjs
+--- a/src/reserve.mjs
++++ b/src/reserve.mjs
+@@ -1,11 +1,12 @@
+ import { availableUnits } from './stock.mjs';
+ 
+ export function reserveStock(stock, requests) {
++  const remaining = { ...stock };
+   const reserved = {};
+   const shortages = {};
+   for (const request of requests) {
+-    const take = Math.min(request.qty, availableUnits(stock, request.sku));
+-    stock[request.sku] = availableUnits(stock, request.sku) - take;
++    const take = Math.min(request.qty, availableUnits(remaining, request.sku));
++    remaining[request.sku] = availableUnits(remaining, request.sku) - take;
+     if (take > 0) reserved[request.sku] = (reserved[request.sku] ?? 0) + take;
+     if (take < request.qty) shortages[request.sku] = (shortages[request.sku] ?? 0) + (request.qty - take);
+   }

@@ -1,0 +1,12 @@
+diff --git a/src/chunk-budget.mjs b/src/chunk-budget.mjs
+--- a/src/chunk-budget.mjs
++++ b/src/chunk-budget.mjs
+@@ -6,7 +6,7 @@
+   let used = 0;
+   for (const item of items) {
+     const size = sizeOf(item);
+-    if (current.length > 0 && used + size >= budget) {
++    if (current.length > 0 && used + size > budget) {
+       chunks.push(current);
+       current = [];
+       used = 0;

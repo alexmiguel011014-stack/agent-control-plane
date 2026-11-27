@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "cases": [
+    {
+      "id": "i09-public-1",
+      "operationId": "call",
+      "args": [
+        5,
+        10,
+        2
+      ],
+      "expected": {
+        "ok": true,
+        "value": {
+          "$ref": "n0"
+        }
+      }
+    },
+    {
+      "id": "i09-public-2",
+      "operationId": "call",
+      "args": [
+        1,
+        10,
+        2
+      ],
+      "expected": {
+        "ok": true,
+        "value": {
+          "$ref": "n1"
+        }
+      }
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n0",
+      "kind": "array",
+      "items": [
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "id": "n1",
+      "kind": "array",
+      "items": [
+        1,
+        2,
+        3
+      ]
+    }
+  ]
+}

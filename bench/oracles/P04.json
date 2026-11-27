@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "cases": [
+    {
+      "id": "keeps-first-occurrence-and-empty-string-without-mutation",
+      "operationId": "call",
+      "args": [
+        {
+          "$ref": "n0"
+        }
+      ],
+      "expected": {
+        "ok": true,
+        "value": {
+          "$ref": "n1"
+        }
+      },
+      "expectedArgsAfter": [
+        {
+          "$ref": "n0"
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n0",
+      "kind": "array",
+      "items": [
+        "z",
+        "a",
+        "z",
+        "b",
+        "a",
+        ""
+      ]
+    },
+    {
+      "id": "n1",
+      "kind": "array",
+      "items": [
+        "z",
+        "a",
+        "b",
+        ""
+      ]
+    }
+  ]
+}

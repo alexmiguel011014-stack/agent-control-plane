@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "cases": [
+    {
+      "id": "i28-oracle-1",
+      "operationId": "call",
+      "args": [
+        60000
+      ],
+      "expected": {
+        "ok": true,
+        "value": "1m 00s"
+      }
+    },
+    {
+      "id": "i28-oracle-2",
+      "operationId": "call",
+      "args": [
+        3600000
+      ],
+      "expected": {
+        "ok": true,
+        "value": "1h 00m 00s"
+      }
+    },
+    {
+      "id": "i28-oracle-3",
+      "operationId": "call",
+      "args": [
+        999
+      ],
+      "expected": {
+        "ok": true,
+        "value": "0s"
+      }
+    },
+    {
+      "id": "i28-oracle-4",
+      "operationId": "call",
+      "args": [
+        86399000
+      ],
+      "expected": {
+        "ok": true,
+        "value": "23h 59m 59s"
+      }
+    }
+  ],
+  "nodes": []
+}

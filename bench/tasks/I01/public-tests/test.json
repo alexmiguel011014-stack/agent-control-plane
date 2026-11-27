@@ -1,0 +1,180 @@
+{
+  "schemaVersion": 1,
+  "cases": [
+    {
+      "id": "i01-public-cli-overrides",
+      "operationId": "call",
+      "args": [
+        {
+          "$ref": "n0"
+        }
+      ],
+      "expected": {
+        "ok": true,
+        "value": {
+          "$ref": "n4"
+        }
+      }
+    },
+    {
+      "id": "i01-public-file-overrides-defaults",
+      "operationId": "call",
+      "args": [
+        {
+          "$ref": "n5"
+        }
+      ],
+      "expected": {
+        "ok": true,
+        "value": {
+          "$ref": "n9"
+        }
+      }
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n0",
+      "kind": "object",
+      "properties": [
+        [
+          "defaults",
+          {
+            "$ref": "n1"
+          }
+        ],
+        [
+          "fileOptions",
+          {
+            "$ref": "n2"
+          }
+        ],
+        [
+          "cliOptions",
+          {
+            "$ref": "n3"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "n1",
+      "kind": "object",
+      "properties": [
+        [
+          "theme",
+          "light"
+        ],
+        [
+          "port",
+          3000
+        ]
+      ]
+    },
+    {
+      "id": "n2",
+      "kind": "object",
+      "properties": [
+        [
+          "theme",
+          "blue"
+        ],
+        [
+          "port",
+          4000
+        ]
+      ]
+    },
+    {
+      "id": "n3",
+      "kind": "object",
+      "properties": [
+        [
+          "theme",
+          "dark"
+        ]
+      ]
+    },
+    {
+      "id": "n4",
+      "kind": "object",
+      "properties": [
+        [
+          "theme",
+          "dark"
+        ],
+        [
+          "port",
+          4000
+        ]
+      ]
+    },
+    {
+      "id": "n5",
+      "kind": "object",
+      "properties": [
+        [
+          "defaults",
+          {
+            "$ref": "n6"
+          }
+        ],
+        [
+          "fileOptions",
+          {
+            "$ref": "n7"
+          }
+        ],
+        [
+          "cliOptions",
+          {
+            "$ref": "n8"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "n6",
+      "kind": "object",
+      "properties": [
+        [
+          "region",
+          "default"
+        ],
+        [
+          "retries",
+          2
+        ]
+      ]
+    },
+    {
+      "id": "n7",
+      "kind": "object",
+      "properties": [
+        [
+          "region",
+          "file"
+        ]
+      ]
+    },
+    {
+      "id": "n8",
+      "kind": "object",
+      "properties": []
+    },
+    {
+      "id": "n9",
+      "kind": "object",
+      "properties": [
+        [
+          "region",
+          "file"
+        ],
+        [
+          "retries",
+          2
+        ]
+      ]
+    }
+  ]
+}

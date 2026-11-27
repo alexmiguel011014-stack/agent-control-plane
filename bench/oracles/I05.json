@@ -1,0 +1,144 @@
+{
+  "schemaVersion": 1,
+  "cases": [
+    {
+      "id": "i05-oracle-read-defaults-before-startup",
+      "operationId": "read-defaults",
+      "args": [],
+      "expected": {
+        "ok": true,
+        "value": {
+          "$ref": "n0"
+        }
+      }
+    },
+    {
+      "id": "i05-oracle-read-runtime-config",
+      "operationId": "read-runtime-config",
+      "args": [],
+      "expected": {
+        "ok": true,
+        "value": {
+          "$ref": "n1"
+        }
+      }
+    },
+    {
+      "id": "i05-oracle-startup-config-overrides",
+      "operationId": "create-startup-config",
+      "args": [
+        {
+          "$ref": "n2"
+        }
+      ],
+      "expected": {
+        "ok": true,
+        "value": {
+          "$ref": "n3"
+        }
+      },
+      "expectedArgsAfter": [
+        {
+          "$ref": "n4"
+        }
+      ]
+    },
+    {
+      "id": "i05-oracle-read-defaults-after-startup",
+      "operationId": "read-defaults",
+      "args": [],
+      "expected": {
+        "ok": true,
+        "value": {
+          "$ref": "n5"
+        }
+      }
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n0",
+      "kind": "object",
+      "properties": [
+        [
+          "mode",
+          "safe"
+        ],
+        [
+          "retries",
+          2
+        ]
+      ]
+    },
+    {
+      "id": "n1",
+      "kind": "object",
+      "properties": [
+        [
+          "mode",
+          "safe"
+        ],
+        [
+          "retries",
+          2
+        ]
+      ]
+    },
+    {
+      "id": "n2",
+      "kind": "object",
+      "properties": [
+        [
+          "mode",
+          "review"
+        ],
+        [
+          "retries",
+          0
+        ]
+      ]
+    },
+    {
+      "id": "n3",
+      "kind": "object",
+      "properties": [
+        [
+          "mode",
+          "review"
+        ],
+        [
+          "retries",
+          0
+        ]
+      ]
+    },
+    {
+      "id": "n4",
+      "kind": "object",
+      "properties": [
+        [
+          "mode",
+          "review"
+        ],
+        [
+          "retries",
+          0
+        ]
+      ]
+    },
+    {
+      "id": "n5",
+      "kind": "object",
+      "properties": [
+        [
+          "mode",
+          "safe"
+        ],
+        [
+          "retries",
+          2
+        ]
+      ]
+    }
+  ]
+}

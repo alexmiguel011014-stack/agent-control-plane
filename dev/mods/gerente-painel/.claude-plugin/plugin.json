@@ -1,0 +1,6 @@
+{
+  "name": "gerente-painel",
+  "version": "0.1.0",
+  "description": "Read-only manager panel: GOALS queue, benchmark runs, Kaggle ledger, local resources.",
+  "types": "./types/index.d.ts"
+}

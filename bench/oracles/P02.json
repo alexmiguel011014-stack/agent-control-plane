@@ -1,0 +1,83 @@
+{
+  "schemaVersion": 1,
+  "cases": [
+    {
+      "id": "accepts-two-digit-hours",
+      "operationId": "call",
+      "args": [
+        "99:59"
+      ],
+      "expected": {
+        "ok": true,
+        "value": 5999
+      }
+    },
+    {
+      "id": "rejects-one-digit-hour",
+      "operationId": "call",
+      "args": [
+        "9:05"
+      ],
+      "expected": {
+        "ok": true,
+        "value": null
+      }
+    },
+    {
+      "id": "rejects-one-digit-minute",
+      "operationId": "call",
+      "args": [
+        "09:5"
+      ],
+      "expected": {
+        "ok": true,
+        "value": null
+      }
+    },
+    {
+      "id": "rejects-three-digit-hour",
+      "operationId": "call",
+      "args": [
+        "100:00"
+      ],
+      "expected": {
+        "ok": true,
+        "value": null
+      }
+    },
+    {
+      "id": "rejects-minute-overflow",
+      "operationId": "call",
+      "args": [
+        "09:60"
+      ],
+      "expected": {
+        "ok": true,
+        "value": null
+      }
+    },
+    {
+      "id": "rejects-non-numeric-hour",
+      "operationId": "call",
+      "args": [
+        "aa:10"
+      ],
+      "expected": {
+        "ok": true,
+        "value": null
+      }
+    },
+    {
+      "id": "rejects-empty-string",
+      "operationId": "call",
+      "args": [
+        ""
+      ],
+      "expected": {
+        "ok": true,
+        "value": null
+      }
+    }
+  ],
+  "nodes": []
+}

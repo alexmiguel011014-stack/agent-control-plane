@@ -1,0 +1,212 @@
+{
+  "schemaVersion": 1,
+  "cases": [
+    {
+      "id": "i23-oracle-1",
+      "operationId": "call",
+      "args": [
+        {
+          "$ref": "n0"
+        },
+        {
+          "$ref": "n2"
+        },
+        "write"
+      ],
+      "expected": {
+        "ok": true,
+        "value": false
+      }
+    },
+    {
+      "id": "i23-oracle-2",
+      "operationId": "call",
+      "args": [
+        {
+          "$ref": "n3"
+        },
+        {
+          "$ref": "n5"
+        },
+        "read"
+      ],
+      "expected": {
+        "ok": true,
+        "value": false
+      }
+    },
+    {
+      "id": "i23-oracle-3",
+      "operationId": "call",
+      "args": [
+        {
+          "$ref": "n6"
+        },
+        {
+          "$ref": "n8"
+        },
+        "delete"
+      ],
+      "expected": {
+        "ok": true,
+        "value": true
+      }
+    },
+    {
+      "id": "i23-oracle-4",
+      "operationId": "call",
+      "args": [
+        {
+          "$ref": "n9"
+        },
+        {
+          "$ref": "n11"
+        },
+        "write"
+      ],
+      "expected": {
+        "ok": true,
+        "value": true
+      }
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n0",
+      "kind": "object",
+      "properties": [
+        [
+          "roles",
+          {
+            "$ref": "n1"
+          }
+        ],
+        [
+          "orgId",
+          1
+        ]
+      ],
+      "frozen": true
+    },
+    {
+      "id": "n1",
+      "kind": "array",
+      "items": [
+        "editor"
+      ]
+    },
+    {
+      "id": "n2",
+      "kind": "object",
+      "properties": [
+        [
+          "orgId",
+          2
+        ]
+      ],
+      "frozen": true
+    },
+    {
+      "id": "n3",
+      "kind": "object",
+      "properties": [
+        [
+          "roles",
+          {
+            "$ref": "n4"
+          }
+        ],
+        [
+          "disabled",
+          true
+        ]
+      ],
+      "frozen": true
+    },
+    {
+      "id": "n4",
+      "kind": "array",
+      "items": [
+        "admin"
+      ]
+    },
+    {
+      "id": "n5",
+      "kind": "object",
+      "properties": [
+        [
+          "orgId",
+          1
+        ]
+      ],
+      "frozen": true
+    },
+    {
+      "id": "n6",
+      "kind": "object",
+      "properties": [
+        [
+          "roles",
+          {
+            "$ref": "n7"
+          }
+        ]
+      ],
+      "frozen": true
+    },
+    {
+      "id": "n7",
+      "kind": "array",
+      "items": [
+        "admin"
+      ]
+    },
+    {
+      "id": "n8",
+      "kind": "object",
+      "properties": [
+        [
+          "orgId",
+          1
+        ]
+      ],
+      "frozen": true
+    },
+    {
+      "id": "n9",
+      "kind": "object",
+      "properties": [
+        [
+          "roles",
+          {
+            "$ref": "n10"
+          }
+        ],
+        [
+          "orgId",
+          3
+        ]
+      ],
+      "frozen": true
+    },
+    {
+      "id": "n10",
+      "kind": "array",
+      "items": [
+        "viewer",
+        "editor"
+      ]
+    },
+    {
+      "id": "n11",
+      "kind": "object",
+      "properties": [
+        [
+          "orgId",
+          3
+        ]
+      ],
+      "frozen": true
+    }
+  ]
+}

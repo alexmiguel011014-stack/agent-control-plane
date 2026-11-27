@@ -1,0 +1,8 @@
+diff --git a/src/clamp.mjs b/src/clamp.mjs
+--- a/src/clamp.mjs
++++ b/src/clamp.mjs
+@@ -1,3 +1,3 @@
+ export function clampInt(value, low, high) {
+-  return Math.min(low, Math.max(high, value));
++  return Math.max(low, Math.min(high, value));
+ }

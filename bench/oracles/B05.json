@@ -1,0 +1,99 @@
+{
+  "schemaVersion": 1,
+  "cases": [
+    {
+      "id": "missing-key-does-not-change-cache",
+      "operationId": "call",
+      "args": [
+        {
+          "$ref": "n0"
+        },
+        "missing"
+      ],
+      "expected": {
+        "ok": true,
+        "value": false
+      },
+      "expectedArgsAfter": [
+        {
+          "$ref": "n1"
+        },
+        "missing"
+      ]
+    },
+    {
+      "id": "existing-key-is-removed",
+      "operationId": "call",
+      "args": [
+        {
+          "$ref": "n2"
+        },
+        "a"
+      ],
+      "expected": {
+        "ok": true,
+        "value": true
+      },
+      "expectedArgsAfter": [
+        {
+          "$ref": "n3"
+        },
+        "a"
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n0",
+      "kind": "map",
+      "entries": [
+        [
+          "a",
+          1
+        ],
+        [
+          "b",
+          2
+        ]
+      ]
+    },
+    {
+      "id": "n1",
+      "kind": "map",
+      "entries": [
+        [
+          "a",
+          1
+        ],
+        [
+          "b",
+          2
+        ]
+      ]
+    },
+    {
+      "id": "n2",
+      "kind": "map",
+      "entries": [
+        [
+          "a",
+          1
+        ],
+        [
+          "b",
+          2
+        ]
+      ]
+    },
+    {
+      "id": "n3",
+      "kind": "map",
+      "entries": [
+        [
+          "b",
+          2
+        ]
+      ]
+    }
+  ]
+}

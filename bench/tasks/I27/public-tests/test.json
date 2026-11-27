@@ -1,0 +1,170 @@
+{
+  "schemaVersion": 1,
+  "cases": [
+    {
+      "id": "i27-public-1",
+      "operationId": "call",
+      "args": [
+        {
+          "$ref": "n0"
+        }
+      ],
+      "expected": {
+        "ok": true,
+        "value": {
+          "$ref": "n1"
+        }
+      },
+      "expectedArgsAfter": [
+        {
+          "$ref": "n2"
+        }
+      ]
+    },
+    {
+      "id": "i27-public-2",
+      "operationId": "call",
+      "args": [
+        {
+          "$ref": "n3"
+        }
+      ],
+      "expected": {
+        "ok": true,
+        "value": {
+          "$ref": "n5"
+        }
+      },
+      "expectedArgsAfter": [
+        {
+          "$ref": "n7"
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n0",
+      "kind": "object",
+      "properties": [
+        [
+          "user",
+          "ann"
+        ],
+        [
+          "Password",
+          "p1"
+        ]
+      ],
+      "frozen": true
+    },
+    {
+      "id": "n1",
+      "kind": "object",
+      "properties": [
+        [
+          "user",
+          "ann"
+        ],
+        [
+          "Password",
+          "***"
+        ]
+      ]
+    },
+    {
+      "id": "n2",
+      "kind": "object",
+      "properties": [
+        [
+          "user",
+          "ann"
+        ],
+        [
+          "Password",
+          "p1"
+        ]
+      ]
+    },
+    {
+      "id": "n3",
+      "kind": "object",
+      "properties": [
+        [
+          "db",
+          {
+            "$ref": "n4"
+          }
+        ]
+      ],
+      "frozen": true
+    },
+    {
+      "id": "n4",
+      "kind": "object",
+      "properties": [
+        [
+          "clientSecret",
+          "x"
+        ],
+        [
+          "port",
+          5432
+        ]
+      ],
+      "frozen": true
+    },
+    {
+      "id": "n5",
+      "kind": "object",
+      "properties": [
+        [
+          "db",
+          {
+            "$ref": "n6"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "n6",
+      "kind": "object",
+      "properties": [
+        [
+          "clientSecret",
+          "***"
+        ],
+        [
+          "port",
+          5432
+        ]
+      ]
+    },
+    {
+      "id": "n7",
+      "kind": "object",
+      "properties": [
+        [
+          "db",
+          {
+            "$ref": "n8"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "n8",
+      "kind": "object",
+      "properties": [
+        [
+          "clientSecret",
+          "x"
+        ],
+        [
+          "port",
+          5432
+        ]
+      ]
+    }
+  ]
+}

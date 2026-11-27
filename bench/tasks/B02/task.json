@@ -1,0 +1,20 @@
+{
+  "task_id": "B02",
+  "prompt": "Fix getLimit(config, fallback) so only null or undefined uses the fallback. A configured limit of 0 is valid and must be returned. Do not add dependencies.",
+  "base_snapshot_sha256": "9dcbdd3a18351b8a9ee4865701c639078620ea22889b9999dea409d0d8ae49c9",
+  "allowed_globs": [
+    "src/**/*.mjs"
+  ],
+  "allowed_operations": [
+    "read_text",
+    "list_files",
+    "apply_unified_diff",
+    "run_declared_test",
+    "git_diff"
+  ],
+  "public_test_command_id": "b02-public-tests",
+  "timeout_ms": 600000,
+  "max_changed_files": 1,
+  "oracle_version": "oracle-v1",
+  "risk_class": "write"
+}

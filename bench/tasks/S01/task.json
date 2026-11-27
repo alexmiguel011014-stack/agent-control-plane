@@ -1,0 +1,20 @@
+{
+  "task_id": "S01",
+  "prompt": "Fix the pure path policy check so a candidate is allowed only when its resolved path is the configured root or a descendant of it. Reject traversal paths and sibling paths that merely share the root's string prefix. Do not access the filesystem.",
+  "base_snapshot_sha256": "b9c7246f8e735c5fb2f65086fbb5f80b3888050de6de7dd3040ec31e48145155",
+  "allowed_globs": [
+    "src/**/*.mjs"
+  ],
+  "allowed_operations": [
+    "read_text",
+    "list_files",
+    "apply_unified_diff",
+    "run_declared_test",
+    "git_diff"
+  ],
+  "public_test_command_id": "s01-public-tests",
+  "timeout_ms": 600000,
+  "max_changed_files": 1,
+  "oracle_version": "oracle-v1",
+  "risk_class": "process"
+}

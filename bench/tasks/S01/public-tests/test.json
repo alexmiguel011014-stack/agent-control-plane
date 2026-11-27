@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 1,
+  "cases": [
+    {
+      "id": "root-is-within",
+      "operationId": "call",
+      "args": [
+        "/workspace/project",
+        "."
+      ],
+      "expected": {
+        "ok": true,
+        "value": true
+      }
+    },
+    {
+      "id": "descendant-is-within",
+      "operationId": "call",
+      "args": [
+        "/workspace/project",
+        "src/main.mjs"
+      ],
+      "expected": {
+        "ok": true,
+        "value": true
+      }
+    },
+    {
+      "id": "parent-traversal-is-outside",
+      "operationId": "call",
+      "args": [
+        "/workspace/project",
+        "../outside/file.mjs"
+      ],
+      "expected": {
+        "ok": true,
+        "value": false
+      }
+    },
+    {
+      "id": "same-prefix-sibling-is-outside",
+      "operationId": "call",
+      "args": [
+        "/workspace/project",
+        "../project-evil/file.mjs"
+      ],
+      "expected": {
+        "ok": true,
+        "value": false
+      }
+    }
+  ],
+  "nodes": []
+}

@@ -1,0 +1,20 @@
+{
+  "task_id": "P03",
+  "prompt": "Implement sortByPriority(items) as a non-mutating stable sort in ascending numeric priority. Items with equal priority must retain their original relative order. Do not add dependencies.",
+  "base_snapshot_sha256": "a9d70be2932779ac50d0d6eff3c65d81259de3fa9e45e80f4260390245410b9f",
+  "allowed_globs": [
+    "src/**/*.mjs"
+  ],
+  "allowed_operations": [
+    "read_text",
+    "list_files",
+    "apply_unified_diff",
+    "run_declared_test",
+    "git_diff"
+  ],
+  "public_test_command_id": "p03-public-tests",
+  "timeout_ms": 600000,
+  "max_changed_files": 1,
+  "oracle_version": "oracle-v1",
+  "risk_class": "write"
+}

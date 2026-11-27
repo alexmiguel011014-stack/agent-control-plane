@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 1,
+  "cases": [
+    {
+      "id": "i13-public-1",
+      "operationId": "call",
+      "args": [
+        "the quick brown fox",
+        10
+      ],
+      "expected": {
+        "ok": true,
+        "value": {
+          "$ref": "n0"
+        }
+      }
+    },
+    {
+      "id": "i13-public-2",
+      "operationId": "call",
+      "args": [
+        "abcdefg",
+        3
+      ],
+      "expected": {
+        "ok": true,
+        "value": {
+          "$ref": "n1"
+        }
+      }
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n0",
+      "kind": "array",
+      "items": [
+        "the quick",
+        "brown fox"
+      ]
+    },
+    {
+      "id": "n1",
+      "kind": "array",
+      "items": [
+        "abc",
+        "def",
+        "g"
+      ]
+    }
+  ]
+}

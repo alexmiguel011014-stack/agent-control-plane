@@ -1,0 +1,10 @@
+{
+  "schemaVersion": 1,
+  "files": [
+    {
+      "path": "src/limit.mjs",
+      "sizeBytes": 87,
+      "sha256": "bed3b0a69505886babde230b7940703b2576a6c8ee61d668ed29636285d613af"
+    }
+  ]
+}

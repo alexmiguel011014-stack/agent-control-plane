@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "files": [
+    {
+      "path": "src/app-error.mjs",
+      "sizeBytes": 185,
+      "sha256": "8db12daca6a8c66ad2a3f38592fc349055112e0c404c32c723d9104cb0d9bad5"
+    },
+    {
+      "path": "src/error-response.mjs",
+      "sizeBytes": 347,
+      "sha256": "cf7e62131e42d58847f0bc8abf70277469b6cb5e7d5c1071cf6b03b13adaad9c"
+    }
+  ]
+}

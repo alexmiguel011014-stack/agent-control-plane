@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "cases": [
+    {
+      "id": "i16-public-1",
+      "operationId": "call",
+      "args": [
+        "IN_PROGRESS"
+      ],
+      "expected": {
+        "ok": true,
+        "value": "In progress"
+      }
+    },
+    {
+      "id": "i16-public-2",
+      "operationId": "call",
+      "args": [
+        " done "
+      ],
+      "expected": {
+        "ok": true,
+        "value": "Done"
+      }
+    }
+  ],
+  "nodes": []
+}

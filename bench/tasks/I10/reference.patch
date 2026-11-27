@@ -1,0 +1,12 @@
+diff --git a/src/version.mjs b/src/version.mjs
+--- a/src/version.mjs
++++ b/src/version.mjs
+@@ -1,5 +1,7 @@
+ export function parseVersion(text) {
+-  return String(text).split('.').map((part) => part);
++  const parts = String(text).split('.').map(Number);
++  while (parts.length < 3) parts.push(0);
++  return parts;
+ }
+ 
+ export function compareVersions(a, b) {

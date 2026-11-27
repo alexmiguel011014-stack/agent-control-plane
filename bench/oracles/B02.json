@@ -1,0 +1,104 @@
+{
+  "schemaVersion": 1,
+  "cases": [
+    {
+      "id": "zero-limit-is-preserved",
+      "operationId": "call",
+      "args": [
+        {
+          "$ref": "n0"
+        }
+      ],
+      "expected": {
+        "ok": true,
+        "value": 0
+      }
+    },
+    {
+      "id": "null-limit-uses-fallback",
+      "operationId": "call",
+      "args": [
+        {
+          "$ref": "n1"
+        },
+        4
+      ],
+      "expected": {
+        "ok": true,
+        "value": 4
+      }
+    },
+    {
+      "id": "undefined-limit-uses-fallback",
+      "operationId": "call",
+      "args": [
+        {
+          "$ref": "n2"
+        },
+        6
+      ],
+      "expected": {
+        "ok": true,
+        "value": 6
+      }
+    },
+    {
+      "id": "positive-limit-is-used",
+      "operationId": "call",
+      "args": [
+        {
+          "$ref": "n3"
+        },
+        6
+      ],
+      "expected": {
+        "ok": true,
+        "value": 2
+      }
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n0",
+      "kind": "object",
+      "properties": [
+        [
+          "limit",
+          0
+        ]
+      ]
+    },
+    {
+      "id": "n1",
+      "kind": "object",
+      "properties": [
+        [
+          "limit",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "n2",
+      "kind": "object",
+      "properties": [
+        [
+          "limit",
+          {
+            "$value": "undefined"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "n3",
+      "kind": "object",
+      "properties": [
+        [
+          "limit",
+          2
+        ]
+      ]
+    }
+  ]
+}

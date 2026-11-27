@@ -1,0 +1,109 @@
+{
+  "schemaVersion": 1,
+  "cases": [
+    {
+      "id": "redacts-nested-sensitive-fields",
+      "operationId": "call",
+      "args": [
+        "request",
+        {
+          "$ref": "n0"
+        }
+      ],
+      "expected": {
+        "ok": true,
+        "value": {
+          "$ref": "n2"
+        }
+      },
+      "expectedArgsAfterProjections": [
+        {
+          "index": 1,
+          "path": [
+            "request",
+            "apiKey"
+          ],
+          "value": "TEST_SECRET_SENTINEL"
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n0",
+      "kind": "object",
+      "properties": [
+        [
+          "request",
+          {
+            "$ref": "n1"
+          }
+        ],
+        [
+          "count",
+          2
+        ]
+      ]
+    },
+    {
+      "id": "n1",
+      "kind": "object",
+      "properties": [
+        [
+          "apiKey",
+          "TEST_SECRET_SENTINEL"
+        ],
+        [
+          "label",
+          "visible"
+        ]
+      ]
+    },
+    {
+      "id": "n2",
+      "kind": "object",
+      "properties": [
+        [
+          "type",
+          "request"
+        ],
+        [
+          "data",
+          {
+            "$ref": "n3"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "n3",
+      "kind": "object",
+      "properties": [
+        [
+          "request",
+          {
+            "$ref": "n4"
+          }
+        ],
+        [
+          "count",
+          2
+        ]
+      ]
+    },
+    {
+      "id": "n4",
+      "kind": "object",
+      "properties": [
+        [
+          "apiKey",
+          "[REDACTED]"
+        ],
+        [
+          "label",
+          "visible"
+        ]
+      ]
+    }
+  ]
+}

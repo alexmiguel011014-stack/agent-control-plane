@@ -1,0 +1,84 @@
+{
+  "schemaVersion": 1,
+  "cases": [
+    {
+      "id": "i02-public-offset-to-utc-day",
+      "operationId": "call",
+      "args": [
+        "2025-04-01T01:00:00+03:00"
+      ],
+      "expected": {
+        "ok": true,
+        "value": "2025-03-31"
+      }
+    },
+    {
+      "id": "i02-public-utc-date",
+      "operationId": "call",
+      "args": [
+        "2025-04-01T12:00:00Z"
+      ],
+      "expected": {
+        "ok": true,
+        "value": "2025-04-01"
+      }
+    },
+    {
+      "id": "i02-public-rejects-date-only",
+      "operationId": "call",
+      "args": [
+        "2025-04-01"
+      ],
+      "expected": {
+        "ok": false,
+        "error": {
+          "name": "TypeError",
+          "instanceOf": "TypeError"
+        }
+      }
+    },
+    {
+      "id": "i02-public-rejects-impossible-day",
+      "operationId": "call",
+      "args": [
+        "2025-02-29T12:00:00Z"
+      ],
+      "expected": {
+        "ok": false,
+        "error": {
+          "name": "TypeError",
+          "instanceOf": "TypeError"
+        }
+      }
+    },
+    {
+      "id": "i02-public-rejects-leap-second",
+      "operationId": "call",
+      "args": [
+        "2016-12-31T23:59:60Z"
+      ],
+      "expected": {
+        "ok": false,
+        "error": {
+          "name": "TypeError",
+          "instanceOf": "TypeError"
+        }
+      }
+    },
+    {
+      "id": "i02-public-rejects-unknown-offset",
+      "operationId": "call",
+      "args": [
+        "2025-04-01T12:00:00-00:00"
+      ],
+      "expected": {
+        "ok": false,
+        "error": {
+          "name": "TypeError",
+          "instanceOf": "TypeError"
+        }
+      }
+    }
+  ],
+  "nodes": []
+}

@@ -1,0 +1,20 @@
+{
+  "task_id": "P01",
+  "prompt": "Update isWithinRange(value, lower, upper) so both endpoints are included. Return false when lower is greater than upper. Do not mutate arguments or add dependencies.",
+  "base_snapshot_sha256": "15a1b674d687dd5c79232440f3a5ed5e2dc717e535caef4cb9908c1bd97217c6",
+  "allowed_globs": [
+    "src/**/*.mjs"
+  ],
+  "allowed_operations": [
+    "read_text",
+    "list_files",
+    "apply_unified_diff",
+    "run_declared_test",
+    "git_diff"
+  ],
+  "public_test_command_id": "p01-public-tests",
+  "timeout_ms": 600000,
+  "max_changed_files": 1,
+  "oracle_version": "oracle-v1",
+  "risk_class": "write"
+}

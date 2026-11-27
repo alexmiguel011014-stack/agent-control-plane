@@ -1,0 +1,17 @@
+diff --git a/src/path-policy.mjs b/src/path-policy.mjs
+--- a/src/path-policy.mjs
++++ b/src/path-policy.mjs
+@@ -1,7 +1,11 @@
+-import { resolve } from 'node:path';
++import { isAbsolute, relative, resolve, sep } from 'node:path';
+ 
+ export function isPathWithinRoot(root, candidate) {
+   const resolvedRoot = resolve(root);
+   const resolvedCandidate = resolve(resolvedRoot, candidate);
+-  return resolvedCandidate.startsWith(resolvedRoot);
++  const fromRoot = relative(resolvedRoot, resolvedCandidate);
++  return fromRoot === '' ||
++    (fromRoot !== '..' &&
++      !fromRoot.startsWith('..' + sep) &&
++      !isAbsolute(fromRoot));
+ }

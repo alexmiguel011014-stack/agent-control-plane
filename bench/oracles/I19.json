@@ -1,0 +1,390 @@
+{
+  "schemaVersion": 1,
+  "cases": [
+    {
+      "id": "i19-oracle-1",
+      "operationId": "call",
+      "args": [
+        {
+          "$ref": "n0"
+        },
+        10
+      ],
+      "expected": {
+        "ok": true,
+        "value": {
+          "$ref": "n3"
+        }
+      }
+    },
+    {
+      "id": "i19-oracle-2",
+      "operationId": "call",
+      "args": [
+        {
+          "$ref": "n8"
+        },
+        10
+      ],
+      "expected": {
+        "ok": true,
+        "value": {
+          "$ref": "n9"
+        }
+      }
+    },
+    {
+      "id": "i19-oracle-3",
+      "operationId": "call",
+      "args": [
+        {
+          "$ref": "n10"
+        },
+        1
+      ],
+      "expected": {
+        "ok": true,
+        "value": {
+          "$ref": "n13"
+        }
+      }
+    },
+    {
+      "id": "i19-oracle-4",
+      "operationId": "call",
+      "args": [
+        {
+          "$ref": "n17"
+        },
+        10
+      ],
+      "expected": {
+        "ok": true,
+        "value": {
+          "$ref": "n21"
+        }
+      }
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n0",
+      "kind": "array",
+      "items": [
+        {
+          "$ref": "n1"
+        },
+        {
+          "$ref": "n2"
+        }
+      ]
+    },
+    {
+      "id": "n1",
+      "kind": "object",
+      "properties": [
+        [
+          "id",
+          "big"
+        ],
+        [
+          "size",
+          20
+        ]
+      ],
+      "frozen": true
+    },
+    {
+      "id": "n2",
+      "kind": "object",
+      "properties": [
+        [
+          "id",
+          "x"
+        ],
+        [
+          "size",
+          1
+        ]
+      ],
+      "frozen": true
+    },
+    {
+      "id": "n3",
+      "kind": "array",
+      "items": [
+        {
+          "$ref": "n4"
+        },
+        {
+          "$ref": "n6"
+        }
+      ]
+    },
+    {
+      "id": "n4",
+      "kind": "array",
+      "items": [
+        {
+          "$ref": "n5"
+        }
+      ]
+    },
+    {
+      "id": "n5",
+      "kind": "object",
+      "properties": [
+        [
+          "id",
+          "big"
+        ],
+        [
+          "size",
+          20
+        ]
+      ]
+    },
+    {
+      "id": "n6",
+      "kind": "array",
+      "items": [
+        {
+          "$ref": "n7"
+        }
+      ]
+    },
+    {
+      "id": "n7",
+      "kind": "object",
+      "properties": [
+        [
+          "id",
+          "x"
+        ],
+        [
+          "size",
+          1
+        ]
+      ]
+    },
+    {
+      "id": "n8",
+      "kind": "array",
+      "items": []
+    },
+    {
+      "id": "n9",
+      "kind": "array",
+      "items": []
+    },
+    {
+      "id": "n10",
+      "kind": "array",
+      "items": [
+        {
+          "$ref": "n11"
+        },
+        {
+          "$ref": "n12"
+        }
+      ]
+    },
+    {
+      "id": "n11",
+      "kind": "object",
+      "properties": [
+        [
+          "id",
+          "a"
+        ]
+      ],
+      "frozen": true
+    },
+    {
+      "id": "n12",
+      "kind": "object",
+      "properties": [
+        [
+          "id",
+          "b"
+        ],
+        [
+          "size",
+          -3
+        ]
+      ],
+      "frozen": true
+    },
+    {
+      "id": "n13",
+      "kind": "array",
+      "items": [
+        {
+          "$ref": "n14"
+        }
+      ]
+    },
+    {
+      "id": "n14",
+      "kind": "array",
+      "items": [
+        {
+          "$ref": "n15"
+        },
+        {
+          "$ref": "n16"
+        }
+      ]
+    },
+    {
+      "id": "n15",
+      "kind": "object",
+      "properties": [
+        [
+          "id",
+          "a"
+        ]
+      ]
+    },
+    {
+      "id": "n16",
+      "kind": "object",
+      "properties": [
+        [
+          "id",
+          "b"
+        ],
+        [
+          "size",
+          -3
+        ]
+      ]
+    },
+    {
+      "id": "n17",
+      "kind": "array",
+      "items": [
+        {
+          "$ref": "n18"
+        },
+        {
+          "$ref": "n19"
+        },
+        {
+          "$ref": "n20"
+        }
+      ]
+    },
+    {
+      "id": "n18",
+      "kind": "object",
+      "properties": [
+        [
+          "id",
+          "a"
+        ],
+        [
+          "size",
+          3
+        ]
+      ],
+      "frozen": true
+    },
+    {
+      "id": "n19",
+      "kind": "object",
+      "properties": [
+        [
+          "id",
+          "b"
+        ],
+        [
+          "size",
+          3
+        ]
+      ],
+      "frozen": true
+    },
+    {
+      "id": "n20",
+      "kind": "object",
+      "properties": [
+        [
+          "id",
+          "c"
+        ],
+        [
+          "size",
+          4
+        ]
+      ],
+      "frozen": true
+    },
+    {
+      "id": "n21",
+      "kind": "array",
+      "items": [
+        {
+          "$ref": "n22"
+        }
+      ]
+    },
+    {
+      "id": "n22",
+      "kind": "array",
+      "items": [
+        {
+          "$ref": "n23"
+        },
+        {
+          "$ref": "n24"
+        },
+        {
+          "$ref": "n25"
+        }
+      ]
+    },
+    {
+      "id": "n23",
+      "kind": "object",
+      "properties": [
+        [
+          "id",
+          "a"
+        ],
+        [
+          "size",
+          3
+        ]
+      ]
+    },
+    {
+      "id": "n24",
+      "kind": "object",
+      "properties": [
+        [
+          "id",
+          "b"
+        ],
+        [
+          "size",
+          3
+        ]
+      ]
+    },
+    {
+      "id": "n25",
+      "kind": "object",
+      "properties": [
+        [
+          "id",
+          "c"
+        ],
+        [
+          "size",
+          4
+        ]
+      ]
+    }
+  ]
+}

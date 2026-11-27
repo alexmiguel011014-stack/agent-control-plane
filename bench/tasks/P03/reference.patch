@@ -1,0 +1,10 @@
+diff --git a/src/priority.mjs b/src/priority.mjs
+--- a/src/priority.mjs
++++ b/src/priority.mjs
+@@ -1,5 +1,3 @@
+ export function sortByPriority(items) {
+-  return items.sort((left, right) =>
+-    left.priority - right.priority || left.name.localeCompare(right.name),
+-  );
++  return [...items].sort((left, right) => left.priority - right.priority);
+ }

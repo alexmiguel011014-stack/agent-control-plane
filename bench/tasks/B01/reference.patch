@@ -1,0 +1,12 @@
+diff --git a/src/sum-range.mjs b/src/sum-range.mjs
+--- a/src/sum-range.mjs
++++ b/src/sum-range.mjs
+@@ -1,7 +1,7 @@
+ export function sumRange(values, start, end) {
+   let total = 0;
+-  for (let index = start; index < end; index += 1) {
++  for (let index = start; index <= end; index += 1) {
+     total += values[index];
+   }
+   return total;
+ }

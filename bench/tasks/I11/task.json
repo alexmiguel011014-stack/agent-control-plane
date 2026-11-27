@@ -1,0 +1,20 @@
+{
+  "task_id": "I11",
+  "prompt": "Fix mergeIntervals(intervals). Return the union of the { start, end } intervals sorted by start. Intervals that overlap or merely touch (one ends where the next starts) become one interval. Do not mutate the input.",
+  "base_snapshot_sha256": "351ddf6214db927aaab6234dd67dfb0c804b4d535adbf26e09d7e3ec4f11819d",
+  "allowed_globs": [
+    "src/**/*.mjs"
+  ],
+  "allowed_operations": [
+    "read_text",
+    "list_files",
+    "apply_unified_diff",
+    "run_declared_test",
+    "git_diff"
+  ],
+  "public_test_command_id": "i11-public-tests",
+  "timeout_ms": 600000,
+  "max_changed_files": 1,
+  "oracle_version": "oracle-v1",
+  "risk_class": "process"
+}

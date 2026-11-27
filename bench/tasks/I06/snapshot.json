@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "files": [
+    {
+      "path": "src/cli-output.mjs",
+      "sizeBytes": 153,
+      "sha256": "6385cf90c26e95c32dd8202c8b1f5ceca675cccffaf1b310979fbf6a6d2b2980"
+    },
+    {
+      "path": "src/format-result.mjs",
+      "sizeBytes": 72,
+      "sha256": "c60c8c7cc37558ceb1b74e88c9dbeacd6021a6c5e8ffb5c2eb9f8c08017e245e"
+    }
+  ]
+}

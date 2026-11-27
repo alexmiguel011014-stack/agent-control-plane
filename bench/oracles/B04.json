@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "cases": [
+    {
+      "id": "normalizes-french-diacritics",
+      "operationId": "call",
+      "args": [
+        "Crème Brûlée"
+      ],
+      "expected": {
+        "ok": true,
+        "value": "creme-brulee"
+      }
+    },
+    {
+      "id": "lowercases-uppercase-portuguese-and-symbols",
+      "operationId": "call",
+      "args": [
+        "ÁRVORE & CAFÉ"
+      ],
+      "expected": {
+        "ok": true,
+        "value": "arvore-cafe"
+      }
+    },
+    {
+      "id": "preserves-clean-slug",
+      "operationId": "call",
+      "args": [
+        "already-clean"
+      ],
+      "expected": {
+        "ok": true,
+        "value": "already-clean"
+      }
+    }
+  ],
+  "nodes": []
+}

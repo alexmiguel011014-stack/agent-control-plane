@@ -1,0 +1,20 @@
+{
+  "task_id": "I13",
+  "prompt": "Fix wrapText(text, width). Words are separated by spaces. Fill each line greedily with whole words up to width characters, and cut a word longer than width into pieces of at most width characters that then follow the same rules. Ignore repeated spaces. Return the array of lines.",
+  "base_snapshot_sha256": "7ab64aea81bd7dc703a3e7c7f3c03a5683ed23c510e0fefe2435d2a3b87be688",
+  "allowed_globs": [
+    "src/**/*.mjs"
+  ],
+  "allowed_operations": [
+    "read_text",
+    "list_files",
+    "apply_unified_diff",
+    "run_declared_test",
+    "git_diff"
+  ],
+  "public_test_command_id": "i13-public-tests",
+  "timeout_ms": 600000,
+  "max_changed_files": 1,
+  "oracle_version": "oracle-v1",
+  "risk_class": "process"
+}

@@ -1,0 +1,39 @@
+{
+  "name": "agent-control-plane",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "agentctl": "node src/bin/agentctl.ts",
+    "build": "tsc --project tsconfig.json && node dev/scripts/copy-runtime-files.mjs",
+    "typecheck": "tsc --project tsconfig.json --noEmit",
+    "test": "npm run build && node --test \"dist/src/**/*.test.js\"",
+    "lint": "biome lint src",
+    "verify": "npm run typecheck && npm run lint && npm test && npm run test:benchmark-contract",
+    "ci": "npm run verify",
+    "test:schema": "node --test bench/schema/task-schema.test.mjs",
+    "test:snapshots": "node --test bench/snapshots/snapshot.test.mjs bench/snapshots/seal.test.mjs",
+    "test:evaluator:static": "node --test bench/evaluator/evaluator-static.test.mjs",
+    "test:evaluator:case-data": "node --test bench/evaluator/case-data.test.mjs",
+    "test:evaluator:host-harness": "node --test bench/evaluator/host-harness.test.mjs",
+    "test:evaluator:attestation": "node --test bench/evaluator/write-isolation-attestation.test.mjs",
+    "test:evaluator:post-g2.2": "node bench/evaluator/run-post-g2.2-tests.mjs",
+    "test:g0-report": "node --test bench/evaluator/g0-report.test.mjs",
+    "test:isolation-protocol": "node --test bench/isolation/protocol.test.mjs",
+    "test:isolation-worker": "node --test bench/isolation/worker-bridge.test.mjs",
+    "test:isolation-probe": "node --test bench/isolation/probe-contract.test.mjs",
+    "test:benchmark-contract": "npm run test:schema && npm run test:snapshots && npm run test:evaluator:static && npm run test:evaluator:case-data && npm run test:evaluator:host-harness && npm run test:g0-report && npm run test:isolation-protocol && npm run test:isolation-worker && npm run test:isolation-probe && npm run test:evaluator:attestation",
+    "isolation:attest": "node bench/evaluator/write-isolation-attestation.mjs",
+    "isolation:launch:smoke": "node bench/isolation/smoke-production-launch.mjs",
+    "isolation:appcontainer:probe": "powershell.exe -NoProfile -NonInteractive -ExecutionPolicy Bypass -File bench/isolation/run-probes.ps1",
+    "benchmark:g0:prepare": "node bench/evaluator/g0-report.mjs --prepare-review",
+    "benchmark:g0:check-windows": "node bench/snapshots/windows-junction-check.mjs",
+    "benchmark:g0:run": "node bench/evaluator/index.mjs --run"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.5.14",
+    "@types/node": "24.19.2",
+    "ajv": "^8.20.0",
+    "typescript": "7.0.2"
+  }
+}

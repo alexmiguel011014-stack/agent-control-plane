@@ -1,0 +1,20 @@
+{
+  "task_id": "I29",
+  "prompt": "Fix weightedAverage(items). Items are { score, weight }. Ignore items whose weight is not greater than 0 or whose score is not a finite number. Return the weighted mean rounded to two decimals with halves rounded up (1.005 becomes 1.01), or null when no item counts.",
+  "base_snapshot_sha256": "80aff6faf2832072c59a9fc0b090b3ec2ba054d47343d13acd6c429d0bde141e",
+  "allowed_globs": [
+    "src/**/*.mjs"
+  ],
+  "allowed_operations": [
+    "read_text",
+    "list_files",
+    "apply_unified_diff",
+    "run_declared_test",
+    "git_diff"
+  ],
+  "public_test_command_id": "i29-public-tests",
+  "timeout_ms": 600000,
+  "max_changed_files": 1,
+  "oracle_version": "oracle-v1",
+  "risk_class": "process"
+}

@@ -1,0 +1,20 @@
+{
+  "task_id": "I20",
+  "prompt": "Fix rankScores(entries). Sort the entries by score from highest to lowest, ties by name ascending, and give each a competition rank: equal scores share a rank and the next rank skips (1, 2, 2, 4). Return new { name, score, rank } objects and do not change the input.",
+  "base_snapshot_sha256": "8835caf94065e8d4b59f754b0688c648a428e3acdf23940c2768f39fce26d056",
+  "allowed_globs": [
+    "src/**/*.mjs"
+  ],
+  "allowed_operations": [
+    "read_text",
+    "list_files",
+    "apply_unified_diff",
+    "run_declared_test",
+    "git_diff"
+  ],
+  "public_test_command_id": "i20-public-tests",
+  "timeout_ms": 600000,
+  "max_changed_files": 1,
+  "oracle_version": "oracle-v1",
+  "risk_class": "process"
+}

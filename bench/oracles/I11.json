@@ -1,0 +1,469 @@
+{
+  "schemaVersion": 1,
+  "cases": [
+    {
+      "id": "i11-oracle-1",
+      "operationId": "call",
+      "args": [
+        {
+          "$ref": "n0"
+        }
+      ],
+      "expected": {
+        "ok": true,
+        "value": {
+          "$ref": "n3"
+        }
+      },
+      "expectedArgsAfter": [
+        {
+          "$ref": "n5"
+        }
+      ]
+    },
+    {
+      "id": "i11-oracle-2",
+      "operationId": "call",
+      "args": [
+        {
+          "$ref": "n8"
+        }
+      ],
+      "expected": {
+        "ok": true,
+        "value": {
+          "$ref": "n11"
+        }
+      },
+      "expectedArgsAfter": [
+        {
+          "$ref": "n14"
+        }
+      ]
+    },
+    {
+      "id": "i11-oracle-3",
+      "operationId": "call",
+      "args": [
+        {
+          "$ref": "n17"
+        }
+      ],
+      "expected": {
+        "ok": true,
+        "value": {
+          "$ref": "n18"
+        }
+      },
+      "expectedArgsAfter": [
+        {
+          "$ref": "n19"
+        }
+      ]
+    },
+    {
+      "id": "i11-oracle-4",
+      "operationId": "call",
+      "args": [
+        {
+          "$ref": "n20"
+        }
+      ],
+      "expected": {
+        "ok": true,
+        "value": {
+          "$ref": "n24"
+        }
+      },
+      "expectedArgsAfter": [
+        {
+          "$ref": "n26"
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n0",
+      "kind": "array",
+      "items": [
+        {
+          "$ref": "n1"
+        },
+        {
+          "$ref": "n2"
+        }
+      ]
+    },
+    {
+      "id": "n1",
+      "kind": "object",
+      "properties": [
+        [
+          "start",
+          1
+        ],
+        [
+          "end",
+          4
+        ]
+      ],
+      "frozen": true
+    },
+    {
+      "id": "n2",
+      "kind": "object",
+      "properties": [
+        [
+          "start",
+          2
+        ],
+        [
+          "end",
+          3
+        ]
+      ],
+      "frozen": true
+    },
+    {
+      "id": "n3",
+      "kind": "array",
+      "items": [
+        {
+          "$ref": "n4"
+        }
+      ]
+    },
+    {
+      "id": "n4",
+      "kind": "object",
+      "properties": [
+        [
+          "start",
+          1
+        ],
+        [
+          "end",
+          4
+        ]
+      ]
+    },
+    {
+      "id": "n5",
+      "kind": "array",
+      "items": [
+        {
+          "$ref": "n6"
+        },
+        {
+          "$ref": "n7"
+        }
+      ]
+    },
+    {
+      "id": "n6",
+      "kind": "object",
+      "properties": [
+        [
+          "start",
+          1
+        ],
+        [
+          "end",
+          4
+        ]
+      ]
+    },
+    {
+      "id": "n7",
+      "kind": "object",
+      "properties": [
+        [
+          "start",
+          2
+        ],
+        [
+          "end",
+          3
+        ]
+      ]
+    },
+    {
+      "id": "n8",
+      "kind": "array",
+      "items": [
+        {
+          "$ref": "n9"
+        },
+        {
+          "$ref": "n10"
+        }
+      ]
+    },
+    {
+      "id": "n9",
+      "kind": "object",
+      "properties": [
+        [
+          "start",
+          1
+        ],
+        [
+          "end",
+          2
+        ]
+      ],
+      "frozen": true
+    },
+    {
+      "id": "n10",
+      "kind": "object",
+      "properties": [
+        [
+          "start",
+          4
+        ],
+        [
+          "end",
+          5
+        ]
+      ],
+      "frozen": true
+    },
+    {
+      "id": "n11",
+      "kind": "array",
+      "items": [
+        {
+          "$ref": "n12"
+        },
+        {
+          "$ref": "n13"
+        }
+      ]
+    },
+    {
+      "id": "n12",
+      "kind": "object",
+      "properties": [
+        [
+          "start",
+          1
+        ],
+        [
+          "end",
+          2
+        ]
+      ]
+    },
+    {
+      "id": "n13",
+      "kind": "object",
+      "properties": [
+        [
+          "start",
+          4
+        ],
+        [
+          "end",
+          5
+        ]
+      ]
+    },
+    {
+      "id": "n14",
+      "kind": "array",
+      "items": [
+        {
+          "$ref": "n15"
+        },
+        {
+          "$ref": "n16"
+        }
+      ]
+    },
+    {
+      "id": "n15",
+      "kind": "object",
+      "properties": [
+        [
+          "start",
+          1
+        ],
+        [
+          "end",
+          2
+        ]
+      ]
+    },
+    {
+      "id": "n16",
+      "kind": "object",
+      "properties": [
+        [
+          "start",
+          4
+        ],
+        [
+          "end",
+          5
+        ]
+      ]
+    },
+    {
+      "id": "n17",
+      "kind": "array",
+      "items": []
+    },
+    {
+      "id": "n18",
+      "kind": "array",
+      "items": []
+    },
+    {
+      "id": "n19",
+      "kind": "array",
+      "items": []
+    },
+    {
+      "id": "n20",
+      "kind": "array",
+      "items": [
+        {
+          "$ref": "n21"
+        },
+        {
+          "$ref": "n22"
+        },
+        {
+          "$ref": "n23"
+        }
+      ]
+    },
+    {
+      "id": "n21",
+      "kind": "object",
+      "properties": [
+        [
+          "start",
+          1
+        ],
+        [
+          "end",
+          2
+        ]
+      ],
+      "frozen": true
+    },
+    {
+      "id": "n22",
+      "kind": "object",
+      "properties": [
+        [
+          "start",
+          2
+        ],
+        [
+          "end",
+          3
+        ]
+      ],
+      "frozen": true
+    },
+    {
+      "id": "n23",
+      "kind": "object",
+      "properties": [
+        [
+          "start",
+          3
+        ],
+        [
+          "end",
+          4
+        ]
+      ],
+      "frozen": true
+    },
+    {
+      "id": "n24",
+      "kind": "array",
+      "items": [
+        {
+          "$ref": "n25"
+        }
+      ]
+    },
+    {
+      "id": "n25",
+      "kind": "object",
+      "properties": [
+        [
+          "start",
+          1
+        ],
+        [
+          "end",
+          4
+        ]
+      ]
+    },
+    {
+      "id": "n26",
+      "kind": "array",
+      "items": [
+        {
+          "$ref": "n27"
+        },
+        {
+          "$ref": "n28"
+        },
+        {
+          "$ref": "n29"
+        }
+      ]
+    },
+    {
+      "id": "n27",
+      "kind": "object",
+      "properties": [
+        [
+          "start",
+          1
+        ],
+        [
+          "end",
+          2
+        ]
+      ]
+    },
+    {
+      "id": "n28",
+      "kind": "object",
+      "properties": [
+        [
+          "start",
+          2
+        ],
+        [
+          "end",
+          3
+        ]
+      ]
+    },
+    {
+      "id": "n29",
+      "kind": "object",
+      "properties": [
+        [
+          "start",
+          3
+        ],
+        [
+          "end",
+          4
+        ]
+      ]
+    }
+  ]
+}

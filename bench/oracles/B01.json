@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "cases": [
+    {
+      "id": "single-negative-index",
+      "operationId": "call",
+      "args": [
+        {
+          "$ref": "n0"
+        },
+        0,
+        0
+      ],
+      "expected": {
+        "ok": true,
+        "value": -4
+      }
+    },
+    {
+      "id": "inclusive-range-to-last-index",
+      "operationId": "call",
+      "args": [
+        {
+          "$ref": "n1"
+        },
+        1,
+        3
+      ],
+      "expected": {
+        "ok": true,
+        "value": 17
+      }
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n0",
+      "kind": "array",
+      "items": [
+        -4,
+        10,
+        0,
+        7
+      ]
+    },
+    {
+      "id": "n1",
+      "kind": "array",
+      "items": [
+        -4,
+        10,
+        0,
+        7
+      ]
+    }
+  ]
+}

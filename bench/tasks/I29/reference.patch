@@ -1,0 +1,10 @@
+diff --git a/src/round.mjs b/src/round.mjs
+--- a/src/round.mjs
++++ b/src/round.mjs
+@@ -1,3 +1,5 @@
+ export function round2(value) {
+-  return Math.round(value * 100) / 100;
++  const text = String(value);
++  if (!Number.isFinite(value) || text.includes('e')) return Math.round(value * 100) / 100;
++  return Number(Math.round(Number(text + 'e2')) + 'e-2');
+ }

@@ -1,0 +1,20 @@
+{
+  "task_id": "I05",
+  "prompt": "Remove the startup configuration import cycle that throws during module initialization. Keep the safe defaults { mode: 'safe', retries: 2 } and let caller overrides take precedence. The startup entry module must import and use both the defaults and config modules successfully.",
+  "base_snapshot_sha256": "1a69e579d9f257d0f9ba10966f6d128f9eb3593a730eaca938fb99ac2f35048e",
+  "allowed_globs": [
+    "src/**/*.mjs"
+  ],
+  "allowed_operations": [
+    "read_text",
+    "list_files",
+    "apply_unified_diff",
+    "run_declared_test",
+    "git_diff"
+  ],
+  "public_test_command_id": "i05-public-tests",
+  "timeout_ms": 600000,
+  "max_changed_files": 1,
+  "oracle_version": "oracle-v1",
+  "risk_class": "process"
+}

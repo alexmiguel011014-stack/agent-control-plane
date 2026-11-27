@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "cases": [
+    {
+      "id": "i21-oracle-1",
+      "operationId": "call",
+      "args": [
+        2048
+      ],
+      "expected": {
+        "ok": true,
+        "value": "2 KB"
+      }
+    },
+    {
+      "id": "i21-oracle-2",
+      "operationId": "call",
+      "args": [
+        0
+      ],
+      "expected": {
+        "ok": true,
+        "value": "0 B"
+      }
+    },
+    {
+      "id": "i21-oracle-3",
+      "operationId": "call",
+      "args": [
+        10485760
+      ],
+      "expected": {
+        "ok": true,
+        "value": "10 MB"
+      }
+    },
+    {
+      "id": "i21-oracle-4",
+      "operationId": "call",
+      "args": [
+        -1
+      ],
+      "expected": {
+        "ok": true,
+        "value": "invalid"
+      }
+    }
+  ],
+  "nodes": []
+}

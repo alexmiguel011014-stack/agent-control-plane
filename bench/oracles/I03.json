@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "cases": [
+    {
+      "id": "i03-oracle-null-undefined-crlf-quote",
+      "operationId": "call",
+      "args": [
+        {
+          "$ref": "n0"
+        }
+      ],
+      "expected": {
+        "ok": true,
+        "value": ",,\"a\r\nb\",\"say \"\"yes\"\"\""
+      },
+      "expectedArgsAfter": [
+        {
+          "$ref": "n1"
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n0",
+      "kind": "array",
+      "items": [
+        null,
+        {
+          "$value": "undefined"
+        },
+        "a\r\nb",
+        "say \"yes\""
+      ]
+    },
+    {
+      "id": "n1",
+      "kind": "array",
+      "items": [
+        null,
+        {
+          "$value": "undefined"
+        },
+        "a\r\nb",
+        "say \"yes\""
+      ]
+    }
+  ]
+}

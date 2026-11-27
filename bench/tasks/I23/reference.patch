@@ -1,0 +1,8 @@
+diff --git a/src/roles.mjs b/src/roles.mjs
+--- a/src/roles.mjs
++++ b/src/roles.mjs
+@@ -1,3 +1,3 @@
+ export function hasRole(user, role) {
+-  return user.role === role;
++  return Array.isArray(user.roles) && user.roles.includes(role);
+ }

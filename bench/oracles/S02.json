@@ -1,0 +1,160 @@
+{
+  "schemaVersion": 1,
+  "cases": [
+    {
+      "id": "redacts-sensitive-nested-credential-fields",
+      "operationId": "call",
+      "args": [
+        "audit",
+        {
+          "$ref": "n0"
+        }
+      ],
+      "expected": {
+        "ok": true,
+        "value": {
+          "$ref": "n4"
+        },
+        "valueProjection": {
+          "kind": "path",
+          "path": [
+            "data"
+          ]
+        }
+      },
+      "expectedArgsAfterProjections": [
+        {
+          "index": 1,
+          "path": [
+            "credentials",
+            "0",
+            "Authorization"
+          ],
+          "value": "TEST_AUTH_SENTINEL"
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n0",
+      "kind": "object",
+      "properties": [
+        [
+          "credentials",
+          {
+            "$ref": "n1"
+          }
+        ],
+        [
+          "secretary",
+          "kept"
+        ],
+        [
+          "description",
+          "not secret"
+        ]
+      ]
+    },
+    {
+      "id": "n1",
+      "kind": "array",
+      "items": [
+        {
+          "$ref": "n2"
+        },
+        {
+          "$ref": "n3"
+        }
+      ]
+    },
+    {
+      "id": "n2",
+      "kind": "object",
+      "properties": [
+        [
+          "Authorization",
+          "TEST_AUTH_SENTINEL"
+        ],
+        [
+          "client_token",
+          "TEST_TOKEN_SENTINEL"
+        ]
+      ]
+    },
+    {
+      "id": "n3",
+      "kind": "object",
+      "properties": [
+        [
+          "refreshToken",
+          "TEST_REFRESH_SENTINEL"
+        ],
+        [
+          "api_key",
+          "TEST_API_SENTINEL"
+        ]
+      ]
+    },
+    {
+      "id": "n4",
+      "kind": "object",
+      "properties": [
+        [
+          "credentials",
+          {
+            "$ref": "n5"
+          }
+        ],
+        [
+          "secretary",
+          "kept"
+        ],
+        [
+          "description",
+          "not secret"
+        ]
+      ]
+    },
+    {
+      "id": "n5",
+      "kind": "array",
+      "items": [
+        {
+          "$ref": "n6"
+        },
+        {
+          "$ref": "n7"
+        }
+      ]
+    },
+    {
+      "id": "n6",
+      "kind": "object",
+      "properties": [
+        [
+          "Authorization",
+          "[REDACTED]"
+        ],
+        [
+          "client_token",
+          "[REDACTED]"
+        ]
+      ]
+    },
+    {
+      "id": "n7",
+      "kind": "object",
+      "properties": [
+        [
+          "refreshToken",
+          "[REDACTED]"
+        ],
+        [
+          "api_key",
+          "[REDACTED]"
+        ]
+      ]
+    }
+  ]
+}

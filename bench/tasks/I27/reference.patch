@@ -1,0 +1,8 @@
+diff --git a/src/secret-key.mjs b/src/secret-key.mjs
+--- a/src/secret-key.mjs
++++ b/src/secret-key.mjs
+@@ -1,3 +1,3 @@
+ export function isSecretKey(key) {
+-  return /(password|token)/.test(key);
++  return /(password|token|secret)/i.test(key);
+ }

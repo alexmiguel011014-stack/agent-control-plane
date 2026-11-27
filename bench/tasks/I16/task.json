@@ -1,0 +1,20 @@
+{
+  "task_id": "I16",
+  "prompt": "Fix statusLabel(code). Look the code up in the status table ignoring letter case and surrounding spaces. A code that is not in the table, including inherited names such as constructor and non-text values, returns \"Unknown (\" followed by the original code and \")\".",
+  "base_snapshot_sha256": "21260d0cf7729e0514981eee73ca5997a7c132c617dd51a267b2394d6240f1e6",
+  "allowed_globs": [
+    "src/**/*.mjs"
+  ],
+  "allowed_operations": [
+    "read_text",
+    "list_files",
+    "apply_unified_diff",
+    "run_declared_test",
+    "git_diff"
+  ],
+  "public_test_command_id": "i16-public-tests",
+  "timeout_ms": 600000,
+  "max_changed_files": 1,
+  "oracle_version": "oracle-v1",
+  "risk_class": "process"
+}

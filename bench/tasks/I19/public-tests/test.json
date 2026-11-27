@@ -1,0 +1,309 @@
+{
+  "schemaVersion": 1,
+  "cases": [
+    {
+      "id": "i19-public-1",
+      "operationId": "call",
+      "args": [
+        {
+          "$ref": "n0"
+        },
+        10
+      ],
+      "expected": {
+        "ok": true,
+        "value": {
+          "$ref": "n4"
+        }
+      }
+    },
+    {
+      "id": "i19-public-2",
+      "operationId": "call",
+      "args": [
+        {
+          "$ref": "n10"
+        },
+        8
+      ],
+      "expected": {
+        "ok": true,
+        "value": {
+          "$ref": "n14"
+        }
+      }
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n0",
+      "kind": "array",
+      "items": [
+        {
+          "$ref": "n1"
+        },
+        {
+          "$ref": "n2"
+        },
+        {
+          "$ref": "n3"
+        }
+      ]
+    },
+    {
+      "id": "n1",
+      "kind": "object",
+      "properties": [
+        [
+          "id",
+          "a"
+        ],
+        [
+          "size",
+          5
+        ]
+      ],
+      "frozen": true
+    },
+    {
+      "id": "n2",
+      "kind": "object",
+      "properties": [
+        [
+          "id",
+          "b"
+        ],
+        [
+          "size",
+          5
+        ]
+      ],
+      "frozen": true
+    },
+    {
+      "id": "n3",
+      "kind": "object",
+      "properties": [
+        [
+          "id",
+          "c"
+        ],
+        [
+          "size",
+          1
+        ]
+      ],
+      "frozen": true
+    },
+    {
+      "id": "n4",
+      "kind": "array",
+      "items": [
+        {
+          "$ref": "n5"
+        },
+        {
+          "$ref": "n8"
+        }
+      ]
+    },
+    {
+      "id": "n5",
+      "kind": "array",
+      "items": [
+        {
+          "$ref": "n6"
+        },
+        {
+          "$ref": "n7"
+        }
+      ]
+    },
+    {
+      "id": "n6",
+      "kind": "object",
+      "properties": [
+        [
+          "id",
+          "a"
+        ],
+        [
+          "size",
+          5
+        ]
+      ]
+    },
+    {
+      "id": "n7",
+      "kind": "object",
+      "properties": [
+        [
+          "id",
+          "b"
+        ],
+        [
+          "size",
+          5
+        ]
+      ]
+    },
+    {
+      "id": "n8",
+      "kind": "array",
+      "items": [
+        {
+          "$ref": "n9"
+        }
+      ]
+    },
+    {
+      "id": "n9",
+      "kind": "object",
+      "properties": [
+        [
+          "id",
+          "c"
+        ],
+        [
+          "size",
+          1
+        ]
+      ]
+    },
+    {
+      "id": "n10",
+      "kind": "array",
+      "items": [
+        {
+          "$ref": "n11"
+        },
+        {
+          "$ref": "n12"
+        },
+        {
+          "$ref": "n13"
+        }
+      ]
+    },
+    {
+      "id": "n11",
+      "kind": "object",
+      "properties": [
+        [
+          "id",
+          "a"
+        ],
+        [
+          "size",
+          4
+        ]
+      ],
+      "frozen": true
+    },
+    {
+      "id": "n12",
+      "kind": "object",
+      "properties": [
+        [
+          "id",
+          "b"
+        ],
+        [
+          "size",
+          4
+        ]
+      ],
+      "frozen": true
+    },
+    {
+      "id": "n13",
+      "kind": "object",
+      "properties": [
+        [
+          "id",
+          "c"
+        ],
+        [
+          "size",
+          4
+        ]
+      ],
+      "frozen": true
+    },
+    {
+      "id": "n14",
+      "kind": "array",
+      "items": [
+        {
+          "$ref": "n15"
+        },
+        {
+          "$ref": "n18"
+        }
+      ]
+    },
+    {
+      "id": "n15",
+      "kind": "array",
+      "items": [
+        {
+          "$ref": "n16"
+        },
+        {
+          "$ref": "n17"
+        }
+      ]
+    },
+    {
+      "id": "n16",
+      "kind": "object",
+      "properties": [
+        [
+          "id",
+          "a"
+        ],
+        [
+          "size",
+          4
+        ]
+      ]
+    },
+    {
+      "id": "n17",
+      "kind": "object",
+      "properties": [
+        [
+          "id",
+          "b"
+        ],
+        [
+          "size",
+          4
+        ]
+      ]
+    },
+    {
+      "id": "n18",
+      "kind": "array",
+      "items": [
+        {
+          "$ref": "n19"
+        }
+      ]
+    },
+    {
+      "id": "n19",
+      "kind": "object",
+      "properties": [
+        [
+          "id",
+          "c"
+        ],
+        [
+          "size",
+          4
+        ]
+      ]
+    }
+  ]
+}

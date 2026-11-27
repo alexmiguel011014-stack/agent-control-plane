@@ -1,0 +1,20 @@
+{
+  "task_id": "I15",
+  "prompt": "Fix buildQuery(params). Return the query string with keys sorted alphabetically and joined by &. Skip keys whose value is null or undefined; repeat the key once per array item; percent-encode both keys and values with encodeURIComponent. An empty object gives an empty string.",
+  "base_snapshot_sha256": "1a2d5cdd16f0e421075e19ee9d6e765c34b63e82b427539750997a6198ea6004",
+  "allowed_globs": [
+    "src/**/*.mjs"
+  ],
+  "allowed_operations": [
+    "read_text",
+    "list_files",
+    "apply_unified_diff",
+    "run_declared_test",
+    "git_diff"
+  ],
+  "public_test_command_id": "i15-public-tests",
+  "timeout_ms": 600000,
+  "max_changed_files": 1,
+  "oracle_version": "oracle-v1",
+  "risk_class": "process"
+}

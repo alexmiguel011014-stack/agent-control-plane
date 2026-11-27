@@ -1,0 +1,10 @@
+diff --git a/src/resolve-options.mjs b/src/resolve-options.mjs
+--- a/src/resolve-options.mjs
++++ b/src/resolve-options.mjs
+@@ -3,5 +3,5 @@ export function resolveOptions({
+   fileOptions = {},
+   cliOptions = {},
+ } = {}) {
+-  return { ...cliOptions, ...fileOptions, ...defaults };
++  return { ...defaults, ...fileOptions, ...cliOptions };
+ }

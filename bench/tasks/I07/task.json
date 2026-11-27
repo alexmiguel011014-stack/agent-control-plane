@@ -1,0 +1,20 @@
+{
+  "task_id": "I07",
+  "prompt": "Fix reserveStock(stock, requests). Process the requests in order; each one reserves the smaller of its qty and the units still available for its sku, and any shortfall is reported in shortages. A sku that is missing from stock or has a non-positive count has 0 units. The caller stock object must not be changed. Return { reserved, shortages } keyed by sku, leaving out zero entries.",
+  "base_snapshot_sha256": "a9d9c89711ca82c82d2b9d38d57fcc38b4abd9eda769da38f0da43f55c14a95c",
+  "allowed_globs": [
+    "src/**/*.mjs"
+  ],
+  "allowed_operations": [
+    "read_text",
+    "list_files",
+    "apply_unified_diff",
+    "run_declared_test",
+    "git_diff"
+  ],
+  "public_test_command_id": "i07-public-tests",
+  "timeout_ms": 600000,
+  "max_changed_files": 1,
+  "oracle_version": "oracle-v1",
+  "risk_class": "process"
+}

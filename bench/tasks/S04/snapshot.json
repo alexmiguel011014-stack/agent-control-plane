@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "files": [
+    {
+      "path": "src/recovery-policy.mjs",
+      "sizeBytes": 89,
+      "sha256": "54bae6fe1849f48beda7519588f1ce1a4d25a00920fe893370767475e83791f5"
+    },
+    {
+      "path": "src/run-recovery.mjs",
+      "sizeBytes": 238,
+      "sha256": "cfb31871df23b8bc292fb134edcc049a101a01224f6027bcecaace860d69527a"
+    }
+  ]
+}

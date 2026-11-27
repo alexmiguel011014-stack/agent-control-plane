@@ -1,0 +1,20 @@
+{
+  "task_id": "I02",
+  "prompt": "Convert date-times matching YYYY-MM-DDTHH:mm:ss[.fraction](Z|±HH:MM) to their UTC calendar date in YYYY-MM-DD form. Validate Gregorian dates, hours 00–23, minutes and seconds 00–59, and offsets with hours 00–23 and minutes 00–59. This supported subset rejects leap seconds and -00:00 because its offset is unknown. Throw TypeError for malformed or impossible input; the result must not depend on the host time zone.",
+  "base_snapshot_sha256": "9d8877a43da08b5a806510b509f011b638e9ca1cd7cad05911eb4b9e31681c8a",
+  "allowed_globs": [
+    "src/**/*.mjs"
+  ],
+  "allowed_operations": [
+    "read_text",
+    "list_files",
+    "apply_unified_diff",
+    "run_declared_test",
+    "git_diff"
+  ],
+  "public_test_command_id": "i02-public-tests",
+  "timeout_ms": 600000,
+  "max_changed_files": 1,
+  "oracle_version": "oracle-v1",
+  "risk_class": "process"
+}

@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "files": [
+    {
+      "path": "src/backoff.mjs",
+      "sizeBytes": 206,
+      "sha256": "c8e2128fe1423c575b5fd07eeb3beb49f85199426381798dff57db9875e145b3"
+    },
+    {
+      "path": "src/power.mjs",
+      "sizeBytes": 120,
+      "sha256": "5ae8298a7a8ce34575d7935874d133dde40fdb17458387fba2478b65be407ae1"
+    }
+  ]
+}

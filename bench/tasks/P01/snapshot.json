@@ -1,0 +1,10 @@
+{
+  "schemaVersion": 1,
+  "files": [
+    {
+      "path": "src/range.mjs",
+      "sizeBytes": 96,
+      "sha256": "eadfd7ae7404e44b09f81f16d41a275b6630a0c4812ff3af2e051d9b63cf245d"
+    }
+  ]
+}

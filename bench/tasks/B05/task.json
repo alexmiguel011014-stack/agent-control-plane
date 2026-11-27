@@ -1,0 +1,20 @@
+{
+  "task_id": "B05",
+  "prompt": "Fix invalidate(cache, key) so it removes only the requested cache entry and leaves all other entries intact. The function should return the boolean result of deleting that key. Do not add dependencies.",
+  "base_snapshot_sha256": "b46dd162ef473b670cb9a1ed2c7765e3d5dd8fa52680258c8cf3eeaaf7f02519",
+  "allowed_globs": [
+    "src/**/*.mjs"
+  ],
+  "allowed_operations": [
+    "read_text",
+    "list_files",
+    "apply_unified_diff",
+    "run_declared_test",
+    "git_diff"
+  ],
+  "public_test_command_id": "b05-public-tests",
+  "timeout_ms": 600000,
+  "max_changed_files": 1,
+  "oracle_version": "oracle-v1",
+  "risk_class": "write"
+}

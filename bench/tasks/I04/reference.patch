@@ -1,0 +1,11 @@
+diff --git a/src/error-response.mjs b/src/error-response.mjs
+--- a/src/error-response.mjs
++++ b/src/error-response.mjs
+@@ -10,6 +10,6 @@ export function toErrorResponse(error) {
+ 
+   return {
+     status: 500,
+-    body: { code: 'INTERNAL_ERROR', message: error?.message ?? String(error) },
++    body: { code: 'INTERNAL_ERROR', message: 'Unexpected error' },
+   };
+ }

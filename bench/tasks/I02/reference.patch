@@ -1,0 +1,43 @@
+diff --git a/src/date-parser.mjs b/src/date-parser.mjs
+--- a/src/date-parser.mjs
++++ b/src/date-parser.mjs
+@@ -1,7 +1,37 @@
+ export function toUtcIsoDate(value) {
+-  if (typeof value !== 'string' || value.length < 10) {
++  const match = typeof value === 'string'
++    ? /^(\d{4})-(\d{2})-(\d{2})T(\d{2}):(\d{2}):(\d{2})(?:\.\d+)?(Z|[+-]\d{2}:\d{2})$(?![\s\S])/.exec(value)
++    : null;
++  if (!match) {
+     throw new TypeError('Expected an RFC 3339 timestamp');
+   }
+ 
+-  return value.slice(0, 10);
++  const [, yearText, monthText, dayText, hourText, minuteText, secondText, zone] = match;
++  const year = Number(yearText);
++  const month = Number(monthText);
++  const day = Number(dayText);
++  const hour = Number(hourText);
++  const minute = Number(minuteText);
++  const second = Number(secondText);
++  const [offsetHourText, offsetMinuteText] = zone === 'Z' ? [0, 0] : zone.slice(1).split(':');
++  const offsetHour = Number(offsetHourText);
++  const offsetMinute = Number(offsetMinuteText);
++  const leapYear = year % 4 === 0 && (year % 100 !== 0 || year % 400 === 0);
++  const monthDays = [31, leapYear ? 29 : 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
++
++  if (
++    month < 1 || month > 12 ||
++    day < 1 || day > monthDays[month - 1] ||
++    hour > 23 || minute > 59 || second > 59 ||
++    offsetHour > 23 || offsetMinute > 59 || zone === '-00:00'
++  ) {
++    throw new TypeError('Expected an RFC 3339 timestamp');
++  }
++
++  const date = new Date(value);
++  if (Number.isNaN(date.getTime())) {
++    throw new TypeError('Expected an RFC 3339 timestamp');
++  }
++
++  return date.toISOString().slice(0, 10);
+ }

@@ -1,0 +1,20 @@
+{
+  "task_id": "I22",
+  "prompt": "Fix groupByDay(events). Each event has at (an ISO date-time such as 2026-03-04T23:10:00Z) and a numeric value. Group the events by the calendar date written in the text (its first 10 characters) and return { day, total } objects sorted by day ascending, with the values summed.",
+  "base_snapshot_sha256": "f310f1f27f8c9aa1c165a2481459a7aafd582c90dfec66f05ae160219c1f7aa8",
+  "allowed_globs": [
+    "src/**/*.mjs"
+  ],
+  "allowed_operations": [
+    "read_text",
+    "list_files",
+    "apply_unified_diff",
+    "run_declared_test",
+    "git_diff"
+  ],
+  "public_test_command_id": "i22-public-tests",
+  "timeout_ms": 600000,
+  "max_changed_files": 1,
+  "oracle_version": "oracle-v1",
+  "risk_class": "process"
+}

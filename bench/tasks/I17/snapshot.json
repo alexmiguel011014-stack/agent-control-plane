@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "files": [
+    {
+      "path": "src/discount.mjs",
+      "sizeBytes": 409,
+      "sha256": "1c68f0bf3f9e64811e262c94895297777faf786775c529b07ceec052595502f1"
+    },
+    {
+      "path": "src/percent.mjs",
+      "sizeBytes": 92,
+      "sha256": "6415ad13168e68b654c97cf3ca4d633488f5c87bafb64ef1a5ea18b1ec46cfd5"
+    }
+  ]
+}

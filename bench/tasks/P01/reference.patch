@@ -1,0 +1,8 @@
+diff --git a/src/range.mjs b/src/range.mjs
+--- a/src/range.mjs
++++ b/src/range.mjs
+@@ -1,3 +1,3 @@
+ export function isWithinRange(value, lower, upper) {
+-  return value > lower && value < upper;
++  return value >= lower && value <= upper;
+ }

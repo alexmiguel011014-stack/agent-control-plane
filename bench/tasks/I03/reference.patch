@@ -1,0 +1,11 @@
+diff --git a/src/csv-cell.mjs b/src/csv-cell.mjs
+--- a/src/csv-cell.mjs
++++ b/src/csv-cell.mjs
+@@ -1,3 +1,6 @@
+ export function escapeCsvCell(value) {
+-  return String(value);
++  const text = String(value ?? '');
++  if (!/[",\r\n]/.test(text)) return text;
++
++  return `"${text.replaceAll('"', '""')}"`;
+ }

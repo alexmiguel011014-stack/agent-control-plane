@@ -1,0 +1,103 @@
+{
+  "schemaVersion": 1,
+  "cases": [
+    {
+      "id": "i18-oracle-1",
+      "operationId": "call",
+      "args": [
+        "# c\n\nk"
+      ],
+      "expected": {
+        "ok": true,
+        "value": {
+          "$ref": "n0"
+        }
+      }
+    },
+    {
+      "id": "i18-oracle-2",
+      "operationId": "call",
+      "args": [
+        "a=1\na=2"
+      ],
+      "expected": {
+        "ok": true,
+        "value": {
+          "$ref": "n1"
+        }
+      }
+    },
+    {
+      "id": "i18-oracle-3",
+      "operationId": "call",
+      "args": [
+        "=v\nq= w "
+      ],
+      "expected": {
+        "ok": true,
+        "value": {
+          "$ref": "n2"
+        }
+      }
+    },
+    {
+      "id": "i18-oracle-4",
+      "operationId": "call",
+      "args": [
+        "k = v=w\r\nz=1"
+      ],
+      "expected": {
+        "ok": true,
+        "value": {
+          "$ref": "n3"
+        }
+      }
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n0",
+      "kind": "object",
+      "properties": [
+        [
+          "k",
+          ""
+        ]
+      ]
+    },
+    {
+      "id": "n1",
+      "kind": "object",
+      "properties": [
+        [
+          "a",
+          "2"
+        ]
+      ]
+    },
+    {
+      "id": "n2",
+      "kind": "object",
+      "properties": [
+        [
+          "q",
+          "w"
+        ]
+      ]
+    },
+    {
+      "id": "n3",
+      "kind": "object",
+      "properties": [
+        [
+          "k",
+          "v=w"
+        ],
+        [
+          "z",
+          "1"
+        ]
+      ]
+    }
+  ]
+}

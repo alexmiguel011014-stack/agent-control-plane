@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "cases": [
+    {
+      "id": "normalizes-portuguese-accents",
+      "operationId": "call",
+      "args": [
+        "São João"
+      ],
+      "expected": {
+        "ok": true,
+        "value": "sao-joao"
+      }
+    },
+    {
+      "id": "normalizes-german-umlaut",
+      "operationId": "call",
+      "args": [
+        "Fünke"
+      ],
+      "expected": {
+        "ok": true,
+        "value": "funke"
+      }
+    },
+    {
+      "id": "punctuation-is-single-word-boundary",
+      "operationId": "call",
+      "args": [
+        "  Hello, World!  "
+      ],
+      "expected": {
+        "ok": true,
+        "value": "hello-world"
+      }
+    }
+  ],
+  "nodes": []
+}

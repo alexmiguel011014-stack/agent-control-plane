@@ -1,0 +1,10 @@
+{
+  "schemaVersion": 1,
+  "files": [
+    {
+      "path": "src/ratio.mjs",
+      "sizeBytes": 84,
+      "sha256": "41cd3ae612b42db2795a438e637fd2b197b79a7c1e45c7f4b4db20aeb1b547fd"
+    }
+  ]
+}

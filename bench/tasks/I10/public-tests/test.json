@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "cases": [
+    {
+      "id": "i10-public-1",
+      "operationId": "call",
+      "args": [
+        "1.10.0",
+        ">=1.9.0"
+      ],
+      "expected": {
+        "ok": true,
+        "value": true
+      }
+    },
+    {
+      "id": "i10-public-2",
+      "operationId": "call",
+      "args": [
+        "1.2",
+        "1.2.0"
+      ],
+      "expected": {
+        "ok": true,
+        "value": true
+      }
+    }
+  ],
+  "nodes": []
+}

@@ -1,0 +1,112 @@
+{
+  "schemaVersion": 1,
+  "cases": [
+    {
+      "id": "resumes-approved-matching-read-run",
+      "operationId": "call",
+      "args": [
+        {
+          "$ref": "n0"
+        }
+      ],
+      "expected": {
+        "ok": true,
+        "value": "resume"
+      }
+    },
+    {
+      "id": "write-run-requires-approval",
+      "operationId": "call",
+      "args": [
+        {
+          "$ref": "n1"
+        }
+      ],
+      "expected": {
+        "ok": true,
+        "value": "await_approval"
+      }
+    },
+    {
+      "id": "mismatched-read-envelope-requires-approval",
+      "operationId": "call",
+      "args": [
+        {
+          "$ref": "n2"
+        }
+      ],
+      "expected": {
+        "ok": true,
+        "value": "await_approval"
+      }
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n0",
+      "kind": "object",
+      "properties": [
+        [
+          "status",
+          "interrupted"
+        ],
+        [
+          "mode",
+          "read"
+        ],
+        [
+          "envelopeHash",
+          "hash-1"
+        ],
+        [
+          "approvedEnvelopeHash",
+          "hash-1"
+        ]
+      ]
+    },
+    {
+      "id": "n1",
+      "kind": "object",
+      "properties": [
+        [
+          "status",
+          "interrupted"
+        ],
+        [
+          "mode",
+          "write"
+        ],
+        [
+          "envelopeHash",
+          "hash-1"
+        ],
+        [
+          "approvedEnvelopeHash",
+          "hash-1"
+        ]
+      ]
+    },
+    {
+      "id": "n2",
+      "kind": "object",
+      "properties": [
+        [
+          "status",
+          "interrupted"
+        ],
+        [
+          "mode",
+          "read"
+        ],
+        [
+          "envelopeHash",
+          "hash-2"
+        ],
+        [
+          "approvedEnvelopeHash",
+          "hash-1"
+        ]
+      ]
+    }
+  ]
+}

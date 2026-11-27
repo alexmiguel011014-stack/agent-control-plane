@@ -1,0 +1,147 @@
+{
+  "schemaVersion": 1,
+  "cases": [
+    {
+      "id": "i14-oracle-1",
+      "operationId": "call",
+      "args": [
+        {
+          "$ref": "n0"
+        },
+        100
+      ],
+      "expected": {
+        "ok": true,
+        "value": 3
+      },
+      "expectedArgsAfter": [
+        {
+          "$ref": "n1"
+        },
+        100
+      ]
+    },
+    {
+      "id": "i14-oracle-2",
+      "operationId": "call",
+      "args": [
+        {
+          "$ref": "n2"
+        },
+        50
+      ],
+      "expected": {
+        "ok": true,
+        "value": null
+      },
+      "expectedArgsAfter": [
+        {
+          "$ref": "n3"
+        },
+        50
+      ]
+    },
+    {
+      "id": "i14-oracle-3",
+      "operationId": "call",
+      "args": [
+        {
+          "$ref": "n4"
+        },
+        0
+      ],
+      "expected": {
+        "ok": true,
+        "value": 7
+      },
+      "expectedArgsAfter": [
+        {
+          "$ref": "n5"
+        },
+        0
+      ]
+    },
+    {
+      "id": "i14-oracle-4",
+      "operationId": "call",
+      "args": [
+        {
+          "$ref": "n6"
+        },
+        50
+      ],
+      "expected": {
+        "ok": true,
+        "value": 10
+      },
+      "expectedArgsAfter": [
+        {
+          "$ref": "n7"
+        },
+        50
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n0",
+      "kind": "array",
+      "items": [
+        3,
+        1,
+        2
+      ]
+    },
+    {
+      "id": "n1",
+      "kind": "array",
+      "items": [
+        3,
+        1,
+        2
+      ]
+    },
+    {
+      "id": "n2",
+      "kind": "array",
+      "items": []
+    },
+    {
+      "id": "n3",
+      "kind": "array",
+      "items": []
+    },
+    {
+      "id": "n4",
+      "kind": "array",
+      "items": [
+        7
+      ]
+    },
+    {
+      "id": "n5",
+      "kind": "array",
+      "items": [
+        7
+      ]
+    },
+    {
+      "id": "n6",
+      "kind": "array",
+      "items": [
+        10,
+        2,
+        33
+      ]
+    },
+    {
+      "id": "n7",
+      "kind": "array",
+      "items": [
+        10,
+        2,
+        33
+      ]
+    }
+  ]
+}

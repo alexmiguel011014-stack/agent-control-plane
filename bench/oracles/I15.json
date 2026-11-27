@@ -1,0 +1,119 @@
+{
+  "schemaVersion": 1,
+  "cases": [
+    {
+      "id": "i15-oracle-1",
+      "operationId": "call",
+      "args": [
+        {
+          "$ref": "n0"
+        }
+      ],
+      "expected": {
+        "ok": true,
+        "value": ""
+      }
+    },
+    {
+      "id": "i15-oracle-2",
+      "operationId": "call",
+      "args": [
+        {
+          "$ref": "n1"
+        }
+      ],
+      "expected": {
+        "ok": true,
+        "value": "z=1"
+      }
+    },
+    {
+      "id": "i15-oracle-3",
+      "operationId": "call",
+      "args": [
+        {
+          "$ref": "n2"
+        }
+      ],
+      "expected": {
+        "ok": true,
+        "value": "k%3D1=v%20v"
+      }
+    },
+    {
+      "id": "i15-oracle-4",
+      "operationId": "call",
+      "args": [
+        {
+          "$ref": "n3"
+        }
+      ],
+      "expected": {
+        "ok": true,
+        "value": "s=ok"
+      }
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n0",
+      "kind": "object",
+      "properties": [],
+      "frozen": true
+    },
+    {
+      "id": "n1",
+      "kind": "object",
+      "properties": [
+        [
+          "z",
+          1
+        ],
+        [
+          "a",
+          {
+            "$value": "undefined"
+          }
+        ],
+        [
+          "m",
+          null
+        ]
+      ],
+      "frozen": true
+    },
+    {
+      "id": "n2",
+      "kind": "object",
+      "properties": [
+        [
+          "k=1",
+          "v v"
+        ]
+      ],
+      "frozen": true
+    },
+    {
+      "id": "n3",
+      "kind": "object",
+      "properties": [
+        [
+          "t",
+          {
+            "$ref": "n4"
+          }
+        ],
+        [
+          "s",
+          "ok"
+        ]
+      ],
+      "frozen": true
+    },
+    {
+      "id": "n4",
+      "kind": "array",
+      "items": []
+    }
+  ]
+}

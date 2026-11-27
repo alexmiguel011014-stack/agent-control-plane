@@ -1,0 +1,20 @@
+{
+  "task_id": "P04",
+  "prompt": "Implement uniqueInOrder(values) so it returns the first occurrence of each value, preserving the original order and leaving the input array unchanged. Values are strings. Do not add dependencies.",
+  "base_snapshot_sha256": "b95e10e1f81efc3fb5a221a94ac1934a8890be2ab3bc7c69bf9ae8bf9f0cab5b",
+  "allowed_globs": [
+    "src/**/*.mjs"
+  ],
+  "allowed_operations": [
+    "read_text",
+    "list_files",
+    "apply_unified_diff",
+    "run_declared_test",
+    "git_diff"
+  ],
+  "public_test_command_id": "p04-public-tests",
+  "timeout_ms": 600000,
+  "max_changed_files": 1,
+  "oracle_version": "oracle-v1",
+  "risk_class": "write"
+}

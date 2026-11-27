@@ -1,0 +1,9 @@
+diff --git a/src/format-range.mjs b/src/format-range.mjs
+--- a/src/format-range.mjs
++++ b/src/format-range.mjs
+@@ -1,4 +1,5 @@
+ export function formatRun(first, last) {
+   if (first === last) return String(first);
++  if (last === first + 1) return first + ',' + last;
+   return first + '-' + last;
+ }

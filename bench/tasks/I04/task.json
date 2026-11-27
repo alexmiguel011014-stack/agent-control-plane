@@ -1,0 +1,20 @@
+{
+  "task_id": "I04",
+  "prompt": "Map application errors to a safe response. Preserve the status, code, and public message of AppError instances. Map every other thrown value to status 500 with code INTERNAL_ERROR and message Unexpected error; never expose an unknown error's message.",
+  "base_snapshot_sha256": "867c21178af85be8d9158ee0f18e10867a2d10b356461eb1f4039cb6fea5138d",
+  "allowed_globs": [
+    "src/**/*.mjs"
+  ],
+  "allowed_operations": [
+    "read_text",
+    "list_files",
+    "apply_unified_diff",
+    "run_declared_test",
+    "git_diff"
+  ],
+  "public_test_command_id": "i04-public-tests",
+  "timeout_ms": 600000,
+  "max_changed_files": 1,
+  "oracle_version": "oracle-v1",
+  "risk_class": "process"
+}

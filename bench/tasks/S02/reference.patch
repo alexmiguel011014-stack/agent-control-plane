@@ -1,0 +1,24 @@
+diff --git a/src/redact-event.mjs b/src/redact-event.mjs
+--- a/src/redact-event.mjs
++++ b/src/redact-event.mjs
+@@ -1,12 +1,11 @@
+ export function redactEventData(value) {
+-  if (!value || typeof value !== 'object' || Array.isArray(value)) return value;
++  if (Array.isArray(value)) return value.map(redactEventData);
++  if (!value || typeof value !== 'object') return value;
+ 
+-  const copy = { ...value };
+-  for (const key of Object.keys(copy)) {
+-    const normalizedKey = key.toLowerCase();
+-    if (normalizedKey === 'secret' || normalizedKey === 'password') {
+-      copy[key] = '[REDACTED]';
+-    }
+-  }
+-  return copy;
++  return Object.fromEntries(Object.entries(value).map(([key, nestedValue]) => {
++    const normalizedKey = key.replace(/[_-]/g, '').toLowerCase();
++    const sensitive = ['secret', 'token', 'password', 'authorization', 'apikey']
++      .some((suffix) => normalizedKey.endsWith(suffix));
++    return [key, sensitive ? '[REDACTED]' : redactEventData(nestedValue)];
++  }));
+ }

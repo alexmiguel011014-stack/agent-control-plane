@@ -1,0 +1,74 @@
+{
+  "schemaVersion": 1,
+  "cases": [
+    {
+      "id": "merges-overrides-without-mutating-inputs",
+      "operationId": "call",
+      "args": [
+        {
+          "$ref": "n0"
+        },
+        {
+          "$ref": "n1"
+        }
+      ],
+      "expected": {
+        "ok": true,
+        "value": {
+          "$ref": "n2"
+        }
+      },
+      "expectedArgsAfter": [
+        {
+          "$ref": "n0"
+        },
+        {
+          "$ref": "n1"
+        }
+      ],
+      "expectedDistinctFromArgs": [
+        0
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n0",
+      "kind": "object",
+      "properties": [
+        [
+          "retries",
+          3
+        ],
+        [
+          "mode",
+          "safe"
+        ]
+      ]
+    },
+    {
+      "id": "n1",
+      "kind": "object",
+      "properties": [
+        [
+          "mode",
+          "fast"
+        ]
+      ]
+    },
+    {
+      "id": "n2",
+      "kind": "object",
+      "properties": [
+        [
+          "retries",
+          3
+        ],
+        [
+          "mode",
+          "fast"
+        ]
+      ]
+    }
+  ]
+}

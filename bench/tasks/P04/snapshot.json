@@ -1,0 +1,10 @@
+{
+  "schemaVersion": 1,
+  "files": [
+    {
+      "path": "src/unique.mjs",
+      "sizeBytes": 149,
+      "sha256": "c1cbfc072f68e4460283d1b40ecdbc34baceb28fbeb387f0c77833873efe789c"
+    }
+  ]
+}

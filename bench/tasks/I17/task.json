@@ -1,0 +1,20 @@
+{
+  "task_id": "I17",
+  "prompt": "Fix applyDiscount(subtotalCents, rule). A percent rule takes rule.value percent of the subtotal rounded to the nearest cent with halves rounded up; a fixed rule takes rule.value cents; any other or missing rule takes 0. The discount never exceeds the subtotal and is never negative. Return { discountCents, totalCents }.",
+  "base_snapshot_sha256": "4def5b1400003e73a302074e78c0b4742e98f9b8f7454c2225e9d62f7411a955",
+  "allowed_globs": [
+    "src/**/*.mjs"
+  ],
+  "allowed_operations": [
+    "read_text",
+    "list_files",
+    "apply_unified_diff",
+    "run_declared_test",
+    "git_diff"
+  ],
+  "public_test_command_id": "i17-public-tests",
+  "timeout_ms": 600000,
+  "max_changed_files": 1,
+  "oracle_version": "oracle-v1",
+  "risk_class": "process"
+}

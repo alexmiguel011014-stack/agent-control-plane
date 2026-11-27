@@ -1,0 +1,11 @@
+diff --git a/src/recovery-policy.mjs b/src/recovery-policy.mjs
+--- a/src/recovery-policy.mjs
++++ b/src/recovery-policy.mjs
+@@ -1,3 +1,6 @@
+ export function canResumeInterruptedRun(run) {
+-  return run?.status === 'interrupted';
++  return run?.status === 'interrupted' &&
++    run.mode === 'read' &&
++    typeof run.envelopeHash === 'string' &&
++    run.envelopeHash === run.approvedEnvelopeHash;
+ }

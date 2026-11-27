@@ -1,0 +1,20 @@
+{
+  "task_id": "B06",
+  "prompt": "Fix mergeConfig(defaults, override) so it returns a shallow merged configuration with override values taking precedence, without mutating either input object. Do not add dependencies.",
+  "base_snapshot_sha256": "e81122635e02f67450514bcac2c02e500444eb57a49e492acdd97cd073f5e339",
+  "allowed_globs": [
+    "src/**/*.mjs"
+  ],
+  "allowed_operations": [
+    "read_text",
+    "list_files",
+    "apply_unified_diff",
+    "run_declared_test",
+    "git_diff"
+  ],
+  "public_test_command_id": "b06-public-tests",
+  "timeout_ms": 600000,
+  "max_changed_files": 1,
+  "oracle_version": "oracle-v1",
+  "risk_class": "write"
+}

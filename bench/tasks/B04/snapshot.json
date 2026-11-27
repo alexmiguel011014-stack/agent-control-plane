@@ -1,0 +1,10 @@
+{
+  "schemaVersion": 1,
+  "files": [
+    {
+      "path": "src/slugify.mjs",
+      "sizeBytes": 130,
+      "sha256": "16cfc1f570140679b0407517285004db8338bb8f41ecfefe6066b8b2ff8f0682"
+    }
+  ]
+}

@@ -1,0 +1,120 @@
+{
+  "schemaVersion": 1,
+  "cases": [
+    {
+      "id": "i04-public-preserves-app-error-fields",
+      "operationId": "call",
+      "args": [
+        {
+          "$ref": "n0"
+        }
+      ],
+      "expected": {
+        "ok": true,
+        "value": {
+          "$ref": "n1"
+        }
+      }
+    },
+    {
+      "id": "i04-public-hides-unknown-error-details",
+      "operationId": "call",
+      "args": [
+        {
+          "$ref": "n3"
+        }
+      ],
+      "expected": {
+        "ok": true,
+        "value": {
+          "$ref": "n4"
+        }
+      }
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n0",
+      "kind": "error",
+      "name": "AppError",
+      "message": "Record not found",
+      "properties": [
+        [
+          "code",
+          "NOT_FOUND"
+        ],
+        [
+          "status",
+          404
+        ]
+      ]
+    },
+    {
+      "id": "n1",
+      "kind": "object",
+      "properties": [
+        [
+          "status",
+          404
+        ],
+        [
+          "body",
+          {
+            "$ref": "n2"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "n2",
+      "kind": "object",
+      "properties": [
+        [
+          "code",
+          "NOT_FOUND"
+        ],
+        [
+          "message",
+          "Record not found"
+        ]
+      ]
+    },
+    {
+      "id": "n3",
+      "kind": "error",
+      "name": "Error",
+      "message": "internal database detail",
+      "properties": []
+    },
+    {
+      "id": "n4",
+      "kind": "object",
+      "properties": [
+        [
+          "status",
+          500
+        ],
+        [
+          "body",
+          {
+            "$ref": "n5"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "n5",
+      "kind": "object",
+      "properties": [
+        [
+          "code",
+          "INTERNAL_ERROR"
+        ],
+        [
+          "message",
+          "Unexpected error"
+        ]
+      ]
+    }
+  ]
+}

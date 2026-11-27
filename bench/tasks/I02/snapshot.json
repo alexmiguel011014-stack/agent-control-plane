@@ -1,0 +1,10 @@
+{
+  "schemaVersion": 1,
+  "files": [
+    {
+      "path": "src/date-parser.mjs",
+      "sizeBytes": 189,
+      "sha256": "a5480f2f91609b0374077716ff28475cc2e3d6113a07e4d48ebe38840e86135e"
+    }
+  ]
+}

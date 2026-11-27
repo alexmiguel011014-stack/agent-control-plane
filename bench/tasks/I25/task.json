@@ -1,0 +1,20 @@
+{
+  "task_id": "I25",
+  "prompt": "Fix latestByKey(records). Keep one record per key: the one with the highest version; when versions are equal the record that appears later in the input wins. List the keys in the order they first appear. Return new { key, version, payload } objects.",
+  "base_snapshot_sha256": "afffc856569e0e7d260ea4913dafa1d93927d1e920e68529841ed043143331a6",
+  "allowed_globs": [
+    "src/**/*.mjs"
+  ],
+  "allowed_operations": [
+    "read_text",
+    "list_files",
+    "apply_unified_diff",
+    "run_declared_test",
+    "git_diff"
+  ],
+  "public_test_command_id": "i25-public-tests",
+  "timeout_ms": 600000,
+  "max_changed_files": 1,
+  "oracle_version": "oracle-v1",
+  "risk_class": "process"
+}

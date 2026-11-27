@@ -1,0 +1,84 @@
+{
+  "schemaVersion": 1,
+  "cases": [
+    {
+      "id": "includes-lower-endpoint",
+      "operationId": "call",
+      "args": [
+        0,
+        0,
+        4
+      ],
+      "expected": {
+        "ok": true,
+        "value": true
+      }
+    },
+    {
+      "id": "includes-upper-endpoint",
+      "operationId": "call",
+      "args": [
+        4,
+        0,
+        4
+      ],
+      "expected": {
+        "ok": true,
+        "value": true
+      }
+    },
+    {
+      "id": "includes-between-endpoints",
+      "operationId": "call",
+      "args": [
+        2,
+        0,
+        4
+      ],
+      "expected": {
+        "ok": true,
+        "value": true
+      }
+    },
+    {
+      "id": "excludes-below-range",
+      "operationId": "call",
+      "args": [
+        -1,
+        0,
+        4
+      ],
+      "expected": {
+        "ok": true,
+        "value": false
+      }
+    },
+    {
+      "id": "excludes-above-range",
+      "operationId": "call",
+      "args": [
+        5,
+        0,
+        4
+      ],
+      "expected": {
+        "ok": true,
+        "value": false
+      }
+    },
+    {
+      "id": "excludes-reversed-bounds",
+      "operationId": "call",
+      "args": [
+        2,
+        4,
+        0
+      ],
+      "expected": {
+        "ok": true,
+        "value": false
+      }
+    }
+  ],
+  "nodes": []
+}

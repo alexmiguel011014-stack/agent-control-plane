@@ -1,0 +1,20 @@
+{
+  "task_id": "P02",
+  "prompt": "Implement durationToMinutes(value) for a two-digit HH:MM duration. Hours may be 00 through 99, minutes must be 00 through 59. Return total minutes for valid input and null for malformed input. Do not add dependencies.",
+  "base_snapshot_sha256": "8fa68606c9bc3c7602abd741606035af30c8a07bedd4ab4bd3bdc1fb459b9f7b",
+  "allowed_globs": [
+    "src/**/*.mjs"
+  ],
+  "allowed_operations": [
+    "read_text",
+    "list_files",
+    "apply_unified_diff",
+    "run_declared_test",
+    "git_diff"
+  ],
+  "public_test_command_id": "p02-public-tests",
+  "timeout_ms": 600000,
+  "max_changed_files": 1,
+  "oracle_version": "oracle-v1",
+  "risk_class": "write"
+}
